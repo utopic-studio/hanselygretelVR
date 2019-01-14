@@ -15,7 +15,7 @@ public class MyRotationController : MonoBehaviour {
 	void Start () {
 		quat = Quaternion.identity;
 
-		cameraChild = transform.FindChild ("Camera");
+		cameraChild = transform.Find ("Camera");
 		if (cameraChild == null) {
 			Debug.LogWarning ("Para rotacion manual, se necesita 'Camera' como hijo del Player");
 		}
