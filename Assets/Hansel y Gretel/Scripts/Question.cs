@@ -24,7 +24,7 @@ public class Question : MonoBehaviour {
 	public AudioSource buttonSound;
 	public float timeOffsetForOptions = 2f;
 	public float timeOffsetForTransition = 1f;
-	public Text asociatedText;
+	public TextUtopic asociatedText;
 	[Space(4)]
 	public GameObject[] options;
 	public UnityEngine.Events.UnityEvent onFinishAnswering;
