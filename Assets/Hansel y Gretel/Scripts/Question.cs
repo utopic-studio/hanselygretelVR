@@ -65,6 +65,7 @@ public class Question : MonoBehaviour {
 	}
 
 	public void Show() {
+        Debug.Log("showing question se supone");
 		StartCoroutine (ShowPrivate ());
 	}
 	private IEnumerator ShowPrivate() {
