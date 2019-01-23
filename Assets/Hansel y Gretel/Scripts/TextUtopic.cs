@@ -3,7 +3,7 @@ using System.Collections;
 
 // It starts deactivated.
 // public: Show(), Hide(), ShowInstantly(), HideInstantly().
-public class TextUtopic : MonoBehaviour {
+public class TextUtopic : TextVR {
 
 	public Question asociatedQuestion;
 	public UIAlpha childText;
@@ -16,20 +16,20 @@ public class TextUtopic : MonoBehaviour {
 
 	private UnityEngine.UI.GraphicRaycaster OkButtonRaycaster;
 
-	void Start() {
+    private void Awake()
+    {
+        gameObject.SetActive(false);
+    }
+
+    void Start() {
 		OkButtonRaycaster = canvasWithOkButton.GetComponent<UnityEngine.UI.GraphicRaycaster> ();
 		setIfButtonsAreInteractable (false);
 	}
 
-	public void Show() {
-		StartCoroutine (ShowPrivate ());
-	}
-	private IEnumerator ShowPrivate() {
-		childText.Show ();
-		childButton.Show ();
-		textSound.Play ();
-		yield return new WaitForSeconds (0.5f); //wait a bit of fade in for the buttons
-		setIfButtonsAreInteractable(true);
+	public void Show()
+    {
+        gameObject.SetActive(true);
+        textSound.Play();
 	}
 	public void TransitionToQuestion() {
 		StartCoroutine (TransitionToQuestionPrivate ());

@@ -4,7 +4,7 @@ using System.Collections;
 // Question UI: has a text and buttons we call options.
 // It starts deactivated.
 // public: Show(), Hide(), ShowInstantly(), HideInstantly().
-public class Question : MonoBehaviour {
+public class Question : TextVR {
 
 	public enum QType {Inferencia, ExtraccionDeInfo, InterpretacionDeSentido}
 	public enum QDifficulty {Basico, Intermedio, Avanzado}

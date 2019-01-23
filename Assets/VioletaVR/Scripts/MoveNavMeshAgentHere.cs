@@ -10,6 +10,8 @@ public class MoveNavMeshAgentHere : MonoBehaviour {
 
 
 	public void MoveNavMeshAgent() {
+        if (!agent)
+            agent = GameObject.FindGameObjectWithTag("Player").GetComponent<UnityEngine.AI.NavMeshAgent>();
 
 		if (destination)
 			agent.destination = destination.position;
