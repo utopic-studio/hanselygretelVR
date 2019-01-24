@@ -5,7 +5,8 @@ using System.Collections;
 // public: Show(), Hide(), ShowInstantly(), HideInstantly().
 public class TextUtopic : TextVR {
 
-	public Question asociatedQuestion;
+    public TextController textController;
+    public Question asociatedQuestion;
 	public UIAlpha childText;
 	public UIAlpha childButton;
 	public AudioSource textSound;
@@ -26,12 +27,21 @@ public class TextUtopic : TextVR {
 		setIfButtonsAreInteractable (false);
 	}
 
-	public void Show()
+	public override void Show()
     {
+        textController.HideAll();
         gameObject.SetActive(true);
         textSound.Play();
-	}
-	public void TransitionToQuestion() {
+    }
+    public override void Hide()
+    {
+        gameObject.SetActive(false);
+        /*childText.Hide ();
+		childButton.Hide ();
+		setIfButtonsAreInteractable (false);*/
+
+    }
+    public void TransitionToQuestion() {
 		StartCoroutine (TransitionToQuestionPrivate ());
 	}
 	private IEnumerator TransitionToQuestionPrivate() {
@@ -41,11 +51,6 @@ public class TextUtopic : TextVR {
 		if (asociatedQuestion != null) {
 			asociatedQuestion.Show ();
 		}
-	}
-	public void Hide() {
-		childText.Hide ();
-		childButton.Hide ();
-		setIfButtonsAreInteractable (false);
 	}
 	public void ShowInstantly() {
 		childText.ShowInstantly ();

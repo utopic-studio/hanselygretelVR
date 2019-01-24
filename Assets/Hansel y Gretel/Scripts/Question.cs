@@ -9,7 +9,8 @@ public class Question : TextVR {
 	public enum QType {Inferencia, ExtraccionDeInfo, InterpretacionDeSentido}
 	public enum QDifficulty {Basico, Intermedio, Avanzado}
 
-	[HeaderAttribute("set Question Number to 1 or more")]
+    public TextController textController;
+    [HeaderAttribute("set Question Number to 1 or more")]
 	public int questionNumber;
 	public QType type;
 	public QDifficulty difficulty;
@@ -64,26 +65,20 @@ public class Question : TextVR {
 		QuestionManager.Instance.addQuestion (this, this.questionNumber-1);
 	}
 
-	public void Show() {
-        Debug.Log("showing question se supone");
-		StartCoroutine (ShowPrivate ());
-	}
-	private IEnumerator ShowPrivate() {
-		childText.Show ();
-		childButton.Show ();
-		textSound.Play ();
-		yield return new WaitForSeconds (timeOffsetForOptions);
-		childOptions.Show ();
-		optionsSound.Play();
-		yield return new WaitForSeconds (0.5f); //wait a bit of fade in for the buttons
-		setIfButtonsAreInteractable(true);
-	}
-	public void Hide() {
-		childText.Hide ();
+    public override void Show()
+    {
+        textController.HideAll();
+        gameObject.SetActive(true);
+        textSound.Play();
+    }
+
+	public override void Hide() {
+        gameObject.SetActive(false);
+        /*childText.Hide ();
 		childOptions.Hide ();
 		childButton.Hide ();
-		setIfButtonsAreInteractable (false);
-	}
+		setIfButtonsAreInteractable (false);*/
+    }
 	public void ShowInstantly() {
 		childText.ShowInstantly ();
 		childButton.ShowInstantly ();

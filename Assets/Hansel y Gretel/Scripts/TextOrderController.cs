@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TextOrderController : MonoBehaviour
+public class TextController : MonoBehaviour
 {
     public TextVR[] texts;
     
@@ -14,27 +14,10 @@ public class TextOrderController : MonoBehaviour
         currentIndex = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    
+    public void HideAll()
     {
-
-    }
-
-    public void Previous()
-    {
-        texts[currentIndex].gameObject.SetActive(false);
-        currentIndex = (currentIndex - 1) % texts.Length;
-        texts[currentIndex].gameObject.SetActive(true);
-    }
-    public void Next()
-    {
-        texts[currentIndex].gameObject.SetActive(false);
-        string msg = "desactivado: " + texts[currentIndex];
-
-        currentIndex = (currentIndex + 1) % texts.Length;
-        texts[currentIndex].gameObject.SetActive(true);
-        msg += "\tactivado: " + texts[currentIndex];
-
-        Debug.Log(msg);
+        foreach (TextVR text in texts)
+            text.Hide();
     }
 }
