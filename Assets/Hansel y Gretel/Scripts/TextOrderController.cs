@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TextController : MonoBehaviour
+public class TextOrderController : MonoBehaviour
 {
     public TextVR[] texts;
     

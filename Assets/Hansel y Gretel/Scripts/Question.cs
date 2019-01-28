@@ -64,10 +64,14 @@ public class Question : TextVR {
 	void addMe() {
 		QuestionManager.Instance.addQuestion (this, this.questionNumber-1);
 	}
-
-    public override void Show()
+    public override void ShowAndHideOthers()
     {
         textController.HideAll();
+        gameObject.SetActive(true);
+        textSound.Play();
+    }
+    public override void Show()
+    {
         gameObject.SetActive(true);
         textSound.Play();
     }
