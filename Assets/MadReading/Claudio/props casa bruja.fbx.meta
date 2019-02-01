@@ -87,7 +87,12 @@ ModelImporter:
     4300026: cageHansel
     4300028: DoorCage
     10800000: Sun
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: d572de47adcc2bb4c91c0a68852d7b45, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -127,17 +132,17 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
     indexFormat: 0
-    secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15.000001
-    secondaryUVHardAngle: 88
-    secondaryUVPackMargin: 4
+    secondaryUVAngleDistortion: 72
+    secondaryUVAreaDistortion: 67
+    secondaryUVHardAngle: 87
+    secondaryUVPackMargin: 60
     useFileScale: 1
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
