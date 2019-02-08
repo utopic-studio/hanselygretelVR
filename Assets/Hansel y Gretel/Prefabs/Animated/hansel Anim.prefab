@@ -954,6 +954,7 @@ GameObject:
   - component: {fileID: 1407823337480492830}
   - component: {fileID: 1407823337480246106}
   - component: {fileID: 1407823337480246109}
+  - component: {fileID: 475513616}
   m_Layer: 0
   m_Name: hansel Anim
   m_TagString: Untagged
@@ -968,7 +969,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1407823337480246108}
-  m_LocalRotation: {x: -0, y: 0.47447783, z: -0, w: 0.8802675}
+  m_LocalRotation: {x: 0, y: 0.47448003, z: 0, w: 0.88026625}
   m_LocalPosition: {x: -30.54968, y: -0.1400001, z: 5.328743}
   m_LocalScale: {x: 1.03529, y: 0.88126, z: 1.0944498}
   m_Children:
@@ -1017,6 +1018,25 @@ MonoBehaviour:
   - Idle
   - Walk
   - Caught
+--- !u!114 &475513616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407823337480246108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f4dae5f614b6447bd02c90627cc17d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MeshChangeTexture: {fileID: 1407823337493667222}
+  SwichTexture: {fileID: 2800000, guid: f5d65028c2c398a409d842a3cc6cfdf2, type: 3}
+  SwichTextureBlink: {fileID: 2800000, guid: e3ee393484efef645b42fe05d100f998, type: 3}
+  switched: 1
+  TimeOfBlinkMax: 50
+  DurationOfBlink: 0.2
+  RandomBlinkFactor: 1.7
 --- !u!1 &1407823337480250480
 GameObject:
   m_ObjectHideFlags: 0
