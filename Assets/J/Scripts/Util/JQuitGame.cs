@@ -15,10 +15,12 @@ namespace J
 
 		public void Quit () {
 			Application.Quit ();
-			if (worksInEditor) {
+#if UNITY_EDITOR
+            if (worksInEditor) {
 				UnityEditor.EditorApplication.isPlaying = false;
 			}
-		}
+#endif
+        }
 	}
 
 }

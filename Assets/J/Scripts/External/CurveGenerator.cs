@@ -38,7 +38,8 @@ namespace J
 	        return curve;
 	    }
 
-	    [MenuItem("Assets/Create/EasingCurves")]
+#if UNITY_EDITOR
+        [MenuItem("Assets/Create/EasingCurves")]
 	    protected static void CreateAsset()
 	    {
 	        var curvePresetLibraryType = Type.GetType("UnityEditor.CurvePresetLibrary, UnityEditor");
@@ -102,8 +103,9 @@ namespace J
 	        AssetDatabase.SaveAssets();
 	        AssetDatabase.Refresh();
 	    }
+#endif
 
-	    protected static void addCurve(object library, EasingFunction easingFunction, int resolution, CurveType type)
+        protected static void addCurve(object library, EasingFunction easingFunction, int resolution, CurveType type)
 	    {
 	        var curvePresetLibraryType = Type.GetType("UnityEditor.CurvePresetLibrary, UnityEditor");
 	        var addMehtod = curvePresetLibraryType.GetMethod("Add");
