@@ -87,7 +87,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8624891274206912657}
-  m_LocalRotation: {x: -0, y: -0.74239993, z: -0, w: 0.669957}
+  m_LocalRotation: {x: 0, y: -0.7424028, z: 0, w: 0.6699538}
   m_LocalPosition: {x: 7.18, y: 0.01, z: 18.33}
   m_LocalScale: {x: 64, y: 64, z: 64}
   m_Children:
@@ -95,7 +95,7 @@ Transform:
   - {fileID: 8624891274207167261}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -95.873, z: 0}
 --- !u!136 &8624891274210258009
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  behavior: 000000000000
+  behavior: 000100000000
   BehaviorName:
   - Idle
   - Speak
