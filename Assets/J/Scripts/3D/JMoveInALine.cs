@@ -3,7 +3,7 @@
 namespace J
 {
 
-	[AddComponentMenu("J/Util/JMoveInALine")]
+	[AddComponentMenu("J/3D/JMoveInALine")]
 	public class JMoveInALine : MonoBehaviour {
 
 

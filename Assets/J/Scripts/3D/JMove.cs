@@ -3,7 +3,7 @@
 namespace J
 {
 		
-	[AddComponentMenu("J/Util/JMove")]
+	[AddComponentMenu("J/3D/JMove")]
 	public class JMove : MonoBehaviour {
 
 		enum ModificationType

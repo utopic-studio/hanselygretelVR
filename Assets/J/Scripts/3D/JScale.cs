@@ -3,7 +3,7 @@
 namespace J
 {
 
-	[AddComponentMenu("J/Util/JScale")]
+	[AddComponentMenu("J/3D/JScale")]
 	public class JScale : MonoBehaviour {
 
 		enum ModificationType

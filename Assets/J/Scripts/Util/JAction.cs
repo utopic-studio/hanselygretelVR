@@ -19,7 +19,11 @@ namespace J
 				CallDelayedAction ();
 			}
 		}
-
+        public void CallBothActions ()
+        {
+            CallNormalAction();
+            CallDelayedAction();
+        }
 		public void CallNormalAction () {
 			normalAction.Invoke ();
 

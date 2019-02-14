@@ -2,7 +2,7 @@
 
 namespace J
 {
-	[AddComponentMenu("J/Util/JPatrol")]
+	[AddComponentMenu("J/3d/JPatrol")]
 	[RequireComponent(typeof(UnityEngine.AI.NavMeshAgent))]
 	public class JPatrol : MonoBehaviour {
 
