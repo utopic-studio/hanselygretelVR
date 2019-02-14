@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MoveNavMeshAgents : MonoBehaviour
 {
@@ -38,8 +36,8 @@ public class MoveNavMeshAgents : MonoBehaviour
     {
         for (int i = 0; i < agents.Length; i++)
         {
-            //if (this.HasReachedDestintation(agents[i]))
-                //agents[i].GetComponent<AnimatorBoolController>().anim = AnimatorBoolController.AnimationType.Idle;
+            if (this.HasReachedDestintation(agents[i]))
+                agents[i].GetComponent<AnimatorBoolController>().anim = AnimatorBoolController.AnimationType.Idle;
         }
     }
     private bool HasReachedDestintation(UnityEngine.AI.NavMeshAgent mNavMeshAgent)
@@ -48,12 +46,13 @@ public class MoveNavMeshAgents : MonoBehaviour
         {
             if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance)
             {
-                if (!mNavMeshAgent.hasPath || mNavMeshAgent.velocity.sqrMagnitude == 0f)
+                if (!mNavMeshAgent.hasPath || mNavMeshAgent.velocity.sqrMagnitude < 0.6f)
                 {
                     return true;
                 }
             }
         }
+        Debug.LogWarning(!mNavMeshAgent.pathPending +" "+ mNavMeshAgent.remainingDistance +" "+ mNavMeshAgent.stoppingDistance +" "+ !mNavMeshAgent.hasPath +" "+ mNavMeshAgent.velocity.sqrMagnitude );
         return false;
     }
 }
