@@ -26,7 +26,10 @@ public class QuestionManager : Singleton<QuestionManager> {
 	public float type2Percentage;
 	public float type3Percentage;
 
-	[HideInInspector] public QuestionJson[] questions;
+    public UnityEngine.Sprite[] correctSprites;
+    public UnityEngine.Sprite[] wrongSprites;
+
+    [HideInInspector] public QuestionJson[] questions;
 
 	private int index_questions = 0;
 
@@ -89,15 +92,15 @@ public class QuestionManager : Singleton<QuestionManager> {
 		}
 	}
 
-	public void addAnswer(int answerIndex, int value) {
-		tries [answerIndex - 1] += 1;
+	public void addAnswer(int questionID, int value) {
+		tries [questionID - 1] += 1;
 
-		playerChoices [answerIndex - 1].addAnswer (value);
-		if (!playerAnswers [answerIndex - 1])
-			playerAnswers [answerIndex - 1] = (value == realAnswers [answerIndex - 1]);
-		this.questions [answerIndex - 1].userAnsweredCorrectly = (value == realAnswers [answerIndex - 1]);
-		this.questions [answerIndex - 1].userTries = tries [answerIndex - 1];
-		this.questions [answerIndex - 1].playerPoints = calculatePoints (tries [answerIndex - 1], this.points [answerIndex - 1], playerAnswers[answerIndex - 1]);
+		playerChoices [questionID - 1].addAnswer (value);
+		if (!playerAnswers [questionID - 1])
+			playerAnswers [questionID - 1] = (value == realAnswers [questionID - 1]);
+		this.questions [questionID - 1].userAnsweredCorrectly = (value == realAnswers [questionID - 1]);
+		this.questions [questionID - 1].userTries = tries [questionID - 1];
+		this.questions [questionID - 1].playerPoints = calculatePoints (tries [questionID - 1], this.points [questionID - 1], playerAnswers[questionID - 1]);
 	}
 	float calculatePoints(int tries, int maxPoints, bool answeredCorrectly) {
 		float ret = maxPoints * (maxChancesPerQuestion - tries + 1) * 1.0f / maxChancesPerQuestion;
