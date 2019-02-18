@@ -61,12 +61,12 @@ PrefabInstance:
     - target: {fileID: 815554843965788641, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}
       propertyPath: m_Name
-      value: VRWaypoint Place
+      value: VRWaypoint Place Variant
       objectReference: {fileID: 0}
     - target: {fileID: 815554843965788641, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 815554843965788649, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}
@@ -176,17 +176,32 @@ PrefabInstance:
     - target: {fileID: 815554843965788649, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5115301
+      value: 2.236205
       objectReference: {fileID: 0}
     - target: {fileID: 815554843965788649, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5115301
+      value: 2.236205
       objectReference: {fileID: 0}
     - target: {fileID: 815554843965788649, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.51153
+      value: 2.2362046
+      objectReference: {fileID: 0}
+    - target: {fileID: 815554844522029934, guid: 73dbb445628dd3d4680d4d598f9f8075,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 815554844522029934, guid: 73dbb445628dd3d4680d4d598f9f8075,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 815554844522029934, guid: 73dbb445628dd3d4680d4d598f9f8075,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 9199902721646501371, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}
@@ -232,21 +247,6 @@ PrefabInstance:
         type: 3}
       propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 815554844522029934, guid: 73dbb445628dd3d4680d4d598f9f8075,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 815554844522029934, guid: 73dbb445628dd3d4680d4d598f9f8075,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 815554844522029934, guid: 73dbb445628dd3d4680d4d598f9f8075,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 815554843965788644, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}
