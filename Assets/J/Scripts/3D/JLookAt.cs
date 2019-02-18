@@ -3,7 +3,7 @@
 namespace J
 {
 
-    [AddComponentMenu("J/3D/JMove")]
+    [AddComponentMenu("J/3D/JLookAt")]
     public class JLookAt : MonoBehaviour
     {
         [SerializeField] Transform target;
