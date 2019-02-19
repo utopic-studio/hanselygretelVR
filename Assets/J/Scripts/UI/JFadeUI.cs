@@ -4,19 +4,18 @@ namespace J
 {
 
 	[AddComponentMenu("J/UI/JFadeUI")]
-	[RequireComponent(typeof(UnityEngine.CanvasGroup))]
 	public class JFadeUI : MonoBehaviour {
 
 		enum UIAlphaStartMode {invisible, visible, visibleFadeIn, invisibleFadeOut}
 
+        [Tooltip("If empty it uses this object's CanvasGroup")]
+        [SerializeField]    CanvasGroup[] canvasGroup;
 		[SerializeField]	UIAlphaStartMode startVisibility = UIAlphaStartMode.visible;
 		[SerializeField]	float fadeInTime = 1f;
 		[SerializeField]	float fadeOutTime = 1f;
-
-		private UnityEngine.CanvasGroup canvasGroup;
+        
 
 		void Start () {
-			canvasGroup = GetComponent<UnityEngine.CanvasGroup> ();
 
 			switch (startVisibility) {
 			case UIAlphaStartMode.invisible:
@@ -37,16 +36,20 @@ namespace J
 		}
 
 		public void Show() {
-			J.instance.followCurve (x => canvasGroup.alpha = x, duration: fadeInTime, repeat: 1, type: CurveType.Linear);
+            foreach (var g in canvasGroup)
+			    J.instance.followCurve (x => g.alpha = x, duration: fadeInTime, repeat: 1, type: CurveType.Linear);
 		}
 		public void Hide() {
-			J.instance.followCurve (x => canvasGroup.alpha = x, duration: fadeOutTime, repeat: 1, type: CurveType.Linear, reverse: true);
+            foreach (var g in canvasGroup)
+			    J.instance.followCurve (x => g.alpha = x, duration: fadeOutTime, repeat: 1, type: CurveType.Linear, reverse: true);
 		}
 		public void ShowInstantly() {
-			canvasGroup.alpha = 1f;
+            foreach (var g in canvasGroup)
+                g.alpha = 1f;
 		}
 		public void HideInstantly() {
-			canvasGroup.alpha = 0f;
+            foreach (var g in canvasGroup)
+                g.alpha = 0f;
 		}
 
 		public void SetFadeInTime(float f) {
