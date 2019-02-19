@@ -15,6 +15,8 @@ namespace J
         [SerializeField] UnityEngine.Events.UnityEvent[] delayedAction;
         [SerializeField] float[] delay;
 
+        private int index;
+
         void Start()
         {
             if (doOnStart)
@@ -37,17 +39,21 @@ namespace J
         {
             for (int i = 0; i < delay.Length; i++)
             {
-               
-                StartCoroutine("CallDelayedActionPrivate",i);
-
+                //Coroutine c = StartCoroutine(CallDelayedActionPrivate(i));
+                index = i;
+                Invoke("CallDelayedActionPrivate", i);
             }
             
         }
-        IEnumerator CallDelayedActionPrivate(int ActionNumber)
+        
+        //IEnumerator CallDelayedActionPrivate(int ActionNumber)
+        void CallDelayedActionPrivate()
         {
-            yield return new WaitForSeconds(delay[ActionNumber]);
-            delayedAction[ActionNumber].Invoke();
-  
+            delayedAction[index].Invoke();
+
+            //yield return new WaitForSeconds(delay[ActionNumber]);
+            //delayedAction[ActionNumber].Invoke();
+
         }
     }
 
