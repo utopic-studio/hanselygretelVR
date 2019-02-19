@@ -4,8 +4,8 @@ using System.Collections;
 namespace J
 {
 
-    [AddComponentMenu("J/Util/JAction")]
-    public class JAction : MonoBehaviour
+    [AddComponentMenu("J/Util/JActionMultidelay")]
+    public class JActionMultidelay : MonoBehaviour
     {
 
         [Range(0.02f, 600f)]
@@ -37,10 +37,9 @@ namespace J
         {
             for (int i = 0; i < delay.Length; i++)
             {
-                //Invoke("CallDelayedActionPrivate", delay[i]);
+               
                 StartCoroutine("CallDelayedActionPrivate",i);
-                
-                
+
             }
             
         }
