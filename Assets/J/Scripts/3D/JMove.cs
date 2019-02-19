@@ -23,6 +23,7 @@ namespace J
 		protected float curveDuration;
 		protected float curveStartTime;
 		protected float modifyFactor;
+        public bool loop;
 
 		void Start () {
 			UpdateCurveInfo ();
@@ -34,8 +35,11 @@ namespace J
 		}
 
 		void Update () {
+
 			timeVariable = (timeVariable + Time.deltaTime / durationFactor) % curveDuration;
 			modifyFactor = curve.Evaluate (curveStartTime + timeVariable) * moveFactor;
+
+
 			switch (type) {
 			case ModificationType.Local:
 				transform.position = initialPosition + transform.TransformVector (Vector3.Normalize (direction)) * modifyFactor;

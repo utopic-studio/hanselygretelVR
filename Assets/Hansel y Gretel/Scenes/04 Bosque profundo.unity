@@ -19792,7 +19792,7 @@ PrefabInstance:
     - target: {fileID: 1407823337480246109, guid: 7390b888f8bb1c242a9666c7e408f8cc,
         type: 3}
       propertyPath: BehaviorName.Array.data[2]
-      value: Walk
+      value: speak
       objectReference: {fileID: 0}
     - target: {fileID: 1407823337480246109, guid: 7390b888f8bb1c242a9666c7e408f8cc,
         type: 3}
@@ -19804,11 +19804,19 @@ PrefabInstance:
       propertyPath: BehaviorName.Array.data[4]
       value: Consolate
       objectReference: {fileID: 0}
+<<<<<<< HEAD
     - target: {fileID: 1407823337480246106, guid: 7390b888f8bb1c242a9666c7e408f8cc,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 2b7c40f44e5727343985c1e15b0ab966, type: 2}
+=======
+    - target: {fileID: 1407823337480246109, guid: 7390b888f8bb1c242a9666c7e408f8cc,
+        type: 3}
+      propertyPath: BehaviorName.Array.data[1]
+      value: walk
+      objectReference: {fileID: 0}
+>>>>>>> 6495a788a8941e95c1db8951c19e1b6ecc637b09
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7390b888f8bb1c242a9666c7e408f8cc, type: 3}
 --- !u!4 &1161178700 stripped

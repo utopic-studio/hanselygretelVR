@@ -7,22 +7,22 @@ public class AnimatorBoolController : MonoBehaviour
     //Claudio Inostroza shit script
 
     public Animator animator;//Animator to control
-    public enum AnimationType {Idle, Speak, Walk, Bye, Push, Sit, Fear, Consolate, Caught}
+    public enum AnimationType {Idle, Speak, Walk, Bye, Push, Sit, Fear, Consolate, Caught, Dead}
 
     public AnimationType anim;
-    public bool[] behavior;//List Of bool
-    public string[] BehaviorName;//list of Name of the bool in the animator controller
+    //public bool[] behavior;//List Of bool
+    //public string[] BehaviorName;//list of Name of the bool in the animator controller
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         animator = GetComponent<Animator>();
         UpdateAnimation();
     }
-    private void OnValidate()
-    {
-        UpdateAnimation();
-    }
+    //private void OnValidate()
+    //{
+    //    UpdateAnimation();
+    //}
     public void SetAnim(AnimationType animType)
     {
         print("--------Called----");
