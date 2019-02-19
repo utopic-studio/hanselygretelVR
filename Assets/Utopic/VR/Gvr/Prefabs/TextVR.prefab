@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &44529546
 Transform:
   m_ObjectHideFlags: 0
@@ -382,7 +382,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fade50be94da5094999a6c0db6bc6eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.2
   doOnStart: 0
   normalAction:
     m_PersistentCalls:
@@ -444,11 +443,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  delayedAction:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  delayedAction: []
+  delay: []
 --- !u!1 &44529537
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,7 +598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fade50be94da5094999a6c0db6bc6eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.2
   doOnStart: 0
   normalAction:
     m_PersistentCalls:
@@ -620,11 +615,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  delayedAction:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  delayedAction: []
+  delay: []
 --- !u!1 &44529541
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +852,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fade50be94da5094999a6c0db6bc6eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.02
   doOnStart: 0
   normalAction:
     m_PersistentCalls:
@@ -922,11 +913,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  delayedAction:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  delayedAction: []
+  delay: []
 --- !u!1 &373161671
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,7 +1997,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fade50be94da5094999a6c0db6bc6eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1
   doOnStart: 0
   normalAction:
     m_PersistentCalls:
@@ -2028,33 +2015,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  delayedAction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4081060794762982323}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  delayedAction: []
+  delay: []
 --- !u!1 &3802704548424916951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2517,7 +2479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fade50be94da5094999a6c0db6bc6eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1
   doOnStart: 0
   normalAction:
     m_PersistentCalls:
@@ -2536,33 +2497,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  delayedAction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4081060794762982323}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  delayedAction: []
+  delay: []
 --- !u!1 &7450696776399823483
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,7 +2738,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fade50be94da5094999a6c0db6bc6eb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1
   doOnStart: 0
   normalAction:
     m_PersistentCalls:
@@ -2821,33 +2756,8 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  delayedAction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4081060794762982323}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  delayedAction: []
+  delay: []
 --- !u!1 &9181038427426149818
 GameObject:
   m_ObjectHideFlags: 0
