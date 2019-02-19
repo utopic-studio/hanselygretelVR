@@ -26,7 +26,7 @@ PrefabInstance:
     - target: {fileID: 815554843965788641, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}
       propertyPath: m_Name
-      value: VRWaypoint Text
+      value: VRWaypoint Text Variant
       objectReference: {fileID: 0}
     - target: {fileID: 815554843965788649, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}
@@ -143,6 +143,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5115333
       objectReference: {fileID: 0}
+    - target: {fileID: 815554844522029934, guid: 73dbb445628dd3d4680d4d598f9f8075,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 815554844522029934, guid: 73dbb445628dd3d4680d4d598f9f8075,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 815554844522029934, guid: 73dbb445628dd3d4680d4d598f9f8075,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 9199902721646501371, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}
       propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.size
@@ -203,20 +218,30 @@ PrefabInstance:
       propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 815554844522029934, guid: 73dbb445628dd3d4680d4d598f9f8075,
+    - target: {fileID: 815554843965788647, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.3
+      propertyPath: m_Size.x
+      value: 2.7408457
       objectReference: {fileID: 0}
-    - target: {fileID: 815554844522029934, guid: 73dbb445628dd3d4680d4d598f9f8075,
+    - target: {fileID: 815554843965788647, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.3
+      propertyPath: m_Size.y
+      value: 1.6744156
       objectReference: {fileID: 0}
-    - target: {fileID: 815554844522029934, guid: 73dbb445628dd3d4680d4d598f9f8075,
+    - target: {fileID: 815554843965788647, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3
+      propertyPath: m_Center.x
+      value: 0.06357229
+      objectReference: {fileID: 0}
+    - target: {fileID: 815554843965788647, guid: 73dbb445628dd3d4680d4d598f9f8075,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.056776192
+      objectReference: {fileID: 0}
+    - target: {fileID: 815554843965788647, guid: 73dbb445628dd3d4680d4d598f9f8075,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.022811538
       objectReference: {fileID: 0}
     - target: {fileID: 815554844522029935, guid: 73dbb445628dd3d4680d4d598f9f8075,
         type: 3}

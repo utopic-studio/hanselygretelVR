@@ -14,25 +14,19 @@ public class AnswerButton : MonoBehaviour {
 	}
 
 	public void DoWhenClicked() {
-		questionNumber = GetComponentInParent<Question> ().questionNumber;
+		questionNumber = GetComponentInParent<Question> ().questionID;
 		QuestionManager.Instance.addAnswer (questionNumber, indexNumberOfAnswer);
 		if (QuestionManager.Instance.isQuestionCorrectlyAnswered (questionNumber)) {
-			HideQuestion ();
-			questionInParent.onFinishAnswering.Invoke ();
-			questionInParent.correctSound.Play ();
+			//questionInParent..Invoke ();
+			//questionInParent.correctSound.Play ();
 		}
 		else {
 			if (!QuestionManager.Instance.isQuestionWithTriesLeft (questionNumber)) {
-				HideQuestion ();
-				questionInParent.onFinishAnswering.Invoke ();
+				//questionInParent.onFinishAnswering.Invoke ();
 			}
-			questionInParent.incorrectSound.Play ();
+			//questionInParent.incorrectSound.Play ();
 		}
 			
 			
-	}
-
-	public void HideQuestion() {
-		questionInParent.Hide ();
 	}
 }
