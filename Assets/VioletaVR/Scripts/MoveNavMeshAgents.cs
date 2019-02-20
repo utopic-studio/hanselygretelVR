@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+using System.Linq;
 
 public class MoveNavMeshAgents : MonoBehaviour
 {
@@ -6,7 +8,16 @@ public class MoveNavMeshAgents : MonoBehaviour
 
     public UnityEngine.AI.NavMeshAgent[] agents;
     public Transform[] destinations;
-    [SerializeField] UnityEngine.Events.UnityEvent[] eventOnArrive;
+    [SerializeField] UnityEngine.Events.UnityEvent OnArriveAny;
+    [SerializeField] UnityEngine.Events.UnityEvent OnArriveAll;
+    [SerializeField] UnityEngine.Events.UnityEvent[] eventOnArrivePerCharacter;
+
+    private List<bool> boolOnArrive;
+
+    private void Start()
+    {
+        boolOnArrive = Enumerable.Repeat<bool>(false, eventOnArrivePerCharacter.Length).ToList<bool>();
+    }
 
     public void MoveAgents()
     {
@@ -21,32 +32,16 @@ public class MoveNavMeshAgents : MonoBehaviour
     }
     public void CallEventOnArrive(int i)
     {
-        eventOnArrive[i].Invoke();
-    }
-    public void AnimateAgents()
-    {
-        /*
-        for (int i = 0; i < agents.Length; i++)
+        this.boolOnArrive[i] = true;
+        if (boolOnArrive.Any<bool>(b => b == true))
         {
-            agents[i].GetComponent<AnimatorBoolController>().SetAnim(AnimatorBoolController.AnimationType.Walk);
+            OnArriveAny.Invoke();
         }
-        */
-    }
-
-    /*
-    private bool HasReachedDestintation(UnityEngine.AI.NavMeshAgent mNavMeshAgent)
-    {
-        if (!mNavMeshAgent.pathPending)
+        if (boolOnArrive.All<bool>(b => b == true))
         {
-            if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance)
-            {
-                if (!mNavMeshAgent.hasPath || mNavMeshAgent.velocity.sqrMagnitude < 0.6f)
-                {
-                    return true;
-                }
-            }
+            OnArriveAll.Invoke();
         }
-        return false;
+        eventOnArrivePerCharacter[i].Invoke();
     }
-    */
+    
 }
