@@ -8,7 +8,6 @@ namespace J
     public class JActionMultidelay : MonoBehaviour
     {
 
-        [Range(0.02f, 600f)]
        
         [SerializeField] bool doOnStart = false;
         [SerializeField] UnityEngine.Events.UnityEvent normalAction;

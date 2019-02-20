@@ -54,7 +54,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091708385231251499}
-  m_LocalRotation: {x: -0.6478421, y: 0.14800668, z: -0.1455164, w: 0.73295265}
+  m_LocalRotation: {x: -0.6478421, y: 0.14800669, z: -0.1455164, w: 0.7329527}
   m_LocalPosition: {x: 0.0133296, y: -0.0000000018368931, z: -5.6950878e-11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -646,7 +646,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091708386031185570}
-  m_LocalRotation: {x: -0.6478449, y: 0.14800622, z: -0.14551689, w: 0.73295027}
+  m_LocalRotation: {x: -0.6478449, y: 0.1480062, z: -0.14551689, w: 0.7329502}
   m_LocalPosition: {x: -0.013329601, y: -5.7256768e-18, z: 1.5699247e-18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1197,9 +1197,11 @@ GameObject:
   - component: {fileID: 1091708385841260180}
   - component: {fileID: 1091708386701913496}
   - component: {fileID: 1091708385841260183}
+  - component: {fileID: 2115631141}
+  - component: {fileID: 7371448376053160524}
   m_Layer: 0
   m_Name: mother Anim
-  m_TagString: Untagged
+  m_TagString: Mother
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1244,7 +1246,7 @@ Animator:
   m_GameObject: {fileID: 1091708386701913501}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8d4db56fcc8214a038e24ff4cda209fa, type: 3}
-  m_Controller: {fileID: 9100000, guid: 6b4615c4ebfbe2043aa4c308b29517a6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0595892f335c04e468da07138ea50e69, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1267,14 +1269,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1091708386701913502}
   anim: 0
-  behavior: 000100000000
-  BehaviorName:
-  - Idle
-  - Speak
-  - Walk
-  - '-'
-  - '-'
-  - '-'
 --- !u!114 &1091708386701913496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1304,7 +1298,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1
-  m_Speed: 6
+  m_Speed: 6.3
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 300
@@ -1316,6 +1310,33 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 2
+--- !u!114 &2115631141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091708386701913501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f25d36bb39e1a1c4084954f37d59fef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1091708386701913502}
+  navMeshAgent: {fileID: 1091708385841260183}
+--- !u!65 &7371448376053160524
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091708386701913501}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 5.62, z: 1}
+  m_Center: {x: 0, y: 2.72, z: 0}
 --- !u!1 &1091708386738912765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1617,7 +1638,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091708387040580762}
-  m_LocalRotation: {x: 0.4621483, y: 0.36274102, z: -0.45141417, w: 0.67161244}
+  m_LocalRotation: {x: 0.4621483, y: 0.362741, z: -0.45141417, w: 0.6716124}
   m_LocalPosition: {x: 0.03274482, y: 0.0000000031836391, z: -8.9460545e-10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1679,7 +1700,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091708387092549843}
-  m_LocalRotation: {x: 0.70478696, y: -0.057223685, z: 0.057223577, w: 0.7047881}
+  m_LocalRotation: {x: 0.70478696, y: -0.05722369, z: 0.057223577, w: 0.70478815}
   m_LocalPosition: {x: -0.0094524855, y: 0.0000000011217987, z: -0.0009796541}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

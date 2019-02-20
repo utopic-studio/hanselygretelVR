@@ -6,13 +6,7 @@ public class MoveNavMeshAgents : MonoBehaviour
 
     public UnityEngine.AI.NavMeshAgent[] agents;
     public Transform[] destinations;
-    
-
-    public void MoveAndAnimateAgents()
-    {
-        MoveAgents();
-        AnimateAgents();
-    }
+    [SerializeField] UnityEngine.Events.UnityEvent[] eventOnArrive;
 
     public void MoveAgents()
     {
@@ -25,23 +19,21 @@ public class MoveNavMeshAgents : MonoBehaviour
             }
         }
     }
+    public void CallEventOnArrive(int i)
+    {
+        eventOnArrive[i].Invoke();
+    }
     public void AnimateAgents()
     {
+        /*
         for (int i = 0; i < agents.Length; i++)
         {
             agents[i].GetComponent<AnimatorBoolController>().SetAnim(AnimatorBoolController.AnimationType.Walk);
-            //agents[i].GetComponent<Animator>().SetBool= AnimatorBoolController.AnimationType.Walk;
         }
+        */
     }
-    private void Update()
-    {
-        for (int i = 0; i < agents.Length; i++)
-        {
-            if (this.HasReachedDestintation(agents[i]))
-                agents[i].GetComponent<AnimatorBoolController>().anim = AnimatorBoolController.AnimationType.Idle;
-        }
 
-    }
+    /*
     private bool HasReachedDestintation(UnityEngine.AI.NavMeshAgent mNavMeshAgent)
     {
         if (!mNavMeshAgent.pathPending)
@@ -56,4 +48,5 @@ public class MoveNavMeshAgents : MonoBehaviour
         }
         return false;
     }
+    */
 }
