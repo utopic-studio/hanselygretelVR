@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+using System.Linq;
 
 public class MoveNavMeshAgents : MonoBehaviour
 {
@@ -6,12 +8,15 @@ public class MoveNavMeshAgents : MonoBehaviour
 
     public UnityEngine.AI.NavMeshAgent[] agents;
     public Transform[] destinations;
-    
+    [SerializeField] UnityEngine.Events.UnityEvent OnArriveAny;
+    [SerializeField] UnityEngine.Events.UnityEvent OnArriveAll;
+    [SerializeField] UnityEngine.Events.UnityEvent[] eventOnArrivePerCharacter;
 
-    public void MoveAndAnimateAgents()
+    private List<bool> boolOnArrive;
+
+    private void Start()
     {
-        MoveAgents();
-        AnimateAgents();
+        boolOnArrive = Enumerable.Repeat<bool>(false, eventOnArrivePerCharacter.Length).ToList<bool>();
     }
 
     public void MoveAgents()
@@ -25,35 +30,18 @@ public class MoveNavMeshAgents : MonoBehaviour
             }
         }
     }
-    public void AnimateAgents()
+    public void CallEventOnArrive(int i)
     {
-        for (int i = 0; i < agents.Length; i++)
+        this.boolOnArrive[i] = true;
+        if (boolOnArrive.Any<bool>(b => b == true))
         {
-            agents[i].GetComponent<AnimatorBoolController>().SetAnim(AnimatorBoolController.AnimationType.Walk);
-            //agents[i].GetComponent<Animator>().SetBool= AnimatorBoolController.AnimationType.Walk;
+            OnArriveAny.Invoke();
         }
-    }
-    private void Update()
-    {
-        for (int i = 0; i < agents.Length; i++)
+        if (boolOnArrive.All<bool>(b => b == true))
         {
-            if (this.HasReachedDestintation(agents[i]))
-                agents[i].GetComponent<AnimatorBoolController>().anim = AnimatorBoolController.AnimationType.Idle;
+            OnArriveAll.Invoke();
         }
-
+        eventOnArrivePerCharacter[i].Invoke();
     }
-    private bool HasReachedDestintation(UnityEngine.AI.NavMeshAgent mNavMeshAgent)
-    {
-        if (!mNavMeshAgent.pathPending)
-        {
-            if (mNavMeshAgent.remainingDistance <= mNavMeshAgent.stoppingDistance)
-            {
-                if (!mNavMeshAgent.hasPath || mNavMeshAgent.velocity.sqrMagnitude < 0.6f)
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
+    
 }

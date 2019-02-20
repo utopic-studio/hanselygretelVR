@@ -254,7 +254,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8246228005364492925}
-  m_LocalRotation: {x: -0.22335246, y: 0.47575456, z: 0.22778183, w: 0.81968695}
+  m_LocalRotation: {x: -0.22335248, y: 0.47575456, z: 0.22778185, w: 0.81968695}
   m_LocalPosition: {x: -0.0076464512, y: -0.000000019092113, z: 0.000025375222}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -648,9 +648,12 @@ GameObject:
   - component: {fileID: 8246228005364651128}
   - component: {fileID: 8246228005364651135}
   - component: {fileID: 1409615015}
+  - component: {fileID: 14969195}
+  - component: {fileID: 14969200}
+  - component: {fileID: 2194683210063134218}
   m_Layer: 0
   m_Name: gretel Anim
-  m_TagString: Untagged
+  m_TagString: Gretel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -681,7 +684,7 @@ Animator:
   m_GameObject: {fileID: 8246228005364651129}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 543a8835889694358bd8de437a204120, type: 3}
-  m_Controller: {fileID: 9100000, guid: 2000d3ddcd7ff454eb13c41b8795329d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0595892f335c04e468da07138ea50e69, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -703,14 +706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8246228005364651128}
-  behavior: 000000000000
-  BehaviorName:
-  - Fear
-  - Walk
-  - Bye
-  - Push
-  - Idle
-  - Sit
+  anim: 2
 --- !u!114 &1409615015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,12 +720,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MeshChangeTexture: {fileID: 8246228005361347207}
-  SwichTexture: {fileID: 2800000, guid: 63fdb7852362c754d819de519e7561ac, type: 3}
-  SwichTextureBlink: {fileID: 2800000, guid: 4233e4124a8dc794a8dcf9c16d3cf986, type: 3}
+  SwichTexture: {fileID: 2800000, guid: 12a76a536aaba4549966546aa1f7d5c0, type: 3}
+  SwichTextureBlink: {fileID: 2800000, guid: 9224ebb120840e44b8ea9c702b6147a0, type: 3}
   switched: 1
   TimeOfBlinkMax: 50
   DurationOfBlink: 0.3
   RandomBlinkFactor: 1.5
+--- !u!195 &14969195
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8246228005364651129}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 1
+  m_Speed: 3.6
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 300
+  m_StoppingDistance: 0.1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2.7
+  m_BaseOffset: 0.18
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 2
+--- !u!114 &14969200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8246228005364651129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f25d36bb39e1a1c4084954f37d59fef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 8246228005364651128}
+  navMeshAgent: {fileID: 14969195}
+--- !u!65 &2194683210063134218
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8246228005364651129}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.78, z: 1}
+  m_Center: {x: 0, y: 1.21, z: 0}
 --- !u!1 &8246228005364652203
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,14 +8,11 @@ namespace J
     public class JActionMultidelay : MonoBehaviour
     {
 
-        [Range(0.02f, 600f)]
        
         [SerializeField] bool doOnStart = false;
         [SerializeField] UnityEngine.Events.UnityEvent normalAction;
         [SerializeField] UnityEngine.Events.UnityEvent[] delayedAction;
         [SerializeField] float[] delay;
-
-        private int index;
 
         void Start()
         {
@@ -39,20 +36,15 @@ namespace J
         {
             for (int i = 0; i < delay.Length; i++)
             {
-                //Coroutine c = StartCoroutine(CallDelayedActionPrivate(i));
-                index = i;
-                Invoke("CallDelayedActionPrivate", i);
+                Coroutine c = StartCoroutine(CallDelayedActionPrivate(i));
             }
             
         }
         
-        //IEnumerator CallDelayedActionPrivate(int ActionNumber)
-        void CallDelayedActionPrivate()
+        IEnumerator CallDelayedActionPrivate(int actionNumber)
         {
-            delayedAction[index].Invoke();
-
-            //yield return new WaitForSeconds(delay[ActionNumber]);
-            //delayedAction[ActionNumber].Invoke();
+            yield return new WaitForSeconds(delay[actionNumber]);
+            delayedAction[actionNumber].Invoke();
 
         }
     }
