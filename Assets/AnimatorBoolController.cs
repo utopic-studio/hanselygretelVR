@@ -7,7 +7,7 @@ public class AnimatorBoolController : MonoBehaviour
     //Claudio Inostroza shit script
 
     public Animator animator;//Animator to control
-    public enum AnimationType {Idle, Speak, Walk, Bye, Push, Sit, Fear, Consolate, Caught, Dead}
+    public enum AnimationType {Idle, Speak, Walk, Bye, Push, Sit, Fear, Consolate, Caught, Dead, Speak2}
 
     public AnimationType anim;
     //public bool[] behavior;//List Of bool
