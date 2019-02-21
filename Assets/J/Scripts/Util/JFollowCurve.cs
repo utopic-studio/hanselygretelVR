@@ -37,7 +37,7 @@ namespace J
 			updateEnabled = true;
 
 			if (duration != 1)
-				this.curveDuration = duration;
+				this.durationFactor = duration;
 			if (amplitude != 1)
 				this.amplitudeFactor = amplitude;
 			if (repeat != 0)

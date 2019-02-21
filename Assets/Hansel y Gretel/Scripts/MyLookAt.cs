@@ -21,4 +21,5 @@ public class MyLookAt : MonoBehaviour {
 			Time.deltaTime * speed);
 		//transform.LookAt(target, Vector3.up);
 	}
+
 }

@@ -8,6 +8,7 @@ namespace J
     {
         [SerializeField] Transform target;
         [SerializeField] bool x, y=true, z;
+        
 
         private void OnValidate()
         {
