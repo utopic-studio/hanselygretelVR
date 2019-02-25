@@ -4,27 +4,52 @@ using UnityEngine;
 
 public class TpHanselGretelCisne : MonoBehaviour
 {
+    public float delayStopMovmiento = 9;
+    public float delayMovmiento = 2;
+
+    public bool meMuevo = false;
+    //PRIMERA FASE
+    [Header("PRIMERA FASE")]
     public GameObject hansel;
     public GameObject gretel;
-    public GameObject Tp1;
-    public GameObject Tp2;
-    public GameObject cisne;
+    public GameObject hanselPos1;
+    public GameObject gretelPos1;
+    public GameObject cisnePos1;
     public GameObject movedor;
-    private bool meMuevo = false;
+    
+
+    //SEGUNDA FASE
+    [Header("SEGUNDA FASE")]
+    public GameObject cam;
+    public GameObject camPos;
+    public GameObject hanselPos2;
+    public GameObject gretelPos2;
+    public GameObject father;
+    public GameObject cisnePos2;
 
     public void Teleportation() {
-        hansel.transform.position = Tp1.transform.position;
-        hansel.transform.rotation = cisne.transform.rotation;
-        gretel.transform.position = Tp2.transform.position;
-        gretel.transform.rotation = cisne.transform.rotation;
+        hansel.transform.position = hanselPos1.transform.position;
+        hansel.transform.rotation = cisnePos1.transform.rotation;
+        gretel.transform.position = gretelPos1.transform.position;
+        gretel.transform.rotation = cisnePos1.transform.rotation;
         StartCoroutine("DelayMovimiento");
-
+        StartCoroutine("StopMovimiento");
     }
 
     IEnumerator DelayMovimiento() {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(delayMovmiento);
         movedor.transform.rotation *= Quaternion.Euler(0, 180f, 0);
         meMuevo = true;
+
+    }
+
+    IEnumerator StopMovimiento()
+    {
+     yield return new WaitForSeconds(delayStopMovmiento);     
+        meMuevo = false;
+        //FADE IN FADE OUT
+        SegundaParte();
+
 
     }
     private void Update()
@@ -34,6 +59,19 @@ public class TpHanselGretelCisne : MonoBehaviour
             movedor.transform.Translate(Vector3.back * Time.deltaTime);
 
         }
+    }
+
+    void SegundaParte() {
+        cam.transform.position = camPos.transform.position;
+        cam.transform.rotation = camPos.transform.rotation;
+        movedor.transform.rotation *= Quaternion.Euler(0, -180f, 0);
+        hansel.transform.position = hanselPos2.transform.position;
+        hansel.transform.rotation = hanselPos2.transform.rotation;
+        gretel.transform.position = gretelPos2.transform.position;
+        gretel.transform.rotation = gretelPos2.transform.rotation;
+        father.gameObject.SetActive(true);
+
+
     }
 }
 
