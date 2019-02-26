@@ -9,14 +9,17 @@ public class Question : MonoBehaviour {
 	public enum QDifficulty {Basico, Intermedio, Avanzado}
     
     [HeaderAttribute("set Question Number to 1 or more")]
-	public int questionID;
-    public QChoice correctChoice;
-	public QType type;
-	public QDifficulty difficulty;
-    public UnityEngine.UI.Image[] optionImages;
+    public int questionID;
+    [SerializeField] QChoice correctChoice;
+    [SerializeField] QType type;
+    [SerializeField] QDifficulty difficulty;
+    [SerializeField] UnityEngine.UI.Image[] optionImages;
+    [SerializeField] VRAutomaticButton[] optionButtons;
+    [SerializeField] float hideDelay = 1f;
+    [SerializeField] UnityEngine.Events.UnityEvent normalAction;
 
-	// Json variables
-	[HideInInspector] public bool userAnsweredCorrectly;
+    // Json variables
+    [HideInInspector] public bool userAnsweredCorrectly;
 	[HideInInspector] public int realAnswer;
 	[HideInInspector] public int userTries;
 	[HideInInspector] public float playerPoints;
@@ -47,6 +50,16 @@ public class Question : MonoBehaviour {
             optionImages[choice - 1].sprite = QuestionManager.Instance.correctSprites[choice - 1];
         else
             optionImages[choice - 1].sprite = QuestionManager.Instance.wrongSprites[choice - 1];
+        Invoke("InvokeAction", hideDelay);
+        foreach (var item in optionButtons)
+        {
+            item.enabled = false;
+        }
+    }
+
+    public void InvokeAction()
+    {
+        normalAction.Invoke();
     }
    
 

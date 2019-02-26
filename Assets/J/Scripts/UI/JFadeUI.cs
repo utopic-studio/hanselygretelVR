@@ -16,26 +16,46 @@ namespace J
         [SerializeField] UnityEngine.Events.UnityEvent[] OnFadeInStarting;
         [SerializeField] UnityEngine.Events.UnityEvent[] OnFadeOutEnded;
 
+        private bool _startHasHappened = false;
+        private UIAlphaStartMode _mode;
 
-        void Start () {
+        private void OnValidate()
+        {
+            if (_startHasHappened && startVisibility != _mode)
+            {
+                _mode = startVisibility;
+                UpdateVisibilityState();
+            }
+        }
 
-			switch (startVisibility) {
-			case UIAlphaStartMode.invisible:
-				HideInstantly ();
-				break;
-			case UIAlphaStartMode.visible:
-				ShowInstantly ();
-				break;
-			case UIAlphaStartMode.visibleFadeIn:
-				Show ();
-				break;
-			case UIAlphaStartMode.invisibleFadeOut:
-				Hide ();
-				break;
-			default:
-				break;
-			}
+        private void Start () {
+            _startHasHappened = true;
+            _mode = startVisibility;
+
+            UpdateVisibilityState();
 		}
+        private void UpdateVisibilityState()
+        {
+            switch (startVisibility)
+            {
+                case UIAlphaStartMode.invisible:
+                    HideInstantly();
+                    break;
+                case UIAlphaStartMode.visible:
+                    ShowInstantly();
+                    break;
+                case UIAlphaStartMode.visibleFadeIn:
+                    Show();
+                    break;
+                case UIAlphaStartMode.invisibleFadeOut:
+                    Hide();
+                    break;
+                default:
+                    break;
+            }
+        }
+        
+
 
 		public void Show() {
             Invoke("CallOnFadeInStarting", 0f);
