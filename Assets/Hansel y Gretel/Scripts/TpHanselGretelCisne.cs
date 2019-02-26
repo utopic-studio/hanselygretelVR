@@ -28,12 +28,13 @@ public class TpHanselGretelCisne : MonoBehaviour
     public GameObject cisnePos2;
 
     public void Teleportation() {
-        //hansel.transform.position = hanselPos1.transform.position;
-        //hansel.transform.rotation = cisnePos1.transform.rotation;
-        //gretel.transform.position = gretelPos1.transform.position;
-        //gretel.transform.rotation = cisnePos1.transform.rotation;
-     //   StartCoroutine("DelayMovimiento");
-     //   StartCoroutine("StopMovimiento");
+        hansel.transform.position = hanselPos1.transform.position;
+        hansel.transform.rotation = cisnePos1.transform.rotation;
+        gretel.transform.position = gretelPos1.transform.position;
+        gretel.transform.rotation = cisnePos1.transform.rotation;
+     
+        //   StartCoroutine("DelayMovimiento");
+        //   StartCoroutine("StopMovimiento");
     }
 
     IEnumerator DelayMovimiento() {
@@ -71,6 +72,22 @@ public class TpHanselGretelCisne : MonoBehaviour
         gretel.transform.rotation = gretelPos2.transform.rotation;
         father.gameObject.SetActive(true);
 
+
+    }
+    public void OnArriveCamMove() {
+        
+
+
+        cam.transform.position = camPos.transform.position;
+        cam.transform.rotation = camPos.transform.rotation;
+    }
+
+    public void OnArriveBack()
+    {
+        hansel.transform.position = hanselPos2.transform.position;
+        hansel.transform.rotation = hanselPos2.transform.rotation;
+        gretel.transform.position = gretelPos2.transform.position;
+        gretel.transform.rotation = gretelPos2.transform.rotation;
 
     }
 }
