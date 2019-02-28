@@ -730,6 +730,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 65358524}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &66183791 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2776306270180104321, guid: a80d2b1992b9155489528fe03f42e744,
+    type: 3}
+  m_PrefabInstance: {fileID: 1765526372}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &74030326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21046,7 +21052,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 9000000, guid: f29abc1d8e3744970b3c2f7de479234e, type: 3}
+      objectReference: {fileID: 9000000, guid: aaa4a6475fa304ccfa11887f84012557, type: 3}
     - target: {fileID: 1407823337480492830, guid: 7390b888f8bb1c242a9666c7e408f8cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28172,6 +28178,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1394959261}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1397101670 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2776306269538122504, guid: a80d2b1992b9155489528fe03f42e744,
+    type: 3}
+  m_PrefabInstance: {fileID: 1765526372}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1402827085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29151,7 +29163,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 58085385}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1584154849 stripped
 Transform:
@@ -30784,12 +30796,12 @@ PrefabInstance:
         type: 3}
       propertyPath: agents.Array.data[0]
       value: 
-      objectReference: {fileID: 16028243}
+      objectReference: {fileID: 58085386}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: agents.Array.data[1]
       value: 
-      objectReference: {fileID: 302399253}
+      objectReference: {fileID: 14969195}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: agents.Array.data[2]
@@ -30834,12 +30846,12 @@ PrefabInstance:
         type: 3}
       propertyPath: destinations.Array.data[0]
       value: 
-      objectReference: {fileID: 1765526375}
+      objectReference: {fileID: 1397101670}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: destinations.Array.data[1]
       value: 
-      objectReference: {fileID: 1765526374}
+      objectReference: {fileID: 66183791}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: OnArriveAll.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -31035,18 +31047,6 @@ PrefabInstance:
 --- !u!4 &1765526373 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2776306269438260141, guid: a80d2b1992b9155489528fe03f42e744,
-    type: 3}
-  m_PrefabInstance: {fileID: 1765526372}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1765526374 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2776306270180104321, guid: a80d2b1992b9155489528fe03f42e744,
-    type: 3}
-  m_PrefabInstance: {fileID: 1765526372}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1765526375 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2776306269538122504, guid: a80d2b1992b9155489528fe03f42e744,
     type: 3}
   m_PrefabInstance: {fileID: 1765526372}
   m_PrefabAsset: {fileID: 0}
