@@ -16,10 +16,15 @@ namespace J
         [SerializeField] bool x, y=true, z;
         [SerializeField] UnityEngine.AI.NavMeshAgent navMeshAgent;
 
+        private bool startWasCalled = false;
 
+        private void Start()
+        {
+            startWasCalled = true;
+        }
         private void OnValidate()
         {
-            if (!target)
+            if (!target && startWasCalled)
             {
                 target = GameObject.FindGameObjectWithTag("Player").transform;
             }

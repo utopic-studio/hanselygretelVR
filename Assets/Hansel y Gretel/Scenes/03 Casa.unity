@@ -33443,11 +33443,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3148484979670643510, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Alpha
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: canvasGroup.Array.size
       value: 4
@@ -33512,9 +33507,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3148484979670643510, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 865633121, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1897807942, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2058293561, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496764311, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580267212, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021187601, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 914690977}
+    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 373161673, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580267214, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1580267214, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021187603, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Material
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 44529539, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.m_PersistentCalls.m_Calls.Array.size
@@ -33552,42 +33600,6 @@ PrefabInstance:
         Ellos no podr\xE1n encontrar el camino a casa y as\xED nos desprenderemos
         de esa carga.\r"
       objectReference: {fileID: 0}
-    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 914690977}
-    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 865633121, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2058293561, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1496764311, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1580267212, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2021187601, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 373161673, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1198877664, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
       value: "Al principio, el padre se opuso rotundamente a la cruel idea de la malvada
@@ -33596,18 +33608,6 @@ PrefabInstance:
         cualquier manera, as\xED moriremos todos de hambre \u2013dijo la madrastra
         y no descans\xF3 hasta convencer al d\xE9bil hombre de llevar adelante el
         mal\xE9volo plan que se hab\xEDa trazado.\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 1580267214, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1580267214, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2021187603, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Material
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8795ff84141c649a2592376719451c, type: 3}
@@ -53858,6 +53858,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1190190941}
   - component: {fileID: 1190190940}
+  - component: {fileID: 1190190942}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -53893,6 +53894,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1190190942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190190939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782d4eb79ce597f458efd3ab094300cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeScale: 2
 --- !u!1 &1191230459
 GameObject:
   m_ObjectHideFlags: 0
@@ -61582,6 +61596,22 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5000006
       objectReference: {fileID: 0}
+    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 628199309}
+    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 373161673, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 44529539, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -61616,22 +61646,6 @@ PrefabInstance:
         lloraba amargamente y Hansel la consolaba:\r\n\u2013No llores, querida hermanita
         \u2013dec\xEDa \xE9l\u2013, \xA1Yo tengo una idea para encontrar el camino
         de regreso a casa!\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 628199309}
-    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 373161673, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Material
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8795ff84141c649a2592376719451c, type: 3}
