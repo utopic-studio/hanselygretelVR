@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class TpHanselGretelCisne : MonoBehaviour
 {
+
+    public Vector3 warpPosition;
     //PRIMERA FASE
     [Header("PRIMERA FASE")]
     public GameObject hansel;
@@ -44,6 +47,24 @@ public class TpHanselGretelCisne : MonoBehaviour
         hansel.transform.rotation = hanselPos2.transform.rotation;
         gretel.transform.position = gretelPos2.transform.position;
         gretel.transform.rotation = gretelPos2.transform.rotation;
+
+    }
+
+
+    private void Start()
+    {
+        //hansel.gameObject.GetComponent<NavMeshAgent>().enabled = false;
+        warpPosition = hanselPos1.transform.position;
+    }
+
+    public void JaulaEscape()
+    {
+        // hansel.transform.position = hanselPos1.transform.position;
+        hansel.gameObject.GetComponent<NavMeshAgent>().Warp(warpPosition);
+        hansel.transform.rotation = hanselPos1.transform.rotation;
+
+        Debug.Log("esto funciona");
+        
 
     }
 }
