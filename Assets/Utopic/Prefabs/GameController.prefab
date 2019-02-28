@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 5194875435005119015}
   - component: {fileID: 5194875372663802389}
   - component: {fileID: 5194875370194253675}
+  - component: {fileID: 1736851715}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -152,3 +153,36 @@ MonoBehaviour:
   tapTime: 1.5
   tapOnce: 1
   activateObjectWhenTappingOnce: {fileID: 0}
+--- !u!114 &1736851715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5296629302831996313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11f060cff2ed443cd9f59360b5d18afd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxChancesPerQuestion: 3
+  realAnswers: 02000000
+  points: 
+  playerAnswers: 
+  tries: 
+  questionTexts1: []
+  questionTexts2: []
+  optionTexts: []
+  numCorrect: 0
+  numTotal: 0
+  type1Percentage: 0
+  type2Percentage: 0
+  type3Percentage: 0
+  correctSprites:
+  - {fileID: 21300000, guid: 8b13c703b38bd2b45b7d31e902b341da, type: 3}
+  - {fileID: 21300000, guid: 615b8b512c318fc46b27a91cad773197, type: 3}
+  - {fileID: 21300000, guid: 13304a94df5f7a24db00d055bf144a38, type: 3}
+  wrongSprites:
+  - {fileID: 21300000, guid: 90d79f66ea6797f4e9020ed96d37b61b, type: 3}
+  - {fileID: 21300000, guid: 096a3db140598194ab1fb08a726604ec, type: 3}
+  - {fileID: 21300000, guid: dabe9ef01747fdb4a9c53ac9b27f3322, type: 3}
