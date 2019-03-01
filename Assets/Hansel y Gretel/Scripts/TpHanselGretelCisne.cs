@@ -25,6 +25,9 @@ public class TpHanselGretelCisne : MonoBehaviour
     public GameObject father;
     public GameObject cisnePos2;
 
+    [Header("Final")]
+    public GameObject camPos3;
+
     public void Teleportation() {
         hansel.transform.position = hanselPos1.transform.position;
         hansel.transform.rotation = cisnePos1.transform.rotation;
@@ -50,22 +53,10 @@ public class TpHanselGretelCisne : MonoBehaviour
 
     }
 
-
-    private void Start()
-    {
-        //hansel.gameObject.GetComponent<NavMeshAgent>().enabled = false;
-        //warpPosition = hanselPos1.transform.position;
+    public void FinalTp() {
+        cam.transform.position = camPos3.transform.position;
+        cam.transform.rotation= camPos3.transform.rotation;
     }
 
-    public void JaulaEscape()
-    {
-        // hansel.transform.position = hanselPos1.transform.position;
-        //hansel.gameObject.GetComponent<NavMeshAgent>().Warp(warpPosition);
-        //hansel.transform.rotation = hanselPos1.transform.rotation;
-
-        Debug.Log("esto funciona");
-        
-
-    }
 }
 

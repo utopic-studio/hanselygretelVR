@@ -6,7 +6,7 @@ using System.Collections;
 // public: addAnswer(int,int), printAnswers()
 public class QuestionManager : Singleton<QuestionManager> {
 	protected QuestionManager () {}
-
+    public static int respuestasTotales;
 	public const int numOfOptions = 3;
 	public int maxChancesPerQuestion = 3;
 	[HeaderAttribute("Fill in the real answers in order:")]
