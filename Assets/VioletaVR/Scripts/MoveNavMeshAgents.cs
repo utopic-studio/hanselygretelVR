@@ -6,9 +6,10 @@ public class MoveNavMeshAgents : MonoBehaviour
 {
 
     [Header("En el arreglo AGENTS, usa sólo los que vas a mover")]
+    [Header("Nota: Llamar a este MoveAgents() max 1 vez")]
     [SerializeField] float rotationSpeedOnArrive = 10;
     [SerializeField] UnityEngine.AI.NavMeshAgent[] agents;
-    [Header("No modificar el arreglo DESTINATIONS")]
+    [Header("Usar mismo orden que el arreglo AGENTS")]
     [SerializeField] Transform[] destinations;
     [SerializeField] UnityEngine.Events.UnityEvent OnArriveAny;
     [SerializeField] UnityEngine.Events.UnityEvent OnArriveAll;
@@ -18,14 +19,21 @@ public class MoveNavMeshAgents : MonoBehaviour
     private bool any = false;
     private bool all = false;
     private bool moveAgentsCalled = false;
+    private bool eventsCalled = false;
+    private bool[] eventsPerCharacter;
 
     private void Start()
     {
         boolOnArrive = Enumerable.Repeat<bool>(false, agents.Length).ToList<bool>();
+        eventsPerCharacter = new bool[agents.Length];
+        for (int i = 0; i < agents.Length; i++)
+        {
+            eventsPerCharacter[i] = false;
+        }
     }
     public void Update()
     {
-        if (moveAgentsCalled)
+        if (moveAgentsCalled && !eventsCalled)
         {
             for (int i = 0; i < agents.Length; i++)
             {
@@ -68,10 +76,10 @@ public class MoveNavMeshAgents : MonoBehaviour
                 }
             }
         }
+        
     }
     public void CallEventOnArrive(int i)
     {
-
         RotateAgents(i);
         
         this.boolOnArrive[i] = true;
@@ -87,10 +95,13 @@ public class MoveNavMeshAgents : MonoBehaviour
                 OnArriveAll.Invoke();
             all = true;
         }
-        if (i < eventOnArrivePerCharacter.Length)
+        if (i < eventOnArrivePerCharacter.Length && !eventsPerCharacter[i])
+        {
             eventOnArrivePerCharacter[i].Invoke();
+            eventsPerCharacter[i] = true;
+        }
     }
-
+    
     private void RotateAgents(int i)
     {
         if (i < destinations.Length)
@@ -100,7 +111,5 @@ public class MoveNavMeshAgents : MonoBehaviour
             Quaternion rotation = Quaternion.LookRotation(lookPos);
             J.J.instance.followCurve(x => agents[i].transform.rotation = Quaternion.Slerp(agents[i].transform.rotation, rotation, x), 10 * rotationSpeedOnArrive / agents[i].angularSpeed);
         }
-        
-
     }
 }

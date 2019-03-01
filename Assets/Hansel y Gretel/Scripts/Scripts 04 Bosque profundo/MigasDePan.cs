@@ -17,8 +17,5 @@ public class MigasDePan : MonoBehaviour
         obj.transform.position = point.position + offset;
         obj.transform.forward = forward.forward;
         obj.GetComponent<Rigidbody>().AddForce(forward.forward * velocity, ForceMode.VelocityChange);
-        print(throwedObject.GetComponent<Rigidbody>());
-        print(forward.forward * velocity);
-        print(throwedObject.GetComponent<Rigidbody>().velocity);
     }
 }
