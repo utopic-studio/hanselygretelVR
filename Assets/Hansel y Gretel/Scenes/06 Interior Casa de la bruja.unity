@@ -2533,7 +2533,7 @@ PrefabInstance:
     - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -2544,11 +2544,11 @@ PrefabInstance:
         type: 3}
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 705397561}
+      objectReference: {fileID: 779457120}
     - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: LoadTheLevel
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -3093,6 +3093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705397562}
   - component: {fileID: 705397561}
+  - component: {fileID: 705397563}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -3128,6 +3129,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &705397563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705397560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782d4eb79ce597f458efd3ab094300cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeScale: 1.34
 --- !u!4 &716376002 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2776306269438260141, guid: a80d2b1992b9155489528fe03f42e744,
@@ -4768,7 +4782,7 @@ PrefabInstance:
     - target: {fileID: 6825710636473174069, guid: 892308c5f839a2d4f9b70a4dea21c767,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6825710636473174077, guid: 892308c5f839a2d4f9b70a4dea21c767,
         type: 3}
@@ -10099,7 +10113,7 @@ PrefabInstance:
     - target: {fileID: 5194875372957414637, guid: def576f599838064b8abbc279ee7fff0,
         type: 3}
       propertyPath: timeScale
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: def576f599838064b8abbc279ee7fff0, type: 3}
