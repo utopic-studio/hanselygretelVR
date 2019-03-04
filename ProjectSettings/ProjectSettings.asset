@@ -124,7 +124,7 @@ PlayerSettings:
   isWsaHolographicRemotingEnabled: 0
   vrSettings:
     cardboard:
-      depthFormat: 0
+      depthFormat: 1
       enableTransitionView: 0
     daydream:
       depthFormat: 0
@@ -150,7 +150,9 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.UtopicStudio.HanselYGretel
-  buildNumber: {}
+    Standalone: com.UtopicStudio.HanselYGretel
+  buildNumber:
+    Standalone: 3
   AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 0
@@ -354,6 +356,10 @@ PlayerSettings:
     m_Enabled: 1
     m_Devices:
     - cardboard
+  - m_BuildTarget: Standalone
+    m_Enabled: 1
+    m_Devices:
+    - None
   m_BuildTargetEnableVuforiaSettings: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
