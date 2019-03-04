@@ -9,6 +9,6 @@ public class FinalScore : MonoBehaviour
     public TextMeshProUGUI textFinal;    
     void Update()
     {
-        textFinal.text = "¡Muchas gracias por jugar! Resultado Final: " + QuestionManager.respuestasTotales.ToString() + " de 15 respuestas correctas";
+        textFinal.text = "¡Muchas gracias por jugar! Resultado Final: " + QuestionManager.respuestasTotales.ToString() + " de 10 respuestas correctas";
     }
 }
