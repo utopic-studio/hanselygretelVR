@@ -104,6 +104,7 @@ public class MoveNavMeshAgents : MonoBehaviour
     
     private void RotateAgents(int i)
     {
+        /*
         if (i < destinations.Length)
         {
             Vector3 lookPos = destinations[i].forward;
@@ -111,5 +112,6 @@ public class MoveNavMeshAgents : MonoBehaviour
             Quaternion rotation = Quaternion.LookRotation(lookPos);
             //J.J.instance.followCurve(x => agents[i].transform.rotation = Quaternion.Slerp(agents[i].transform.rotation, rotation, x), 10 * rotationSpeedOnArrive / agents[i].angularSpeed);
         }
+        */
     }
 }

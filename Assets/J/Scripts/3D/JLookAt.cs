@@ -21,14 +21,10 @@ namespace J
         private void Start()
         {
             startWasCalled = true;
-        }
-        private void OnValidate()
-        {
-            if (!target && startWasCalled)
-            {
+            if (!target)
                 target = GameObject.FindGameObjectWithTag("Player").transform;
-            }
         }
+
 
         void Update()
         {
@@ -54,7 +50,7 @@ namespace J
             if (target == null)
                 target = this.target;
             //if (navMeshAgent)
-            //    navMeshAgent.enabled = false;
+            //    navMeshAgent.enabled = false; 
             transform.rotation = CalculateRotation(target);
             //if (navMeshAgent)
             //    navMeshAgent.enabled = true;

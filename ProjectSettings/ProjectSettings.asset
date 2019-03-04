@@ -114,7 +114,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.2
+  bundleVersion: 0.3
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -124,7 +124,7 @@ PlayerSettings:
   isWsaHolographicRemotingEnabled: 0
   vrSettings:
     cardboard:
-      depthFormat: 0
+      depthFormat: 1
       enableTransitionView: 0
     daydream:
       depthFormat: 0
@@ -150,9 +150,11 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.UtopicStudio.HanselYGretel
-  buildNumber: {}
-  AndroidBundleVersionCode: 2
-  AndroidMinSdkVersion: 24
+    Standalone: com.UtopicStudio.HanselYGretel
+  buildNumber:
+    Standalone: 3
+  AndroidBundleVersionCode: 3
+  AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -354,6 +356,10 @@ PlayerSettings:
     m_Enabled: 1
     m_Devices:
     - cardboard
+  - m_BuildTarget: Standalone
+    m_Enabled: 1
+    m_Devices:
+    - None
   m_BuildTargetEnableVuforiaSettings: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
@@ -658,6 +664,7 @@ PlayerSettings:
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
     Build: 1
+    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
