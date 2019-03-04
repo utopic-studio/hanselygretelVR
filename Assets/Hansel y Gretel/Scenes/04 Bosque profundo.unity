@@ -5886,7 +5886,7 @@ MonoBehaviour:
   normalAction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1198932425}
+      - m_Target: {fileID: 1881392794}
         m_MethodName: FadeOut
         m_Mode: 1
         m_Arguments:
@@ -5913,7 +5913,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1198932425}
+      - m_Target: {fileID: 1881392794}
         m_MethodName: FadeIn
         m_Mode: 1
         m_Arguments:
@@ -23264,18 +23264,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1179349502}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1198932425 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8134914397112767351, guid: e82762e15b67c6c4a8295a7fffc7c367,
-    type: 3}
-  m_PrefabInstance: {fileID: 1959224082}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 056f120885a0d9b4cbe0d9870199622c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1208591328
 GameObject:
   m_ObjectHideFlags: 0
@@ -34181,6 +34169,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1879813204}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1881392794 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4659716375807623311, guid: e82762e15b67c6c4a8295a7fffc7c367,
+    type: 3}
+  m_PrefabInstance: {fileID: 1959224082}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2a41e53e46304bd0a6b58f37a4d93f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1881801735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35841,6 +35841,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513352451120052665, guid: e82762e15b67c6c4a8295a7fffc7c367,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e82762e15b67c6c4a8295a7fffc7c367, type: 3}
@@ -42480,7 +42485,7 @@ PrefabInstance:
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1198932425}
+      objectReference: {fileID: 1881392794}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: FadeOut
