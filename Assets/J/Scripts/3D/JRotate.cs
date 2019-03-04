@@ -15,7 +15,6 @@ namespace J
 
         public void Rotate(float angle)
         {
-
             Vector3 rot = transform.rotation.eulerAngles;
             rot = new Vector3(rot.x, rot.y + angle, rot.z);
             Quaternion rotation = Quaternion.Euler(rot);

@@ -47,7 +47,10 @@ public class Question : MonoBehaviour {
     public void Answer(int choice)
     {
         if (choice == (int)correctChoice)
+        {
             optionImages[choice - 1].sprite = QuestionManager.Instance.correctSprites[choice - 1];
+            QuestionManager.respuestasTotales++;
+        }
         else
             optionImages[choice - 1].sprite = QuestionManager.Instance.wrongSprites[choice - 1];
         Invoke("InvokeAction", hideDelay);
