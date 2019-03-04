@@ -17,8 +17,8 @@ namespace J
 			// Singleton:
 			if (instance == null)
 				instance = this;
-			else if (instance != this)
-				Destroy (this.gameObject); // Nota: Esto podria eliminar todo un objeto, con otros componentes
+			//else if (instance != this)
+				//Destroy (this.gameObject); // Nota: Esto podria eliminar todo un objeto, con otros componentes
 			// End Singleton
 
 

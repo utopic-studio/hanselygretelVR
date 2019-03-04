@@ -109,7 +109,7 @@ public class MoveNavMeshAgents : MonoBehaviour
             Vector3 lookPos = destinations[i].forward;
             lookPos.y = 0;
             Quaternion rotation = Quaternion.LookRotation(lookPos);
-            J.J.instance.followCurve(x => agents[i].transform.rotation = Quaternion.Slerp(agents[i].transform.rotation, rotation, x), 10 * rotationSpeedOnArrive / agents[i].angularSpeed);
+            //J.J.instance.followCurve(x => agents[i].transform.rotation = Quaternion.Slerp(agents[i].transform.rotation, rotation, x), 10 * rotationSpeedOnArrive / agents[i].angularSpeed);
         }
     }
 }
