@@ -648,6 +648,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5728279630108988039, guid: 02554de66c99ff440ad012477e6dadf1,
         type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728279630108988039, guid: 02554de66c99ff440ad012477e6dadf1,
+        type: 3}
       propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 94797062}
@@ -655,6 +660,31 @@ PrefabInstance:
         type: 3}
       propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Show
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728279630108988039, guid: 02554de66c99ff440ad012477e6dadf1,
+        type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728279630108988039, guid: 02554de66c99ff440ad012477e6dadf1,
+        type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728279630108988039, guid: 02554de66c99ff440ad012477e6dadf1,
+        type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2039750301}
+    - target: {fileID: 5728279630108988039, guid: 02554de66c99ff440ad012477e6dadf1,
+        type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5728279630108988039, guid: 02554de66c99ff440ad012477e6dadf1,
+        type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 534051698, guid: 02554de66c99ff440ad012477e6dadf1, type: 3}
       propertyPath: target
