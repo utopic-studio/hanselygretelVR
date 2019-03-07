@@ -38,7 +38,7 @@ public class LoadOperations : MonoBehaviour
 
         if (async != null)
         {
-            Debug.Log(async.progress);
+            //Debug.Log(async.progress);
             //When the Async is finished, the level is done loading, fade in the screen
             if (async.progress >= 1.0)
             {
