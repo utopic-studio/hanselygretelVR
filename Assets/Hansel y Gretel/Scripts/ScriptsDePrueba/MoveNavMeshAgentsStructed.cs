@@ -1,15 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
-
-public class MoveNavMeshAgents : MonoBehaviour
+using UnityEngine.AI;
+public class MoveNavMeshAgentsStructed : MonoBehaviour
 {
-    [SerializeField]
-    public struct MyStruct
-    {
-        UnityEngine.AI.NavMeshAgent agent;
-        Transform pos;
-    }
+   
+
+[System.Serializable]
+public struct Personaje1
+{
+    public NavMeshAgent agent;
+    public Transform posicion;
+}
+[System.Serializable]
+public struct Personaje2
+{
+    public NavMeshAgent agent;
+    public Transform posicion;
+}
+[System.Serializable]
+public struct Personaje3
+{
+    public NavMeshAgent agent;
+    public Transform posicion;
+}
 
     [Header("En el arreglo AGENTS, usa sólo los que vas a mover")]
     [Header("Nota: Llamar a este MoveAgents() max 1 vez")]
@@ -18,10 +32,11 @@ public class MoveNavMeshAgents : MonoBehaviour
     [Header("Usar mismo orden que el arreglo AGENTS")]
     [SerializeField] Transform[] destinations;
     [SerializeField] UnityEngine.Events.UnityEvent OnArriveAny;
+    [SerializeField] UnityEngine.Events.UnityEvent OnArriveAnyStruct;
     [SerializeField] UnityEngine.Events.UnityEvent OnArriveAll;
     [SerializeField] UnityEngine.Events.UnityEvent[] eventOnArrivePerCharacter;
 
-    private List<bool> boolOnArrive;
+   public List<bool> boolOnArrive;
     private bool any = false;
     private bool all = false;
     private bool moveAgentsCalled = false;
@@ -29,16 +44,20 @@ public class MoveNavMeshAgents : MonoBehaviour
     private bool[] eventsPerCharacter;
 
 
+    public Personaje1 personaje1;
+    public Personaje2 personaje2;
+    public Personaje3 personaje3;
 
-
-    private void Start()
+    public void Start()
     {
-        boolOnArrive = Enumerable.Repeat<bool>(false, agents.Length).ToList<bool>();
+    //boolOnArrive = Enumerable.Repeat<bool>(false, agents.Length).ToList<bool>();
         eventsPerCharacter = new bool[agents.Length];
         for (int i = 0; i < agents.Length; i++)
         {
             eventsPerCharacter[i] = false;
         }
+        personaje1.agent.SetDestination(personaje1.posicion.position);
+
     }
     public void Update()
     {
@@ -57,6 +76,9 @@ public class MoveNavMeshAgents : MonoBehaviour
                     }
                 }
             }
+        }
+        if (personaje1.agent.remainingDistance <= personaje1.agent.stoppingDistance) {
+            //CallEventOnArrive(i);
         }
     }
     public void MoveAgents()
@@ -87,7 +109,11 @@ public class MoveNavMeshAgents : MonoBehaviour
         }
         
     }
-    public void CallEventOnArrive(int i)
+    public void CallEventOnArriveStruct()
+    {
+
+    }
+        public void CallEventOnArrive(int i)
     {
         RotateAgents(i);
         

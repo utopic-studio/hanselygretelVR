@@ -9,6 +9,7 @@ public class pathFollow : MonoBehaviour {
 	public float reachDistance = 1.0f;
 	public int currentPoint = 0;
     bool move = true;
+    public float waitTime;
 
 	// Use this for initialization
 	void Start () {
@@ -28,9 +29,14 @@ public class pathFollow : MonoBehaviour {
             transform.position = Vector3.MoveTowards(transform.position, path[currentPoint].position, Time.deltaTime * speed);
 
             if (dist <= reachDistance) //agregar condiciones
-            {   
-				currentPoint = Random.Range(1,6); // cambiar por currentPoint +1;
+            {
+                //currentPoint = Random.Range(1,6); // cambiar por currentPoint +1;
+                currentPoint = currentPoint++;
             }
+            if (currentPoint == 5) {
+                currentPoint = 1;
+            }
+ 
         }
 
 		if (currentPoint >= path.Length) {
