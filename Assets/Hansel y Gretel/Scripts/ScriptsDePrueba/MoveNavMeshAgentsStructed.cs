@@ -7,23 +7,14 @@ public class MoveNavMeshAgentsStructed : MonoBehaviour
    
 
 [System.Serializable]
-public struct Personaje1
+public struct Personaje
 {
     public NavMeshAgent agent;
     public Transform posicion;
 }
-[System.Serializable]
-public struct Personaje2
-{
-    public NavMeshAgent agent;
-    public Transform posicion;
-}
-[System.Serializable]
-public struct Personaje3
-{
-    public NavMeshAgent agent;
-    public Transform posicion;
-}
+
+    
+
 
     [Header("En el arreglo AGENTS, usa sólo los que vas a mover")]
     [Header("Nota: Llamar a este MoveAgents() max 1 vez")]
@@ -36,7 +27,8 @@ public struct Personaje3
     [SerializeField] UnityEngine.Events.UnityEvent OnArriveAll;
     [SerializeField] UnityEngine.Events.UnityEvent[] eventOnArrivePerCharacter;
 
-   public List<bool> boolOnArrive;
+    private List<bool> boolOnArrive;
+    public bool llego1;
     private bool any = false;
     private bool all = false;
     private bool moveAgentsCalled = false;
@@ -44,32 +36,34 @@ public struct Personaje3
     private bool[] eventsPerCharacter;
 
 
-    public Personaje1 personaje1;
-    public Personaje2 personaje2;
-    public Personaje3 personaje3;
+    public Personaje[] personaje;
+
+
 
     public void Start()
     {
-    //boolOnArrive = Enumerable.Repeat<bool>(false, agents.Length).ToList<bool>();
-        eventsPerCharacter = new bool[agents.Length];
-        for (int i = 0; i < agents.Length; i++)
+
+
+        boolOnArrive = Enumerable.Repeat<bool>(false, personaje.Length).ToList<bool>();
+        eventsPerCharacter = new bool[personaje.Length];
+        for (int i = 0; i < personaje.Length; i++)
         {
             eventsPerCharacter[i] = false;
         }
-        personaje1.agent.SetDestination(personaje1.posicion.position);
+        
 
     }
     public void Update()
     {
         if (moveAgentsCalled && !eventsCalled)
         {
-            for (int i = 0; i < agents.Length; i++)
+            for (int i = 0; i < personaje.Length; i++)
             {
-                if (agents[i] && agents[i].enabled && agents[i].gameObject.activeInHierarchy && !agents[i].pathPending)
+                if (personaje[i].agent && personaje[i].agent.enabled && personaje[i].agent.gameObject.activeInHierarchy && !personaje[i].agent.pathPending)
                 {
-                    if (agents[i].remainingDistance <= agents[i].stoppingDistance)
+                    if (personaje[i].agent.remainingDistance <= personaje[i].agent.stoppingDistance)
                     {
-                        if (!agents[i].hasPath || agents[i].velocity.sqrMagnitude <= 0.2f)
+                        if (!personaje[i].agent.hasPath || personaje[i].agent.velocity.sqrMagnitude <= 0.2f)
                         {
                             CallEventOnArrive(i);
                         }
@@ -77,42 +71,74 @@ public struct Personaje3
                 }
             }
         }
-        if (personaje1.agent.remainingDistance <= personaje1.agent.stoppingDistance) {
-            //CallEventOnArrive(i);
-        }
+        //public void Update()
+        //{
+        //    if (moveAgentsCalled && !eventsCalled)
+        //    {
+        //        for (int i = 0; i < agents.Length; i++)
+        //        {
+        //            if (agents[i] && agents[i].enabled && agents[i].gameObject.activeInHierarchy && !agents[i].pathPending)
+        //            {
+        //                if (agents[i].remainingDistance <= agents[i].stoppingDistance)
+        //                {
+        //                    if (!agents[i].hasPath || agents[i].velocity.sqrMagnitude <= 0.2f)
+        //                    {
+        //                        CallEventOnArrive(i);
+        //                    }
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
     }
     public void MoveAgents()
     {
+        //Debug.Log("muevo agentes");
         moveAgentsCalled = true;
-        if (agents.Length <= destinations.Length)
+        if (personaje.Length <= personaje.Length)
         {
-            for (int i=0; i<agents.Length; i++)
+            for (int i=0; i< personaje.Length; i++)
             {
-                if (agents[i].gameObject.activeInHierarchy && agents[i].isActiveAndEnabled)
-                    agents[i].SetDestination(destinations[i].position);
+                if (personaje[i].agent.gameObject.activeInHierarchy && personaje[i].agent.isActiveAndEnabled)
+                    //agents[i].SetDestination(destinations[i].position);
+                    personaje[i].agent.SetDestination(personaje[i].posicion.position);
             }
+            //personaje1.agent[i].SetDestination(personaje1.posicion.position);
+            //personaje2.agent.SetDestination(personaje2.posicion.position);
         }
     }
     public void MoveAgentsInstantly()
     {
         moveAgentsCalled = true;
-        if (agents.Length <= destinations.Length)
+        if (personaje.Length <= destinations.Length)
         {
-            for (int i = 0; i < agents.Length; i++)
+            for (int i = 0; i < personaje.Length; i++)
             {
-                if (agents[i].gameObject.activeInHierarchy && agents[i].isActiveAndEnabled)
+                if (personaje[i].agent.gameObject.activeInHierarchy && personaje[i].agent.isActiveAndEnabled)
                 {
-                    agents[i].ResetPath();
-                    agents[i].Warp(destinations[i].position);
+                    personaje[i].agent.ResetPath();
+                    personaje[i].agent.Warp(destinations[i].position);
                 }
             }
         }
         
     }
-    public void CallEventOnArriveStruct()
-    {
+    //public void CallEventOnArriveStruct()
+    //{
+      
+    //    llego1 = true;
+    //    if (llego1 == true)
+    //    {
+    //        Debug.Log("funciona el struct");
 
-    }
+    //        if (!any)
+    //            OnArriveAnyStruct.Invoke();
+    //        any = true;
+    //    }
+    //}
+
+
+
         public void CallEventOnArrive(int i)
     {
         RotateAgents(i);
