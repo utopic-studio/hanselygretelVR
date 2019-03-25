@@ -236,7 +236,7 @@ public class UResourceIndex : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Baking failed, could not locate baking context caller when reloading scene.");
+                Debug.LogError("Baking failed, could not locate baking context caller when reloading scene. Most probably caller scene isn't part of the Build Scenes.");
             }
 
             //Finished, we clear the loading bar

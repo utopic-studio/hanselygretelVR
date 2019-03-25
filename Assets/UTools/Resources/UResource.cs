@@ -418,14 +418,17 @@ public class UResource : MonoBehaviour {
 
         //Manually hide, we don't want to start showing resources without them being selected
         UI.SetActive(false);
+    }
 
-        //Check for auto open config
-        bDeferedOpen = bOpenOnStart;
+    private void Start()
+    {
+        //Check for auto open config, only when on normal application mode
+        bDeferedOpen = bOpenOnStart && UResourceManager.Instance.AppMode == ApplicationMode.Normal;
     }
 
     private void Update()
     {
-        if(bDeferedOpen/* && MyManager.Instance.AppMode == ApplicationMode.Normal*/) //@TODO: app mode should be somewhere resource related
+        if(bDeferedOpen)
         {
             Show();
             bDeferedOpen = false;

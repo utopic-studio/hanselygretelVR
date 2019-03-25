@@ -5,6 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Controls a scroll rect and makes it work like a scrollable list.
 /// </summary>
+[AddComponentMenu("J/UI/JListViewController")]
 public class JListViewController : MonoBehaviour
 {
 

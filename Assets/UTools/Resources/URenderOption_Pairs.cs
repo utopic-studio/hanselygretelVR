@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using J;
 
 public class RenderOption_PairsFactory : IRenderOptionFactory
 {
@@ -72,8 +73,8 @@ public class URenderOption_Pairs : URenderOption {
     public UnityEngine.UI.Text LabelRight;
     public UnityEngine.UI.Image ImageRight;
 
-    public Socket LeftSocket;
-    public Socket RightSocket;
+    public JSocket LeftSocket;
+    public JSocket RightSocket;
 
     private PortType LeftPortType = PortType.Text;
     private PortType RightPortType = PortType.Text;
