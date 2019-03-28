@@ -91,8 +91,6 @@ public class WebVRConvertWindow : EditorWindow
     {
         //Show loading bar
         EditorUtility.DisplayProgressBar("Converting scenes...", "Wrapping up...", 1.0f);
-
-        //This isn't strictly needed, but it helps a lot with readability
         UnityEditor.SceneManagement.EditorSceneManager.sceneOpened -= OnConvertLevelOpened;
         
         //Finally open the context scene
@@ -112,7 +110,7 @@ public class WebVRConvertWindow : EditorWindow
 
         //For any reason, the required game objects can be inactive, we need a proper way to find them
         GameObject[] Roots = UnityEngine.SceneManagement.SceneManager.GetActiveScene().GetRootGameObjects();
-
+        
         for(int i = 0; i < Roots.Length; i++)
         {
             GameObject go = Roots[i];
@@ -129,6 +127,11 @@ public class WebVRConvertWindow : EditorWindow
 
                 //Deactivate/delete old object
                 Undo.RecordObject(go, "Replace VR prefab");
+
+                //Do a reference lookup and replace every old player reference to the new instance.
+                int ReferenceCount = ReplaceReferences(Roots, go, GeneratedPrefab);
+                Debug.Log("Replaced " + ReferenceCount + " component references while converting player.");
+
                 if (bDeleteReplacedGameObjects)
                 {
                     Destroy(go);
@@ -137,6 +140,9 @@ public class WebVRConvertWindow : EditorWindow
                 {
                     go.SetActive(false);
                 }
+
+                //We only support one player, no use in continuing the search
+                break;
             }
         }
 
@@ -152,6 +158,50 @@ public class WebVRConvertWindow : EditorWindow
         {
             EndConvert();
         }
+    }
+
+
+    /// <summary>
+    /// Searches the current scene roots and looks for references to the original game object and tries to replace them with the new object
+    /// </summary>
+    /// <param name="Roots">Original set of roots which may contain the original GameObject, but not the NewObject</param>
+    /// <param name="Original">Original object that was in the scene and needs to be replaced</param>
+    /// <param name="NewObject">New generated object that will replace the original</param>
+    /// <returns>Number of reference replacements that took place.</returns>
+    int ReplaceReferences(GameObject[] Roots, GameObject Original, GameObject NewObject)
+    {
+        int NumberOfReplacements = 0;
+        for(int i = 0; i < Roots.Length; i++)
+        {
+            Component[] components = Roots[i].GetComponentsInChildren<Component>();
+            foreach(Component comp in components)
+            {
+                SerializedObject sObject = new SerializedObject(comp);
+                SerializedProperty sProperty = sObject.GetIterator();
+                while(sProperty.NextVisible(true))
+                {
+                    bool bObjectField = sProperty.propertyType == SerializedPropertyType.ObjectReference && sProperty.objectReferenceValue != null;
+                    if (bObjectField)
+                    {
+                        Component componentReference = sProperty.objectReferenceValue as Component;
+                        if(componentReference && componentReference.gameObject == Original)
+                        {
+                            //Found a referencing component, need to replace if possible.
+                            Debug.Log("Found referencing component");
+                            Component NewComponent = NewObject.GetComponent(componentReference.GetType());
+                            if (NewComponent)
+                            {
+                                sProperty.objectReferenceValue = NewComponent;
+                                sObject.ApplyModifiedProperties();
+                                NumberOfReplacements++;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return NumberOfReplacements;
     }
 }
 
