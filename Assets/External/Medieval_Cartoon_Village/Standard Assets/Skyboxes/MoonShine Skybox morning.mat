@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MoonShine Skybox inverted
+  m_Name: MoonShine Skybox morning
   m_Shader: {fileID: 104, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BackTex:
-        m_Texture: {fileID: 2800000, guid: 427ff48b098658742bdcce953d607e78, type: 3}
+        m_Texture: {fileID: 2800000, guid: da82e12cbaa33f14b83c3d67bbe852f0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DownTex:
@@ -28,11 +28,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FrontTex:
-        m_Texture: {fileID: 2800000, guid: 5dbdf7dfcf86afa418926ee28fab2b1d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 4e6272a0154af44438d0da90ba19fb8f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _LeftTex:
-        m_Texture: {fileID: 2800000, guid: 752b01b0aec6184468996505d2ab8a9c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5671803bf4866c745b66c2b2812a78a5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -40,19 +40,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _RightTex:
-        m_Texture: {fileID: 2800000, guid: dc97187fca1dcaf4e84e8b5f414a64ba, type: 3}
+        m_Texture: {fileID: 2800000, guid: fa7b8451ecb38a34781adf77c7fb6e28, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _UpTex:
-        m_Texture: {fileID: 2800000, guid: 91c222ac5463b7243849bc078d53e72c, type: 3}
+        m_Texture: {fileID: 2800000, guid: c3a42d96b30abdb4cad00a7e2058f970, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Exposure: 1
-    - _Rotation: 0
+    - _Exposure: 4.61
+    - _Rotation: 112
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Tint: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
+    - _Tint: {r: 0.3270737, g: 0.8093241, b: 0.9245283, a: 0.5}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6
