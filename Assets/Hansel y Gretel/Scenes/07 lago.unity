@@ -246,7 +246,7 @@ Transform:
   - {fileID: 2100351929}
   - {fileID: 1309386927}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &50788087 stripped
 GameObject:
@@ -315,7 +315,7 @@ PrefabInstance:
     - target: {fileID: 7208080504847408878, guid: 128a73a7839bdbf4aab9603617a92a07,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7208080504847408878, guid: 128a73a7839bdbf4aab9603617a92a07,
         type: 3}
@@ -851,13 +851,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: "Los ni\xF1os huyeron del bosque hasta llegar a orillas de un inmenso
-        lago que parec\xEDa imposible de atravesar. Por fin, un hermoso cisne blanco,
-        compadeci\xE9ndose de ellos, les ofreci\xF3 pasarlos a la otra orilla. "
+        lago que parec\xEDa imposible de atravesar. Afortunadamente, un hermoso cisne
+        blanco les ofreci\xF3 cruzarlos hasta el muelle."
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_fontSize
-      value: 22.6
+      value: 24.4
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -867,17 +867,17 @@ PrefabInstance:
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 206
+      value: 186
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 34
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 34
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -1029,13 +1029,20 @@ PrefabInstance:
       propertyPath: delay.Array.data[1]
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
       value: 
-      objectReference: {fileID: 1073862156}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
-      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4081060794762982323, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -1096,6 +1103,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 1073862156}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2058293561, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1111,25 +1126,6 @@ PrefabInstance:
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Hide
-      objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
@@ -1156,6 +1152,10 @@ PrefabInstance:
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -1583,7 +1583,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 380640492}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2a41e53e46304bd0a6b58f37a4d93f0, type: 3}
   m_Name: 
@@ -1700,7 +1700,7 @@ PrefabInstance:
     - target: {fileID: 8641980040674156189, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8645783002308860165, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
@@ -1740,7 +1740,7 @@ PrefabInstance:
     - target: {fileID: 8645783002308860165, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8645783002308860165, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
@@ -1975,7 +1975,7 @@ PrefabInstance:
     - target: {fileID: 5299839788435948249, guid: def576f599838064b8abbc279ee7fff0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5299839788435948249, guid: def576f599838064b8abbc279ee7fff0,
         type: 3}
@@ -2716,32 +2716,33 @@ PrefabInstance:
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_text
-      value: "\xBFQu\xE9 es lo m\xE1s importante en la vida para Hansel y Gretel?"
+      value: "En el siguiente extracto:\r\n\u201CCon gran alegr\xEDa, los ni\xF1os
+        encontraron a su padre all\xED\u201D\r\n\xBFA qu\xE9 se refieren con <b>all\xED</b>?"
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_fontSize
-      value: 38.2
+      value: 31.1
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 58
+      value: 114
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 11
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -2801,12 +2802,24 @@ PrefabInstance:
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
       value: 
-      objectReference: {fileID: 1277218781}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4081060794762982323, guid: 3e8795ff84141c649a2592376719451c,
@@ -2827,7 +2840,7 @@ PrefabInstance:
     - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_text
-      value: Ser ricos para siempre.
+      value: Al bosque.
       objectReference: {fileID: 0}
     - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -2837,7 +2850,7 @@ PrefabInstance:
     - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -2847,12 +2860,12 @@ PrefabInstance:
     - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -2867,17 +2880,17 @@ PrefabInstance:
     - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_text
-      value: Olvidar los malos momentos.
+      value: Al lago.
       objectReference: {fileID: 0}
     - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 27
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -2902,7 +2915,7 @@ PrefabInstance:
     - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_text
-      value: Estar con los seres queridos.
+      value: Al muelle.
       objectReference: {fileID: 0}
     - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -2912,7 +2925,7 @@ PrefabInstance:
     - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -2972,6 +2985,19 @@ PrefabInstance:
         type: 3}
       propertyPath: questionID
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 1277218781}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
@@ -3101,35 +3127,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: idle
       objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
       value: "Dejando caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron
@@ -3137,6 +3134,10 @@ PrefabInstance:
         As\xED, Hansel y Gretel supieron que lo m\xE1s importante en la vida es estar
         junto a los seres queridos. Desde ese momento, vivieron felices y ricos para
         siempre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -3356,12 +3357,24 @@ PrefabInstance:
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
       value: 
-      objectReference: {fileID: 1600608882}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4081060794762982323, guid: 3e8795ff84141c649a2592376719451c,
@@ -3518,6 +3531,19 @@ PrefabInstance:
       propertyPath: questionID
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 1600608882}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -3638,35 +3664,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: idle
       objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
       value: "Dejando caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron
@@ -3674,6 +3671,10 @@ PrefabInstance:
         As\xED, Hansel y Gretel supieron que lo m\xE1s importante en la vida es estar
         junto a los seres queridos. Desde ese momento, vivieron felices y ricos para
         siempre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -4894,6 +4895,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WebVRCameraSet
       objectReference: {fileID: 0}
+    - target: {fileID: 1877826137, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 106.94062
@@ -5460,26 +5465,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2776306270180104326, guid: a80d2b1992b9155489528fe03f42e744,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4431198055038833725, guid: a80d2b1992b9155489528fe03f42e744,
-        type: 3}
-      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4431198055038833725, guid: a80d2b1992b9155489528fe03f42e744,
-        type: 3}
-      propertyPath: tagCondition
-      value: Buho
-      objectReference: {fileID: 0}
-    - target: {fileID: 2776306269538122505, guid: a80d2b1992b9155489528fe03f42e744,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5600099382115132752, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -5519,6 +5504,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776306269538122505, guid: a80d2b1992b9155489528fe03f42e744,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776306270180104326, guid: a80d2b1992b9155489528fe03f42e744,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431198055038833725, guid: a80d2b1992b9155489528fe03f42e744,
+        type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431198055038833725, guid: a80d2b1992b9155489528fe03f42e744,
+        type: 3}
+      propertyPath: tagCondition
+      value: Buho
       objectReference: {fileID: 0}
     - target: {fileID: 2776306269538122501, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
@@ -5692,12 +5697,24 @@ PrefabInstance:
       propertyPath: delayedAction.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
       value: 
-      objectReference: {fileID: 29227353}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4081060794762982323, guid: 3e8795ff84141c649a2592376719451c,
@@ -5734,6 +5751,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 29227353}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
@@ -5835,30 +5860,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
       value: idle
       objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
       value: "Dejando caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron
@@ -5866,6 +5867,10 @@ PrefabInstance:
         As\xED, Hansel y Gretel supieron que lo m\xE1s importante en la vida es estar
         junto a los seres queridos. Desde ese momento, vivieron felices y ricos para
         siempre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -6607,12 +6612,24 @@ PrefabInstance:
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
       value: 
-      objectReference: {fileID: 161736695}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4081060794762982323, guid: 3e8795ff84141c649a2592376719451c,
@@ -6749,6 +6766,19 @@ PrefabInstance:
       propertyPath: questionID
       value: 26
       objectReference: {fileID: 0}
+    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 161736695}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -6877,35 +6907,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: idle
       objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
       value: "Dejando caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron
@@ -6913,6 +6914,10 @@ PrefabInstance:
         As\xED, Hansel y Gretel supieron que lo m\xE1s importante en la vida es estar
         junto a los seres queridos. Desde ese momento, vivieron felices y ricos para
         siempre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -7666,12 +7671,24 @@ PrefabInstance:
       propertyPath: delayedAction.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
       value: 
-      objectReference: {fileID: 937995727}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4081060794762982323, guid: 3e8795ff84141c649a2592376719451c,
@@ -7818,6 +7835,19 @@ PrefabInstance:
       propertyPath: questionID
       value: 28
       objectReference: {fileID: 0}
+    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 937995727}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
       value: 0
@@ -7946,35 +7976,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: idle
       objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
       value: "Dejando caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron
@@ -7982,6 +7983,10 @@ PrefabInstance:
         As\xED, Hansel y Gretel supieron que lo m\xE1s importante en la vida es estar
         junto a los seres queridos. Desde ese momento, vivieron felices y ricos para
         siempre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -8943,26 +8948,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2776306270180104326, guid: a80d2b1992b9155489528fe03f42e744,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4431198055038833725, guid: a80d2b1992b9155489528fe03f42e744,
-        type: 3}
-      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4431198055038833725, guid: a80d2b1992b9155489528fe03f42e744,
-        type: 3}
-      propertyPath: tagCondition
-      value: Buho
-      objectReference: {fileID: 0}
-    - target: {fileID: 2776306269538122505, guid: a80d2b1992b9155489528fe03f42e744,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5600099382115132752, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -9002,6 +8987,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776306269538122505, guid: a80d2b1992b9155489528fe03f42e744,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776306270180104326, guid: a80d2b1992b9155489528fe03f42e744,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431198055038833725, guid: a80d2b1992b9155489528fe03f42e744,
+        type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431198055038833725, guid: a80d2b1992b9155489528fe03f42e744,
+        type: 3}
+      propertyPath: tagCondition
+      value: Buho
       objectReference: {fileID: 0}
     - target: {fileID: 2776306269538122501, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
@@ -9159,33 +9164,33 @@ PrefabInstance:
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_text
-      value: "En el siguiente extracto:\r\n\u201CCon gran alegr\xEDa, los ni\xF1os
-        encontraron a su padre all\xED\u201D\r\n\xBFA qu\xE9 se refieren con all\xED?\r\n"
+      value: "Seg\xFAn el texto, \xBFqu\xE9 es lo m\xE1s importante en la vida para
+        Hansel y Gretel?"
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_fontSize
-      value: 30
+      value: 37.5
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 116
+      value: 74
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 20
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -9402,12 +9407,24 @@ PrefabInstance:
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
       value: 
-      objectReference: {fileID: 1404357935}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4081060794762982323, guid: 3e8795ff84141c649a2592376719451c,
@@ -9428,22 +9445,22 @@ PrefabInstance:
     - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_text
-      value: La otra orilla
+      value: Ser ricos para siempre.
       objectReference: {fileID: 0}
     - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 14
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -9468,22 +9485,22 @@ PrefabInstance:
     - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_text
-      value: El Lago.
+      value: Encontrar un lugar tranquilo.
       objectReference: {fileID: 0}
     - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 8
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -9508,22 +9525,22 @@ PrefabInstance:
     - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_text
-      value: El bosque
+      value: Estar con los seres queridos.
       objectReference: {fileID: 0}
     - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 9
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -9553,6 +9570,19 @@ PrefabInstance:
         type: 3}
       propertyPath: questionID
       value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 1404357935}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
@@ -9682,35 +9712,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: idle
       objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
       value: "Dejando caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron
@@ -9718,6 +9719,10 @@ PrefabInstance:
         As\xED, Hansel y Gretel supieron que lo m\xE1s importante en la vida es estar
         junto a los seres queridos. Desde ese momento, vivieron felices y ricos para
         siempre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -10301,6 +10306,79 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1626152042}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1633390141
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633390143}
+  - component: {fileID: 1633390142}
+  m_Layer: 0
+  m_Name: WaterReflectionCameraL
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &1633390142
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633390141}
+  m_Enabled: 0
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_projectionMatrixMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_GateFitMode: 2
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967279
+  m_RenderingPath: 1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1633390143
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633390141}
+  m_LocalRotation: {x: 0.15670775, y: 0.048199106, z: 0.0076548876, w: -0.9864385}
+  m_LocalPosition: {x: 107.29013, y: 9.37145, z: 66.28157}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1660050484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10662,12 +10740,24 @@ PrefabInstance:
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
       value: 
-      objectReference: {fileID: 899549130}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4081060794762982323, guid: 3e8795ff84141c649a2592376719451c,
@@ -10705,6 +10795,14 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 899549130}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -10717,35 +10815,15 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Hide
       objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
       value: "Con gran alegr\xEDa, los ni\xF1os encontraron a su padre all\xED. La
         cruel madrastra no estaba porque ella hab\xEDa muerto. El padre hab\xEDa sufrido
         mucho por la ausencia de los ni\xF1os y los hab\xEDa buscado por todas partes."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -11234,13 +11312,25 @@ PrefabInstance:
       propertyPath: delay.Array.data[1]
       value: 7.5
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
       value: 
-      objectReference: {fileID: 1664822242}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
-      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4081060794762982323, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -11301,6 +11391,19 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 1664822242}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2058293561, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -11316,35 +11419,6 @@ PrefabInstance:
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: Hide
-      objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
@@ -11371,6 +11445,10 @@ PrefabInstance:
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -11589,8 +11667,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821384686}
-  m_LocalRotation: {x: 0.11540606, y: 0.31091738, z: 0.03806602, w: -0.94263613}
-  m_LocalPosition: {x: -9.418953, y: -4.9479036, z: -264.49994}
+  m_LocalRotation: {x: -0, y: 0.019516334, z: -0, w: -0.99980956}
+  m_LocalPosition: {x: 27.544497, y: -18.202126, z: -2.9364827}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 352811229}
@@ -12337,6 +12415,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2776306269759496809, guid: a80d2b1992b9155489528fe03f42e744,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2776306269935881065, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12372,12 +12455,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4009313522745819221, guid: a80d2b1992b9155489528fe03f42e744,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2776306269759496809, guid: a80d2b1992b9155489528fe03f42e744,
+    - target: {fileID: 2776306269538122505, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -12387,7 +12465,7 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2776306269538122505, guid: a80d2b1992b9155489528fe03f42e744,
+    - target: {fileID: 4009313522745819221, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -12552,8 +12630,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020858207}
-  m_LocalRotation: {x: 0.21618867, y: 0.69356716, z: 0.23177679, w: -0.64692086}
-  m_LocalPosition: {x: -0.7580335, y: -4.7565393, z: -0.8943185}
+  m_LocalRotation: {x: 0.14397506, y: 0.58503187, z: 0.10648373, w: -0.79099315}
+  m_LocalPosition: {x: 0.8391426, y: -5.243642, z: -1.1106015}
   m_LocalScale: {x: 0.08434737, y: 1, z: 0.030439662}
   m_Children: []
   m_Father: {fileID: 1531226190}

@@ -15,7 +15,7 @@ public class ScrollRectController : MonoBehaviour
 
     private void Start()
     {
-        _cooldown = scrollCooldown;
+        _ResetCooldown();
     }
 
 
@@ -31,8 +31,13 @@ public class ScrollRectController : MonoBehaviour
             {
                 Down();
             }
+            _ResetCooldown();
         }
         _cooldown -= Time.deltaTime;
+    }
+    protected void _ResetCooldown()
+    {
+        _cooldown = scrollCooldown;
     }
 
     public void EnableUp()
@@ -56,13 +61,13 @@ public class ScrollRectController : MonoBehaviour
 
     public void Up()
     {
-        scrollRect.verticalNormalizedPosition = Mathf.Clamp01(scrollRect.verticalNormalizedPosition - scrollDelta);
+        scrollRect.verticalNormalizedPosition = Mathf.Clamp01(scrollRect.verticalNormalizedPosition + scrollDelta);
         print("up: " + scrollRect.verticalNormalizedPosition);
     }
 
     public void Down()
     {
-        scrollRect.verticalNormalizedPosition = Mathf.Clamp01(scrollRect.verticalNormalizedPosition + scrollDelta);
+        scrollRect.verticalNormalizedPosition = Mathf.Clamp01(scrollRect.verticalNormalizedPosition - scrollDelta);
         print("down: " + scrollRect.verticalNormalizedPosition);
     }
 }

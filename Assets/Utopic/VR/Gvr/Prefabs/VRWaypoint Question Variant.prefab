@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &534051698
+--- !u!114 &4358482514121713229
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c26a1dc0e28b0744f821a073b62c1000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
+  mode: 0
   target: {fileID: 0}
   x: 0
   y: 1
   z: 0
+  navMeshAgent: {fileID: 0}
 --- !u!1001 &3517998716162346876
 PrefabInstance:
   m_ObjectHideFlags: 0
