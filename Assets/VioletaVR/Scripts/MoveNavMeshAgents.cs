@@ -7,7 +7,6 @@ public class MoveNavMeshAgents : MonoBehaviour
 
     [Header("En el arreglo AGENTS, usa sólo los que vas a mover")]
     [Header("Nota: Llamar a este MoveAgents() max 1 vez")]
-    public bool workOnlyWhenActive = false;
     [SerializeField] float rotationSpeedOnArrive = 10;
     [SerializeField] UnityEngine.AI.NavMeshAgent[] agents;
     [Header("Usar mismo orden que el arreglo AGENTS")]
@@ -54,8 +53,6 @@ public class MoveNavMeshAgents : MonoBehaviour
     }
     public void MoveAgents()
     {
-        if (workOnlyWhenActive && !gameObject.activeInHierarchy)
-            return;
 
         moveAgentsCalled = true;
         if (agents.Length <= destinations.Length)
@@ -69,8 +66,6 @@ public class MoveNavMeshAgents : MonoBehaviour
     }
     public void MoveAgentsInstantly()
     {
-        if (workOnlyWhenActive && !gameObject.activeInHierarchy)
-            return;
 
         moveAgentsCalled = true;
         if (agents.Length <= destinations.Length)

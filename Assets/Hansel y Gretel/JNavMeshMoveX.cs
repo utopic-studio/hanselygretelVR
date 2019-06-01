@@ -93,8 +93,9 @@ namespace J
                 {
                     if (!personajes[i].hasArrived)
                         allArrived = false;
-
-                    if (!personajes[i].hasArrived && isAgentDoneWithHisPath(personajes[i].agent))
+                    if (Input.GetKey(KeyCode.A))
+                        print(personajes[i].agent.name + " " + personajes[i].agent.isActiveAndEnabled);
+                    if (personajes[i].agent.isActiveAndEnabled && !personajes[i].hasArrived && isAgentDoneWithHisPath(personajes[i].agent))
                     {
                         personajes[i].hasArrived = true;
 

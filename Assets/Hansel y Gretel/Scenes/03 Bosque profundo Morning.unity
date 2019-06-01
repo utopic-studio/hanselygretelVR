@@ -2963,7 +2963,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca48e1ff3a2d9a488429c8d4d7d94d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workOnlyWhenActive: 0
   rotationSpeedOnArrive: 10
   agents:
   - {fileID: 6931909339998228802}
@@ -6921,7 +6920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: 04 Bosque profundo
-  delay: 2
+  delay: 0.2
 --- !u!4 &834027655
 Transform:
   m_ObjectHideFlags: 0
@@ -28458,7 +28457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca48e1ff3a2d9a488429c8d4d7d94d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workOnlyWhenActive: 0
   rotationSpeedOnArrive: 10
   agents:
   - {fileID: 6931909339998228802}
@@ -40966,7 +40964,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca48e1ff3a2d9a488429c8d4d7d94d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workOnlyWhenActive: 0
   rotationSpeedOnArrive: 10
   agents:
   - {fileID: 1718662629090490869}
@@ -47327,7 +47324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718662629522805369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 108.4, y: 0.58, z: 100.6}
+  m_LocalPosition: {x: 116.6, y: 0.58, z: 100.6}
   m_LocalScale: {x: 3.5894783, y: 1.1674693, z: 40.88731}
   m_Children: []
   m_Father: {fileID: 1718662629102244143}
@@ -47365,19 +47362,8 @@ MonoBehaviour:
   delayedAction:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3557422978797232881}
-        m_MethodName: MoveAgentsInstantly
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: FadeIn
+      - m_Target: {fileID: 834027654}
+        m_MethodName: LoadTheLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -47390,7 +47376,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   delay:
-  - 3
+  - 1.5
 --- !u!54 &1718662629522805376
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -54920,6 +54906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3340829716010514179}
   - component: {fileID: 8408955503462002279}
+  - component: {fileID: 2340213632285315351}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -54927,6 +54914,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2340213632285315351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2340213632285315350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535fb3879b23a884d92c88d027622af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoName: sticky_arrow
+  listOfGizmos: https://unitylist.com/p/5c3/Unity-editor-icons
 --- !u!1 &2340213632406412043
 GameObject:
   m_ObjectHideFlags: 0
@@ -56804,7 +56805,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca48e1ff3a2d9a488429c8d4d7d94d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workOnlyWhenActive: 0
   rotationSpeedOnArrive: 10
   agents:
   - {fileID: 1718662629090490869}
@@ -57412,6 +57412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3557422977258457538}
   - component: {fileID: 3557422977258457537}
+  - component: {fileID: 3557422977258457542}
   m_Layer: 0
   m_Name: G
   m_TagString: Untagged
@@ -57419,6 +57420,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3557422977258457542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557422977258457541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535fb3879b23a884d92c88d027622af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoName: sticky_arrow
+  listOfGizmos: https://unitylist.com/p/5c3/Unity-editor-icons
 --- !u!1 &3557422977260533811
 GameObject:
   m_ObjectHideFlags: 0
@@ -57937,6 +57952,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3557422977374991147}
   - component: {fileID: 3557422977374991142}
+  - component: {fileID: 3557422977374991148}
   m_Layer: 0
   m_Name: Mother
   m_TagString: Untagged
@@ -57959,6 +57975,20 @@ Transform:
   m_Father: {fileID: 3557422978797232878}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 205.65599, z: 0}
+--- !u!114 &3557422977374991148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557422977374991146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535fb3879b23a884d92c88d027622af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoName: sticky_arrow
+  listOfGizmos: https://unitylist.com/p/5c3/Unity-editor-icons
 --- !u!1 &3557422977399473112
 GameObject:
   m_ObjectHideFlags: 0
@@ -58256,6 +58286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3557422977500584490}
   - component: {fileID: 3557422977500584489}
+  - component: {fileID: 3557422977500584494}
   m_Layer: 0
   m_Name: Father
   m_TagString: Untagged
@@ -58263,6 +58294,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &3557422977500584494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557422977500584493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535fb3879b23a884d92c88d027622af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoName: sticky_arrow
+  listOfGizmos: https://unitylist.com/p/5c3/Unity-editor-icons
 --- !u!1 &3557422977514340282
 GameObject:
   m_ObjectHideFlags: 0
@@ -58447,7 +58492,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca48e1ff3a2d9a488429c8d4d7d94d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workOnlyWhenActive: 0
   rotationSpeedOnArrive: 10
   agents:
   - {fileID: 1718662629985013912}
@@ -58577,7 +58621,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca48e1ff3a2d9a488429c8d4d7d94d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workOnlyWhenActive: 0
   rotationSpeedOnArrive: 10
   agents:
   - {fileID: 1718662629090490869}
@@ -59376,7 +59419,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca48e1ff3a2d9a488429c8d4d7d94d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workOnlyWhenActive: 0
   rotationSpeedOnArrive: 10
   agents:
   - {fileID: 1718662629090490869}
@@ -60591,6 +60633,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3557422978696849995}
   - component: {fileID: 3557422978696849993}
+  - component: {fileID: 3557422978696849996}
   m_Layer: 0
   m_Name: H
   m_TagString: Untagged
@@ -60613,6 +60656,20 @@ Transform:
   m_Father: {fileID: 3557422978797232878}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -151.67001, z: 0}
+--- !u!114 &3557422978696849996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557422978696849994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535fb3879b23a884d92c88d027622af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoName: sticky_arrow
+  listOfGizmos: https://unitylist.com/p/5c3/Unity-editor-icons
 --- !u!1 &3557422978698910652
 GameObject:
   m_ObjectHideFlags: 0
@@ -60889,7 +60946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca48e1ff3a2d9a488429c8d4d7d94d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workOnlyWhenActive: 0
   rotationSpeedOnArrive: 10
   agents:
   - {fileID: 1718662629090490869}
@@ -60989,6 +61045,7 @@ GameObject:
   - component: {fileID: 3557422978797232878}
   - component: {fileID: 3557422978797232881}
   - component: {fileID: 1718662630030778834}
+  - component: {fileID: 3557422978797232882}
   m_Layer: 0
   m_Name: Waypoints Chars 5 Fogata
   m_TagString: Untagged
@@ -61008,7 +61065,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca48e1ff3a2d9a488429c8d4d7d94d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workOnlyWhenActive: 0
   rotationSpeedOnArrive: 10
   agents:
   - {fileID: 1718662629090490869}
@@ -61016,11 +61072,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 1718662629205878663}
+  - {fileID: 6931909339998228802}
   destinations:
   - {fileID: 3557422978696849995}
   - {fileID: 3557422977258457538}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 3340829716010514179}
   - {fileID: 3340829716010514179}
   OnArriveAny:
     m_PersistentCalls:
@@ -61044,6 +61102,80 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   eventOnArrivePerCharacter: []
+--- !u!114 &3557422978797232882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3557422978797232880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5d9bff2d76ba81449fb408e13abdad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveOnStart: 0
+  personajes:
+  - agent: {fileID: 1718662629090490869}
+    posicion: {fileID: 3557422978696849996}
+    rotationTime: 0
+    dontRotate: 0
+    callsMainEvent: 1
+    individualEvent:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    hasArrived: 0
+  - agent: {fileID: 1718662628445430689}
+    posicion: {fileID: 3557422977258457542}
+    rotationTime: 0
+    dontRotate: 0
+    callsMainEvent: 1
+    individualEvent:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    hasArrived: 0
+  - agent: {fileID: 6931909339998228802}
+    posicion: {fileID: 2340213632285315351}
+    rotationTime: 0
+    dontRotate: 0
+    callsMainEvent: 1
+    individualEvent:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    hasArrived: 0
+  - agent: {fileID: 1718662629205878663}
+    posicion: {fileID: 2340213632285315351}
+    rotationTime: 0
+    dontRotate: 0
+    callsMainEvent: 1
+    individualEvent:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+    hasArrived: 0
+  MainArriveEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1718662629098008880}
+        m_MethodName: JFadeIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &3557422978799358726
 GameObject:
   m_ObjectHideFlags: 0
@@ -61074,7 +61206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca48e1ff3a2d9a488429c8d4d7d94d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workOnlyWhenActive: 0
   rotationSpeedOnArrive: 10
   agents:
   - {fileID: 1718662629090490869}
@@ -62117,7 +62248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca48e1ff3a2d9a488429c8d4d7d94d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workOnlyWhenActive: 0
   rotationSpeedOnArrive: 10
   agents:
   - {fileID: 1718662629090490869}
@@ -62252,7 +62382,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca48e1ff3a2d9a488429c8d4d7d94d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  workOnlyWhenActive: 0
   rotationSpeedOnArrive: 10
   agents:
   - {fileID: 1718662629090490869}
@@ -64639,6 +64768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6516258110134334483}
   - component: {fileID: 1585136173713910124}
+  - component: {fileID: 4515349405523895851}
   m_Layer: 0
   m_Name: Buho
   m_TagString: Untagged
@@ -64646,6 +64776,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &4515349405523895851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4515349405523895850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535fb3879b23a884d92c88d027622af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoName: sticky_arrow
+  listOfGizmos: https://unitylist.com/p/5c3/Unity-editor-icons
 --- !u!1 &4515349405525956572
 GameObject:
   m_ObjectHideFlags: 0
@@ -69145,6 +69289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2265713591127852764}
   - component: {fileID: 1250489702871856984}
+  - component: {fileID: 5842029179393372147}
   m_Layer: 0
   m_Name: Bruja
   m_TagString: Untagged
@@ -69152,6 +69297,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &5842029179393372147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5842029179393372146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535fb3879b23a884d92c88d027622af5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoName: sticky_arrow
+  listOfGizmos: https://unitylist.com/p/5c3/Unity-editor-icons
 --- !u!1 &5842029179406944869
 GameObject:
   m_ObjectHideFlags: 0
@@ -75921,7 +76080,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6798327431567026667}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09319d4fb93f74e69abea4f37c9bf2c4, type: 3}
   m_Name: 
