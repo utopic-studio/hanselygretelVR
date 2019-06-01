@@ -32,13 +32,13 @@ public class MyCameraManager : MonoBehaviour
 	}
 	public void FadeIn()
 	{
-		SetScreenOverlayColor (new Color (0, 0, 0, 1));
-		StartFade (new Color (0f, 0f, 0f, 0f), fadeOutTime);
+		//SetScreenOverlayColor (new Color (0, 0, 0, 1));
+		//StartFade (new Color (0f, 0f, 0f, 0f), fadeOutTime);
 	}
 	public void FadeOut()
 	{
-		SetScreenOverlayColor (new Color (0, 0, 0, 0));
-		StartFade (new Color (0f, 0f, 0f, 1f), fadeInTime);
+		//SetScreenOverlayColor (new Color (0, 0, 0, 0));
+		//StartFade (new Color (0f, 0f, 0f, 1f), fadeInTime);
 	}
 	public void Shake(float amount)
 	{
@@ -52,6 +52,7 @@ public class MyCameraManager : MonoBehaviour
 	// draw the texture and perform the fade:
 	private void OnGUI()
 	{   
+        /*
 		// if the current color of the screen is not equal to the desired color: keep fading!
 		if (m_CurrentScreenOverlayColor != m_TargetScreenOverlayColor)
 		{			
@@ -75,6 +76,7 @@ public class MyCameraManager : MonoBehaviour
 			GUI.depth = m_FadeGUIDepth;
 			GUI.Label(new Rect(-10, -10, Screen.width + 10, Screen.height + 10), m_FadeTexture, m_BackgroundStyle);
 		}
+        */
 	}
 
 
@@ -82,15 +84,18 @@ public class MyCameraManager : MonoBehaviour
 	// can be usefull if you want to start a scene fully black and then fade to opague
 	private void SetScreenOverlayColor(Color newScreenOverlayColor)
 	{
+        /*
 		m_CurrentScreenOverlayColor = newScreenOverlayColor;
 		m_FadeTexture.SetPixel(0, 0, m_CurrentScreenOverlayColor);
 		m_FadeTexture.Apply();
+        */
 	}
 
 
 	// initiate a fade from the current screen color (set using "SetScreenOverlayColor") towards "newScreenOverlayColor" taking "fadeDuration" seconds
 	private void StartFade(Color newScreenOverlayColor, float fadeDuration)
 	{
+        /*
 		if (fadeDuration <= 0.0f)		// can't have a fade last -2455.05 seconds!
 		{
 			SetScreenOverlayColor(newScreenOverlayColor);
@@ -100,6 +105,7 @@ public class MyCameraManager : MonoBehaviour
 			m_TargetScreenOverlayColor = newScreenOverlayColor;
 			m_DeltaColor = (m_TargetScreenOverlayColor - m_CurrentScreenOverlayColor) / fadeDuration;
 		}
+        */
 	}
 
 
