@@ -24,6 +24,8 @@ namespace J
         private GameObject block_screen_obj;
         private GameObject block_screen_img_obj;
 
+
+
         private void OnValidate()
         {
             if (block_screen_img_obj)
@@ -35,7 +37,14 @@ namespace J
         }
 
 
-
+        public void JSetFadeInTime(float t)
+        {
+            this.fadeinTime = t;
+        }
+        public void JSetFadeOutTime(float t)
+        {
+            this.fadeoutTime = t;
+        }
         public void JFadeIn()
         {
             _Fade(fadeinTime, this.transparentColor);
