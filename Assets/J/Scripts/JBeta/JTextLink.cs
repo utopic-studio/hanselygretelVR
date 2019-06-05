@@ -12,6 +12,7 @@ public class JTextLink : MonoBehaviour
 
     void OnValidate()
     {
+        
         if (text)
             text.text = content;
         if (textPro)

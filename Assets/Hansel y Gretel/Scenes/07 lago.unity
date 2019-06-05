@@ -791,7 +791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 44529546, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1029,45 +1029,13 @@ PrefabInstance:
       propertyPath: delay.Array.data[1]
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
-      value: 
-      objectReference: {fileID: 1073862156}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: fadeInTime
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1897807942, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2058293561, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4081060794762982323, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1270747589}
-    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CallBothActions
-      objectReference: {fileID: 0}
-    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Hide
-      objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
@@ -1079,26 +1047,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -1139,6 +1087,54 @@ PrefabInstance:
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 1073862156}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: fadeInTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2058293561, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1270747589}
+    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CallBothActions
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Hide
       objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
@@ -1205,6 +1201,79 @@ PrefabInstance:
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493277917417023350, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: content
+      value: "Hansel y Gretel viv\xEDan muy cerca de un espeso bosque con su padre
+        que era un pobre le\xF1ador y su cruel madrastra. Viv\xEDan con much\xEDsima
+        escasez y ya no les alcanzaba para que los cuatro pudieran comer.\r\nUna noche,
+        creyendo que los ni\xF1os estaban dormidos, la cruel madrastra dijo al le\xF1ador:
+        No hay bastante comida para todos. Ma\xF1ana llevaremos a los ni\xF1os a la
+        parte m\xE1s espesa del bosque y los dejaremos all\xED. Ellos no podr\xE1n
+        encontrar el camino a casa y as\xED nos desprenderemos de esa carga. Al principio,
+        el padre se opuso rotundamente a la cruel idea de la malvada mujer.\r\n<size=26>\u2013\xBFC\xF3mo
+        vamos a abandonar a mis hijos a su suerte?, \xA1quiz\xE1s sean atacados por
+        los animales del bosque! -<size=18>grit\xF3 enojado.\r\n\u2013De cualquier
+        manera, as\xED moriremos todos de hambre \u2013dijo la madrastra y no descans\xF3
+        hasta convencer al d\xE9bil hombre de llevar adelante el mal\xE9volo plan
+        que se hab\xEDa trazado.\r\nSin embargo, los ni\xF1os escucharon toda la conversaci\xF3n.
+        Gretel lloraba amargamente y Hansel la consolaba: \u2013No llores, querida
+        hermanita \u2013dec\xEDa \xE9l\u2013, \xA1Yo tengo una idea para encontrar
+        el camino de regreso a casa!\r\nA la ma\xF1ana siguiente, cuando salieron
+        hacia el bosque, la madrastra les dio a cada uno de los ni\xF1os un pedazo
+        de pan. <br><b>\u2013No deben comer este pan antes del almuerzo </b>\u2013les
+        dijo\u2013. <b>Eso es todo lo que tendr\xE1n para la tarde.</b>\r\nEl dominado
+        padre y la madrastra los acompa\xF1aron a adentrarse en el bosque. Cuando
+        penetraron en la espesura, los ni\xF1os se quedaron atr\xE1s. Hansel, haciendo
+        migas de su pan, las fue dejando caer con disimulo para tener se\xF1ales que
+        les permitieran luego regresar a casa.\r\nLos padres los llevaron muy adentro
+        del bosque y la madrastra les dijo: <b>\u2014Ya se acerca la hora de irnos.
+        Qu\xE9dense aqu\xED hasta que vengamos a buscarlos.</b> <br>Hansel y Gretel
+        hicieron lo que sus padres hab\xEDan ordenado. Pero cuando se acerc\xF3 la
+        noche, trataron de encontrar el camino de regreso.\r\nDesgraciadamente, los
+        p\xE1jaros se hab\xEDan comido las migas que marcaban el camino. Toda la noche,
+        anduvieron por el bosque con mucho temor observando el brillo de los ojos
+        de las fieras y a cada paso se perd\xEDan m\xE1s en aquella espesura.\r\nAl
+        amanecer, casi muertos de miedo y de hambre, los ni\xF1os vieron un p\xE1jaro
+        blanco que volaba frente a ellos.  El p\xE1jaro les aleteaba en se\xF1al amistosa
+        para animarlos a seguir adelante.\r\nSiguiendo el vuelo de aquel p\xE1jaro
+        encontraron una extra\xF1a casita. \r\nEstaba construida de panes, dulces,
+        bombones y otras golosinas muy sabrosas.\r\nLos ni\xF1os, con un apetito terrible,
+        corrieron hasta la casita, para comer los riqu\xEDsimos dulces, pero una bruja
+        los detuvo. <br>La casa estaba hecha para atraer a los ni\xF1os y cuando \xE9stos
+        se encontraban en su poder, la bruja los mataba y los cocinaba para com\xE9rselos.\r\nComo
+        Hansel estaba muy delgadito, la bruja lo encerr\xF3 en una jaula y all\xED
+        lo alimentaba con ricos y sustanciosos manjares para engordarlo. Mientras
+        tanto, Gretel ten\xEDa que hacer los trabajos m\xE1s pesados y s\xF3lo ten\xEDa
+        c\xE1scaras de cangrejos para comer.\r\n\"Un d\xEDa, la bruja decidi\xF3 que
+        Hansel estaba listo y orden\xF3 a Gretel que preparara una enorme cacerola
+        de agua para cocinarlo.<br><b><size=20>\u2014Primero</size></b> \u2014dijo
+        la bruja\u2014<b><size=20>, vamos a ver el horno que yo prend\xED para hacer
+        pan. Entra t\xFA primero, Gretel, y f\xEDjate si est\xE1 bien caliente como
+        para hornear.\n</size></b>\"\r\nEn realidad la bruja pensaba cerrar la puerta
+        del horno una vez que Gretel estuviera dentro para cocinarla a ella tambi\xE9n.
+        Pero Gretel que era muy astuta hizo como que no entend\xEDa lo que la bruja
+        dec\xEDa.\r\n\u2014<b><size=21>Yo no s\xE9. \xBFC\xF3mo entro? </size></b>\u2014pregunt\xF3
+        Gretel. <br>\u2014<b><size=36>\xA1Tonta! </size></b>\u2014grit\xF3 la bruja\u2014,
+        <b><size=21>mira c\xF3mo se hace</size></b> \u2014y la bruja meti\xF3 la cabeza
+        dentro del horno. <br>R\xE1pidamente Gretel la empuj\xF3 dentro del horno
+        y cerr\xF3 la puerta.\r\nGretel puso en libertad a Hansel. Pero antes de irse...\r\nLos
+        dos ni\xF1os se llenaron los bolsillos de perlas y piedras preciosas del tesoro
+        de la bruja.\r\nLos ni\xF1os huyeron del bosque hasta llegar a orillas de
+        un inmenso lago que parec\xEDa imposible de atravesar. Afortunadamente, un
+        hermoso cisne blanco les ofreci\xF3 cruzarlos hasta el muelle.\r\nCon gran
+        alegr\xEDa, los ni\xF1os encontraron a su padre all\xED. La cruel madrastra
+        no estaba porque ella hab\xEDa muerto. El padre hab\xEDa sufrido mucho por
+        la ausencia de los ni\xF1os y los hab\xEDa buscado por todas partes.\r\nDejando
+        caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron en sus
+        brazos. Juntos olvidaron todos los malos momentos que hab\xEDan pasado. As\xED,
+        Hansel y Gretel supieron que lo m\xE1s importante en la vida es estar junto
+        a los seres queridos. Desde ese momento, vivieron felices y ricos para siempre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8795ff84141c649a2592376719451c, type: 3}
@@ -2034,89 +2103,6 @@ Transform:
   m_Father: {fileID: 1531226190}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &360314500
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 360314501}
-  - component: {fileID: 360314502}
-  m_Layer: 0
-  m_Name: text 3 button
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &360314501
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360314500}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 731484292}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &360314502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360314500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fade50be94da5094999a6c0db6bc6eb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doOnStart: 0
-  normalAction:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  delayedAction:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1886278308}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 1
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: FadeIn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  delay:
-  - 4
-  - 5
 --- !u!4 &375836415 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7f93de0829cc4de47ad9bb8809c1be3f,
@@ -2936,7 +2922,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Name
-      value: TextVR Question 2
+      value: TextVR Question 22
       objectReference: {fileID: 0}
     - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
@@ -3008,7 +2994,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: "En el siguiente extracto:\r\n\u201CCon gran alegr\xEDa, los ni\xF1os
-        encontraron a su padre all\xED\u201D\r\n\xBFA qu\xE9 se refieren con <b>all\xED</b>?"
+        encontraron a su padre all\xED\u201D\r\n\xBFA qu\xE9 se refieren con <b><u>all\xED</u></b>?"
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
@@ -3093,14 +3079,6 @@ PrefabInstance:
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
-      value: 
-      objectReference: {fileID: 1277218781}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1897807942, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3110,45 +3088,148 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: correctChoice
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 2
+      propertyPath: m_isInputParsingRequired
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      propertyPath: m_text
+      value: Al bosque.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_text
+      value: Al lago.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_text
+      value: Al muelle.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
       value: 
-      objectReference: {fileID: 1391398317}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Show
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      propertyPath: m_sharedMaterial
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: questionID
-      value: 25
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 1277218781}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
@@ -3278,150 +3359,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: idle
       objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: Al bosque.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: Al lago.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: Al muelle.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 29
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
       value: "Dejando caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron
@@ -3439,7 +3376,7 @@ PrefabInstance:
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 360314502}
+      objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -3480,6 +3417,129 @@ PrefabInstance:
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2493277917417023350, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: content
+      value: "Hansel y Gretel viv\xEDan muy cerca de un espeso bosque con su padre
+        que era un pobre le\xF1ador y su cruel madrastra. Viv\xEDan con much\xEDsima
+        escasez y ya no les alcanzaba para que los cuatro pudieran comer.\r\nUna noche,
+        creyendo que los ni\xF1os estaban dormidos, la cruel madrastra dijo al le\xF1ador:
+        No hay bastante comida para todos. Ma\xF1ana llevaremos a los ni\xF1os a la
+        parte m\xE1s espesa del bosque y los dejaremos all\xED. Ellos no podr\xE1n
+        encontrar el camino a casa y as\xED nos desprenderemos de esa carga. Al principio,
+        el padre se opuso rotundamente a la cruel idea de la malvada mujer.\r\n<size=26>\u2013\xBFC\xF3mo
+        vamos a abandonar a mis hijos a su suerte?, \xA1quiz\xE1s sean atacados por
+        los animales del bosque! -<size=18>grit\xF3 enojado.\r\n\u2013De cualquier
+        manera, as\xED moriremos todos de hambre \u2013dijo la madrastra y no descans\xF3
+        hasta convencer al d\xE9bil hombre de llevar adelante el mal\xE9volo plan
+        que se hab\xEDa trazado.\r\nSin embargo, los ni\xF1os escucharon toda la conversaci\xF3n.
+        Gretel lloraba amargamente y Hansel la consolaba: \u2013No llores, querida
+        hermanita \u2013dec\xEDa \xE9l\u2013, \xA1Yo tengo una idea para encontrar
+        el camino de regreso a casa!\r\nA la ma\xF1ana siguiente, cuando salieron
+        hacia el bosque, la madrastra les dio a cada uno de los ni\xF1os un pedazo
+        de pan. <br><b>\u2013No deben comer este pan antes del almuerzo </b>\u2013les
+        dijo\u2013. <b>Eso es todo lo que tendr\xE1n para la tarde.</b>\r\nEl dominado
+        padre y la madrastra los acompa\xF1aron a adentrarse en el bosque. Cuando
+        penetraron en la espesura, los ni\xF1os se quedaron atr\xE1s. Hansel, haciendo
+        migas de su pan, las fue dejando caer con disimulo para tener se\xF1ales que
+        les permitieran luego regresar a casa.\r\nLos padres los llevaron muy adentro
+        del bosque y la madrastra les dijo: <b>\u2014Ya se acerca la hora de irnos.
+        Qu\xE9dense aqu\xED hasta que vengamos a buscarlos.</b> <br>Hansel y Gretel
+        hicieron lo que sus padres hab\xEDan ordenado. Pero cuando se acerc\xF3 la
+        noche, trataron de encontrar el camino de regreso.\r\nDesgraciadamente, los
+        p\xE1jaros se hab\xEDan comido las migas que marcaban el camino. Toda la noche,
+        anduvieron por el bosque con mucho temor observando el brillo de los ojos
+        de las fieras y a cada paso se perd\xEDan m\xE1s en aquella espesura.\r\nAl
+        amanecer, casi muertos de miedo y de hambre, los ni\xF1os vieron un p\xE1jaro
+        blanco que volaba frente a ellos.  El p\xE1jaro les aleteaba en se\xF1al amistosa
+        para animarlos a seguir adelante.\r\nSiguiendo el vuelo de aquel p\xE1jaro
+        encontraron una extra\xF1a casita. \r\nEstaba construida de panes, dulces,
+        bombones y otras golosinas muy sabrosas.\r\nLos ni\xF1os, con un apetito terrible,
+        corrieron hasta la casita, para comer los riqu\xEDsimos dulces, pero una bruja
+        los detuvo. <br>La casa estaba hecha para atraer a los ni\xF1os y cuando \xE9stos
+        se encontraban en su poder, la bruja los mataba y los cocinaba para com\xE9rselos.\r\nComo
+        Hansel estaba muy delgadito, la bruja lo encerr\xF3 en una jaula y all\xED
+        lo alimentaba con ricos y sustanciosos manjares para engordarlo. Mientras
+        tanto, Gretel ten\xEDa que hacer los trabajos m\xE1s pesados y s\xF3lo ten\xEDa
+        c\xE1scaras de cangrejos para comer.\r\n\"Un d\xEDa, la bruja decidi\xF3 que
+        Hansel estaba listo y orden\xF3 a Gretel que preparara una enorme cacerola
+        de agua para cocinarlo.<br><b><size=20>\u2014Primero</size></b> \u2014dijo
+        la bruja\u2014<b><size=20>, vamos a ver el horno que yo prend\xED para hacer
+        pan. Entra t\xFA primero, Gretel, y f\xEDjate si est\xE1 bien caliente como
+        para hornear.\n</size></b>\"\r\nEn realidad la bruja pensaba cerrar la puerta
+        del horno una vez que Gretel estuviera dentro para cocinarla a ella tambi\xE9n.
+        Pero Gretel que era muy astuta hizo como que no entend\xEDa lo que la bruja
+        dec\xEDa.\r\n\u2014<b><size=21>Yo no s\xE9. \xBFC\xF3mo entro? </size></b>\u2014pregunt\xF3
+        Gretel. <br>\u2014<b><size=36>\xA1Tonta! </size></b>\u2014grit\xF3 la bruja\u2014,
+        <b><size=21>mira c\xF3mo se hace</size></b> \u2014y la bruja meti\xF3 la cabeza
+        dentro del horno. <br>R\xE1pidamente Gretel la empuj\xF3 dentro del horno
+        y cerr\xF3 la puerta.\r\nGretel puso en libertad a Hansel. Pero antes de irse...\r\nLos
+        dos ni\xF1os se llenaron los bolsillos de perlas y piedras preciosas del tesoro
+        de la bruja.\r\nLos ni\xF1os huyeron del bosque hasta llegar a orillas de
+        un inmenso lago que parec\xEDa imposible de atravesar. Afortunadamente, un
+        hermoso cisne blanco les ofreci\xF3 cruzarlos hasta el muelle.\r\nCon gran
+        alegr\xEDa, los ni\xF1os encontraron a su padre all\xED. La cruel madrastra
+        no estaba porque ella hab\xEDa muerto. El padre hab\xEDa sufrido mucho por
+        la ausencia de los ni\xF1os y los hab\xEDa buscado por todas partes.\r\nDejando
+        caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron en sus
+        brazos. Juntos olvidaron todos los malos momentos que hab\xEDan pasado. As\xED,
+        Hansel y Gretel supieron que lo m\xE1s importante en la vida es estar junto
+        a los seres queridos. Desde ese momento, vivieron felices y ricos para siempre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: correctChoice
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1391398317}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Show
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: questionID
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531504200712742781, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8795ff84141c649a2592376719451c, type: 3}
 --- !u!1001 &542425748
@@ -3491,7 +3551,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Name
-      value: TextVR Question 1
+      value: TextVR Question 21
       objectReference: {fileID: 0}
     - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
@@ -3648,14 +3708,6 @@ PrefabInstance:
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
-      value: 
-      objectReference: {fileID: 1600608882}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1897807942, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -3665,45 +3717,138 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: correctChoice
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_text
+      value: "La madrastra de los ni\xF1os muere."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_text
+      value: "Los ni\xF1os dejan caer los tesoros."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_text
+      value: "Los ni\xF1os encuentran a su padre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
       value: 
-      objectReference: {fileID: 1928103823}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: Show
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      propertyPath: m_sharedMaterial
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: questionID
-      value: 24
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 1600608882}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
@@ -3825,140 +3970,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
       value: idle
       objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: "La madrastra de los ni\xF1os muere."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: "Los ni\xF1os dejan caer los tesoros."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: "Los ni\xF1os encuentran a su padre."
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
       value: "Dejando caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron
@@ -3976,7 +3987,7 @@ PrefabInstance:
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 360314502}
+      objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -4016,6 +4027,129 @@ PrefabInstance:
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493277917417023350, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: content
+      value: "Hansel y Gretel viv\xEDan muy cerca de un espeso bosque con su padre
+        que era un pobre le\xF1ador y su cruel madrastra. Viv\xEDan con much\xEDsima
+        escasez y ya no les alcanzaba para que los cuatro pudieran comer.\r\nUna noche,
+        creyendo que los ni\xF1os estaban dormidos, la cruel madrastra dijo al le\xF1ador:
+        No hay bastante comida para todos. Ma\xF1ana llevaremos a los ni\xF1os a la
+        parte m\xE1s espesa del bosque y los dejaremos all\xED. Ellos no podr\xE1n
+        encontrar el camino a casa y as\xED nos desprenderemos de esa carga. Al principio,
+        el padre se opuso rotundamente a la cruel idea de la malvada mujer.\r\n<size=26>\u2013\xBFC\xF3mo
+        vamos a abandonar a mis hijos a su suerte?, \xA1quiz\xE1s sean atacados por
+        los animales del bosque! -<size=18>grit\xF3 enojado.\r\n\u2013De cualquier
+        manera, as\xED moriremos todos de hambre \u2013dijo la madrastra y no descans\xF3
+        hasta convencer al d\xE9bil hombre de llevar adelante el mal\xE9volo plan
+        que se hab\xEDa trazado.\r\nSin embargo, los ni\xF1os escucharon toda la conversaci\xF3n.
+        Gretel lloraba amargamente y Hansel la consolaba: \u2013No llores, querida
+        hermanita \u2013dec\xEDa \xE9l\u2013, \xA1Yo tengo una idea para encontrar
+        el camino de regreso a casa!\r\nA la ma\xF1ana siguiente, cuando salieron
+        hacia el bosque, la madrastra les dio a cada uno de los ni\xF1os un pedazo
+        de pan. <br><b>\u2013No deben comer este pan antes del almuerzo </b>\u2013les
+        dijo\u2013. <b>Eso es todo lo que tendr\xE1n para la tarde.</b>\r\nEl dominado
+        padre y la madrastra los acompa\xF1aron a adentrarse en el bosque. Cuando
+        penetraron en la espesura, los ni\xF1os se quedaron atr\xE1s. Hansel, haciendo
+        migas de su pan, las fue dejando caer con disimulo para tener se\xF1ales que
+        les permitieran luego regresar a casa.\r\nLos padres los llevaron muy adentro
+        del bosque y la madrastra les dijo: <b>\u2014Ya se acerca la hora de irnos.
+        Qu\xE9dense aqu\xED hasta que vengamos a buscarlos.</b> <br>Hansel y Gretel
+        hicieron lo que sus padres hab\xEDan ordenado. Pero cuando se acerc\xF3 la
+        noche, trataron de encontrar el camino de regreso.\r\nDesgraciadamente, los
+        p\xE1jaros se hab\xEDan comido las migas que marcaban el camino. Toda la noche,
+        anduvieron por el bosque con mucho temor observando el brillo de los ojos
+        de las fieras y a cada paso se perd\xEDan m\xE1s en aquella espesura.\r\nAl
+        amanecer, casi muertos de miedo y de hambre, los ni\xF1os vieron un p\xE1jaro
+        blanco que volaba frente a ellos.  El p\xE1jaro les aleteaba en se\xF1al amistosa
+        para animarlos a seguir adelante.\r\nSiguiendo el vuelo de aquel p\xE1jaro
+        encontraron una extra\xF1a casita. \r\nEstaba construida de panes, dulces,
+        bombones y otras golosinas muy sabrosas.\r\nLos ni\xF1os, con un apetito terrible,
+        corrieron hasta la casita, para comer los riqu\xEDsimos dulces, pero una bruja
+        los detuvo. <br>La casa estaba hecha para atraer a los ni\xF1os y cuando \xE9stos
+        se encontraban en su poder, la bruja los mataba y los cocinaba para com\xE9rselos.\r\nComo
+        Hansel estaba muy delgadito, la bruja lo encerr\xF3 en una jaula y all\xED
+        lo alimentaba con ricos y sustanciosos manjares para engordarlo. Mientras
+        tanto, Gretel ten\xEDa que hacer los trabajos m\xE1s pesados y s\xF3lo ten\xEDa
+        c\xE1scaras de cangrejos para comer.\r\n\"Un d\xEDa, la bruja decidi\xF3 que
+        Hansel estaba listo y orden\xF3 a Gretel que preparara una enorme cacerola
+        de agua para cocinarlo.<br><b><size=20>\u2014Primero</size></b> \u2014dijo
+        la bruja\u2014<b><size=20>, vamos a ver el horno que yo prend\xED para hacer
+        pan. Entra t\xFA primero, Gretel, y f\xEDjate si est\xE1 bien caliente como
+        para hornear.\n</size></b>\"\r\nEn realidad la bruja pensaba cerrar la puerta
+        del horno una vez que Gretel estuviera dentro para cocinarla a ella tambi\xE9n.
+        Pero Gretel que era muy astuta hizo como que no entend\xEDa lo que la bruja
+        dec\xEDa.\r\n\u2014<b><size=21>Yo no s\xE9. \xBFC\xF3mo entro? </size></b>\u2014pregunt\xF3
+        Gretel. <br>\u2014<b><size=36>\xA1Tonta! </size></b>\u2014grit\xF3 la bruja\u2014,
+        <b><size=21>mira c\xF3mo se hace</size></b> \u2014y la bruja meti\xF3 la cabeza
+        dentro del horno. <br>R\xE1pidamente Gretel la empuj\xF3 dentro del horno
+        y cerr\xF3 la puerta.\r\nGretel puso en libertad a Hansel. Pero antes de irse...\r\nLos
+        dos ni\xF1os se llenaron los bolsillos de perlas y piedras preciosas del tesoro
+        de la bruja.\r\nLos ni\xF1os huyeron del bosque hasta llegar a orillas de
+        un inmenso lago que parec\xEDa imposible de atravesar. Afortunadamente, un
+        hermoso cisne blanco les ofreci\xF3 cruzarlos hasta el muelle.\r\nCon gran
+        alegr\xEDa, los ni\xF1os encontraron a su padre all\xED. La cruel madrastra
+        no estaba porque ella hab\xEDa muerto. El padre hab\xEDa sufrido mucho por
+        la ausencia de los ni\xF1os y los hab\xEDa buscado por todas partes.\r\nDejando
+        caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron en sus
+        brazos. Juntos olvidaron todos los malos momentos que hab\xEDan pasado. As\xED,
+        Hansel y Gretel supieron que lo m\xE1s importante en la vida es estar junto
+        a los seres queridos. Desde ese momento, vivieron felices y ricos para siempre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: correctChoice
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1928103823}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Show
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: questionID
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531504200712742781, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8795ff84141c649a2592376719451c, type: 3}
@@ -4181,10 +4315,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: gretel Anim
       objectReference: {fileID: 0}
-    - target: {fileID: 14969195, guid: fe7b377210ade1f47957364f1120369a, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8246228005364927981, guid: fe7b377210ade1f47957364f1120369a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4258,6 +4388,10 @@ PrefabInstance:
       propertyPath: SwichTextureBlink
       value: 
       objectReference: {fileID: 2800000, guid: 10581a1690531b34ba614562da5b5512, type: 3}
+    - target: {fileID: 14969195, guid: fe7b377210ade1f47957364f1120369a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe7b377210ade1f47957364f1120369a, type: 3}
 --- !u!1 &625235317
@@ -4563,9 +4697,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1428999083}
-  - {fileID: 1670859463}
-  - {fileID: 360314501}
   - {fileID: 1589872478}
+  - {fileID: 1670859463}
+  - {fileID: 1571978436}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5017,10 +5151,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: hansel Anim
       objectReference: {fileID: 0}
-    - target: {fileID: 58085386, guid: 7390b888f8bb1c242a9666c7e408f8cc, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1407823337480492830, guid: 7390b888f8bb1c242a9666c7e408f8cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5074,6 +5204,10 @@ PrefabInstance:
     - target: {fileID: 1407823337480492830, guid: 7390b888f8bb1c242a9666c7e408f8cc,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 58085386, guid: 7390b888f8bb1c242a9666c7e408f8cc, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1407823337480246109, guid: 7390b888f8bb1c242a9666c7e408f8cc,
@@ -6080,7 +6214,7 @@ PrefabInstance:
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
@@ -6120,7 +6254,7 @@ PrefabInstance:
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
@@ -6131,11 +6265,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 909525198}
+      objectReference: {fileID: 1496752658}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Show
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
@@ -6170,6 +6304,11 @@ PrefabInstance:
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
+        type: 3}
+      propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2776306270180104326, guid: a80d2b1992b9155489528fe03f42e744,
@@ -6287,7 +6426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 44529546, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6443,17 +6582,67 @@ PrefabInstance:
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4081060794762982323, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: canvasGroup.Array.data[0]
       value: 
       objectReference: {fileID: 29227353}
     - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: startVisibility
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4081060794762982323, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
@@ -6556,60 +6745,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
       value: idle
       objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
       value: "Dejando caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron
@@ -6627,7 +6762,7 @@ PrefabInstance:
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 360314502}
+      objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -6667,6 +6802,79 @@ PrefabInstance:
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493277917417023350, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: content
+      value: "Hansel y Gretel viv\xEDan muy cerca de un espeso bosque con su padre
+        que era un pobre le\xF1ador y su cruel madrastra. Viv\xEDan con much\xEDsima
+        escasez y ya no les alcanzaba para que los cuatro pudieran comer.\r\nUna noche,
+        creyendo que los ni\xF1os estaban dormidos, la cruel madrastra dijo al le\xF1ador:
+        No hay bastante comida para todos. Ma\xF1ana llevaremos a los ni\xF1os a la
+        parte m\xE1s espesa del bosque y los dejaremos all\xED. Ellos no podr\xE1n
+        encontrar el camino a casa y as\xED nos desprenderemos de esa carga. Al principio,
+        el padre se opuso rotundamente a la cruel idea de la malvada mujer.\r\n<size=26>\u2013\xBFC\xF3mo
+        vamos a abandonar a mis hijos a su suerte?, \xA1quiz\xE1s sean atacados por
+        los animales del bosque! -<size=18>grit\xF3 enojado.\r\n\u2013De cualquier
+        manera, as\xED moriremos todos de hambre \u2013dijo la madrastra y no descans\xF3
+        hasta convencer al d\xE9bil hombre de llevar adelante el mal\xE9volo plan
+        que se hab\xEDa trazado.\r\nSin embargo, los ni\xF1os escucharon toda la conversaci\xF3n.
+        Gretel lloraba amargamente y Hansel la consolaba: \u2013No llores, querida
+        hermanita \u2013dec\xEDa \xE9l\u2013, \xA1Yo tengo una idea para encontrar
+        el camino de regreso a casa!\r\nA la ma\xF1ana siguiente, cuando salieron
+        hacia el bosque, la madrastra les dio a cada uno de los ni\xF1os un pedazo
+        de pan. <br><b>\u2013No deben comer este pan antes del almuerzo </b>\u2013les
+        dijo\u2013. <b>Eso es todo lo que tendr\xE1n para la tarde.</b>\r\nEl dominado
+        padre y la madrastra los acompa\xF1aron a adentrarse en el bosque. Cuando
+        penetraron en la espesura, los ni\xF1os se quedaron atr\xE1s. Hansel, haciendo
+        migas de su pan, las fue dejando caer con disimulo para tener se\xF1ales que
+        les permitieran luego regresar a casa.\r\nLos padres los llevaron muy adentro
+        del bosque y la madrastra les dijo: <b>\u2014Ya se acerca la hora de irnos.
+        Qu\xE9dense aqu\xED hasta que vengamos a buscarlos.</b> <br>Hansel y Gretel
+        hicieron lo que sus padres hab\xEDan ordenado. Pero cuando se acerc\xF3 la
+        noche, trataron de encontrar el camino de regreso.\r\nDesgraciadamente, los
+        p\xE1jaros se hab\xEDan comido las migas que marcaban el camino. Toda la noche,
+        anduvieron por el bosque con mucho temor observando el brillo de los ojos
+        de las fieras y a cada paso se perd\xEDan m\xE1s en aquella espesura.\r\nAl
+        amanecer, casi muertos de miedo y de hambre, los ni\xF1os vieron un p\xE1jaro
+        blanco que volaba frente a ellos.  El p\xE1jaro les aleteaba en se\xF1al amistosa
+        para animarlos a seguir adelante.\r\nSiguiendo el vuelo de aquel p\xE1jaro
+        encontraron una extra\xF1a casita. \r\nEstaba construida de panes, dulces,
+        bombones y otras golosinas muy sabrosas.\r\nLos ni\xF1os, con un apetito terrible,
+        corrieron hasta la casita, para comer los riqu\xEDsimos dulces, pero una bruja
+        los detuvo. <br>La casa estaba hecha para atraer a los ni\xF1os y cuando \xE9stos
+        se encontraban en su poder, la bruja los mataba y los cocinaba para com\xE9rselos.\r\nComo
+        Hansel estaba muy delgadito, la bruja lo encerr\xF3 en una jaula y all\xED
+        lo alimentaba con ricos y sustanciosos manjares para engordarlo. Mientras
+        tanto, Gretel ten\xEDa que hacer los trabajos m\xE1s pesados y s\xF3lo ten\xEDa
+        c\xE1scaras de cangrejos para comer.\r\n\"Un d\xEDa, la bruja decidi\xF3 que
+        Hansel estaba listo y orden\xF3 a Gretel que preparara una enorme cacerola
+        de agua para cocinarlo.<br><b><size=20>\u2014Primero</size></b> \u2014dijo
+        la bruja\u2014<b><size=20>, vamos a ver el horno que yo prend\xED para hacer
+        pan. Entra t\xFA primero, Gretel, y f\xEDjate si est\xE1 bien caliente como
+        para hornear.\n</size></b>\"\r\nEn realidad la bruja pensaba cerrar la puerta
+        del horno una vez que Gretel estuviera dentro para cocinarla a ella tambi\xE9n.
+        Pero Gretel que era muy astuta hizo como que no entend\xEDa lo que la bruja
+        dec\xEDa.\r\n\u2014<b><size=21>Yo no s\xE9. \xBFC\xF3mo entro? </size></b>\u2014pregunt\xF3
+        Gretel. <br>\u2014<b><size=36>\xA1Tonta! </size></b>\u2014grit\xF3 la bruja\u2014,
+        <b><size=21>mira c\xF3mo se hace</size></b> \u2014y la bruja meti\xF3 la cabeza
+        dentro del horno. <br>R\xE1pidamente Gretel la empuj\xF3 dentro del horno
+        y cerr\xF3 la puerta.\r\nGretel puso en libertad a Hansel. Pero antes de irse...\r\nLos
+        dos ni\xF1os se llenaron los bolsillos de perlas y piedras preciosas del tesoro
+        de la bruja.\r\nLos ni\xF1os huyeron del bosque hasta llegar a orillas de
+        un inmenso lago que parec\xEDa imposible de atravesar. Afortunadamente, un
+        hermoso cisne blanco les ofreci\xF3 cruzarlos hasta el muelle.\r\nCon gran
+        alegr\xEDa, los ni\xF1os encontraron a su padre all\xED. La cruel madrastra
+        no estaba porque ella hab\xEDa muerto. El padre hab\xEDa sufrido mucho por
+        la ausencia de los ni\xF1os y los hab\xEDa buscado por todas partes.\r\nDejando
+        caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron en sus
+        brazos. Juntos olvidaron todos los malos momentos que hab\xEDan pasado. As\xED,
+        Hansel y Gretel supieron que lo m\xE1s importante en la vida es estar junto
+        a los seres queridos. Desde ese momento, vivieron felices y ricos para siempre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8795ff84141c649a2592376719451c, type: 3}
@@ -7039,7 +7247,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Name
-      value: TextVR Question 3
+      value: TextVR Question 23
       objectReference: {fileID: 0}
     - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
@@ -7226,7 +7434,7 @@ PrefabInstance:
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 360314502}
+      objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CallDelayedAction
@@ -7297,7 +7505,7 @@ PrefabInstance:
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 360314502}
+      objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CallDelayedAction
@@ -7352,14 +7560,6 @@ PrefabInstance:
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
-      value: 
-      objectReference: {fileID: 161736695}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1897807942, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -7369,15 +7569,148 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: correctChoice
-      value: 2
+      propertyPath: m_havePropertiesChanged
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: questionID
-      value: 26
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_text
+      value: Por la muerte de la madrastra
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_text
+      value: "Por la ausencia de los ni\xF1os"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_text
+      value: "Por la pobreza en la que viv\xEDa"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 161736695}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
@@ -7507,150 +7840,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: idle
       objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: Por la muerte de la madrastra.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: "Por la pobreza en que viv\xEDa."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 28
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: "Por la ausencia de los ni\xF1os."
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 29
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
       value: "Dejando caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron
@@ -7668,7 +7857,7 @@ PrefabInstance:
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 360314502}
+      objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -7708,6 +7897,99 @@ PrefabInstance:
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493277917417023350, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: content
+      value: "Hansel y Gretel viv\xEDan muy cerca de un espeso bosque con su padre
+        que era un pobre le\xF1ador y su cruel madrastra. Viv\xEDan con much\xEDsima
+        escasez y ya no les alcanzaba para que los cuatro pudieran comer.\r\nUna noche,
+        creyendo que los ni\xF1os estaban dormidos, la cruel madrastra dijo al le\xF1ador:
+        No hay bastante comida para todos. Ma\xF1ana llevaremos a los ni\xF1os a la
+        parte m\xE1s espesa del bosque y los dejaremos all\xED. Ellos no podr\xE1n
+        encontrar el camino a casa y as\xED nos desprenderemos de esa carga. Al principio,
+        el padre se opuso rotundamente a la cruel idea de la malvada mujer.\r\n<size=26>\u2013\xBFC\xF3mo
+        vamos a abandonar a mis hijos a su suerte?, \xA1quiz\xE1s sean atacados por
+        los animales del bosque! -<size=18>grit\xF3 enojado.\r\n\u2013De cualquier
+        manera, as\xED moriremos todos de hambre \u2013dijo la madrastra y no descans\xF3
+        hasta convencer al d\xE9bil hombre de llevar adelante el mal\xE9volo plan
+        que se hab\xEDa trazado.\r\nSin embargo, los ni\xF1os escucharon toda la conversaci\xF3n.
+        Gretel lloraba amargamente y Hansel la consolaba: \u2013No llores, querida
+        hermanita \u2013dec\xEDa \xE9l\u2013, \xA1Yo tengo una idea para encontrar
+        el camino de regreso a casa!\r\nA la ma\xF1ana siguiente, cuando salieron
+        hacia el bosque, la madrastra les dio a cada uno de los ni\xF1os un pedazo
+        de pan. <br><b>\u2013No deben comer este pan antes del almuerzo </b>\u2013les
+        dijo\u2013. <b>Eso es todo lo que tendr\xE1n para la tarde.</b>\r\nEl dominado
+        padre y la madrastra los acompa\xF1aron a adentrarse en el bosque. Cuando
+        penetraron en la espesura, los ni\xF1os se quedaron atr\xE1s. Hansel, haciendo
+        migas de su pan, las fue dejando caer con disimulo para tener se\xF1ales que
+        les permitieran luego regresar a casa.\r\nLos padres los llevaron muy adentro
+        del bosque y la madrastra les dijo: <b>\u2014Ya se acerca la hora de irnos.
+        Qu\xE9dense aqu\xED hasta que vengamos a buscarlos.</b> <br>Hansel y Gretel
+        hicieron lo que sus padres hab\xEDan ordenado. Pero cuando se acerc\xF3 la
+        noche, trataron de encontrar el camino de regreso.\r\nDesgraciadamente, los
+        p\xE1jaros se hab\xEDan comido las migas que marcaban el camino. Toda la noche,
+        anduvieron por el bosque con mucho temor observando el brillo de los ojos
+        de las fieras y a cada paso se perd\xEDan m\xE1s en aquella espesura.\r\nAl
+        amanecer, casi muertos de miedo y de hambre, los ni\xF1os vieron un p\xE1jaro
+        blanco que volaba frente a ellos.  El p\xE1jaro les aleteaba en se\xF1al amistosa
+        para animarlos a seguir adelante.\r\nSiguiendo el vuelo de aquel p\xE1jaro
+        encontraron una extra\xF1a casita. \r\nEstaba construida de panes, dulces,
+        bombones y otras golosinas muy sabrosas.\r\nLos ni\xF1os, con un apetito terrible,
+        corrieron hasta la casita, para comer los riqu\xEDsimos dulces, pero una bruja
+        los detuvo. <br>La casa estaba hecha para atraer a los ni\xF1os y cuando \xE9stos
+        se encontraban en su poder, la bruja los mataba y los cocinaba para com\xE9rselos.\r\nComo
+        Hansel estaba muy delgadito, la bruja lo encerr\xF3 en una jaula y all\xED
+        lo alimentaba con ricos y sustanciosos manjares para engordarlo. Mientras
+        tanto, Gretel ten\xEDa que hacer los trabajos m\xE1s pesados y s\xF3lo ten\xEDa
+        c\xE1scaras de cangrejos para comer.\r\n\"Un d\xEDa, la bruja decidi\xF3 que
+        Hansel estaba listo y orden\xF3 a Gretel que preparara una enorme cacerola
+        de agua para cocinarlo.<br><b><size=20>\u2014Primero</size></b> \u2014dijo
+        la bruja\u2014<b><size=20>, vamos a ver el horno que yo prend\xED para hacer
+        pan. Entra t\xFA primero, Gretel, y f\xEDjate si est\xE1 bien caliente como
+        para hornear.\n</size></b>\"\r\nEn realidad la bruja pensaba cerrar la puerta
+        del horno una vez que Gretel estuviera dentro para cocinarla a ella tambi\xE9n.
+        Pero Gretel que era muy astuta hizo como que no entend\xEDa lo que la bruja
+        dec\xEDa.\r\n\u2014<b><size=21>Yo no s\xE9. \xBFC\xF3mo entro? </size></b>\u2014pregunt\xF3
+        Gretel. <br>\u2014<b><size=36>\xA1Tonta! </size></b>\u2014grit\xF3 la bruja\u2014,
+        <b><size=21>mira c\xF3mo se hace</size></b> \u2014y la bruja meti\xF3 la cabeza
+        dentro del horno. <br>R\xE1pidamente Gretel la empuj\xF3 dentro del horno
+        y cerr\xF3 la puerta.\r\nGretel puso en libertad a Hansel. Pero antes de irse...\r\nLos
+        dos ni\xF1os se llenaron los bolsillos de perlas y piedras preciosas del tesoro
+        de la bruja.\r\nLos ni\xF1os huyeron del bosque hasta llegar a orillas de
+        un inmenso lago que parec\xEDa imposible de atravesar. Afortunadamente, un
+        hermoso cisne blanco les ofreci\xF3 cruzarlos hasta el muelle.\r\nCon gran
+        alegr\xEDa, los ni\xF1os encontraron a su padre all\xED. La cruel madrastra
+        no estaba porque ella hab\xEDa muerto. El padre hab\xEDa sufrido mucho por
+        la ausencia de los ni\xF1os y los hab\xEDa buscado por todas partes.\r\nDejando
+        caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron en sus
+        brazos. Juntos olvidaron todos los malos momentos que hab\xEDan pasado. As\xED,
+        Hansel y Gretel supieron que lo m\xE1s importante en la vida es estar junto
+        a los seres queridos. Desde ese momento, vivieron felices y ricos para siempre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: correctChoice
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: questionID
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531504200712742781, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8795ff84141c649a2592376719451c, type: 3}
@@ -8090,7 +8372,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Name
-      value: TextVR Question 5
+      value: TextVR Question 25
       objectReference: {fileID: 0}
     - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
@@ -8199,35 +8481,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.size
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[0].m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delay.Array.size
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[1].m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[2].m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[3].m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[4].m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[5].m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -8248,7 +8530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -8257,10 +8539,10 @@ PrefabInstance:
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1522460338}
+      objectReference: {fileID: 1424136839}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Rotate
+      value: MoveAgents
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -8409,7 +8691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
@@ -8509,7 +8791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_FloatArgument
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[0].m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -8543,14 +8825,6 @@ PrefabInstance:
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
-      value: 
-      objectReference: {fileID: 937995727}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1897807942, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -8560,15 +8834,158 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: correctChoice
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_text
+      value: "Enfrentarse a los personajes m\xE1s importantes del relato."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: questionID
-      value: 28
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_text
+      value: "Ser el personaje m\xE1s importante del relato."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_text
+      value: "Ayudar a los personajes m\xE1s importantes del relato."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 937995727}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
@@ -8698,160 +9115,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: idle
       objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: "Enfrentarse a los personajes m\xE1s importantes del relato."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 56
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: 33
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: "Ser el personaje m\xE1s importante del relato."
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 43
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: "Ayudar a los personajes m\xE1s importantes del relato."
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 51
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
       value: "Dejando caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron
@@ -8869,7 +9132,7 @@ PrefabInstance:
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 360314502}
+      objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -8909,6 +9172,99 @@ PrefabInstance:
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493277917417023350, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: content
+      value: "Hansel y Gretel viv\xEDan muy cerca de un espeso bosque con su padre
+        que era un pobre le\xF1ador y su cruel madrastra. Viv\xEDan con much\xEDsima
+        escasez y ya no les alcanzaba para que los cuatro pudieran comer.\r\nUna noche,
+        creyendo que los ni\xF1os estaban dormidos, la cruel madrastra dijo al le\xF1ador:
+        No hay bastante comida para todos. Ma\xF1ana llevaremos a los ni\xF1os a la
+        parte m\xE1s espesa del bosque y los dejaremos all\xED. Ellos no podr\xE1n
+        encontrar el camino a casa y as\xED nos desprenderemos de esa carga. Al principio,
+        el padre se opuso rotundamente a la cruel idea de la malvada mujer.\r\n<size=26>\u2013\xBFC\xF3mo
+        vamos a abandonar a mis hijos a su suerte?, \xA1quiz\xE1s sean atacados por
+        los animales del bosque! -<size=18>grit\xF3 enojado.\r\n\u2013De cualquier
+        manera, as\xED moriremos todos de hambre \u2013dijo la madrastra y no descans\xF3
+        hasta convencer al d\xE9bil hombre de llevar adelante el mal\xE9volo plan
+        que se hab\xEDa trazado.\r\nSin embargo, los ni\xF1os escucharon toda la conversaci\xF3n.
+        Gretel lloraba amargamente y Hansel la consolaba: \u2013No llores, querida
+        hermanita \u2013dec\xEDa \xE9l\u2013, \xA1Yo tengo una idea para encontrar
+        el camino de regreso a casa!\r\nA la ma\xF1ana siguiente, cuando salieron
+        hacia el bosque, la madrastra les dio a cada uno de los ni\xF1os un pedazo
+        de pan. <br><b>\u2013No deben comer este pan antes del almuerzo </b>\u2013les
+        dijo\u2013. <b>Eso es todo lo que tendr\xE1n para la tarde.</b>\r\nEl dominado
+        padre y la madrastra los acompa\xF1aron a adentrarse en el bosque. Cuando
+        penetraron en la espesura, los ni\xF1os se quedaron atr\xE1s. Hansel, haciendo
+        migas de su pan, las fue dejando caer con disimulo para tener se\xF1ales que
+        les permitieran luego regresar a casa.\r\nLos padres los llevaron muy adentro
+        del bosque y la madrastra les dijo: <b>\u2014Ya se acerca la hora de irnos.
+        Qu\xE9dense aqu\xED hasta que vengamos a buscarlos.</b> <br>Hansel y Gretel
+        hicieron lo que sus padres hab\xEDan ordenado. Pero cuando se acerc\xF3 la
+        noche, trataron de encontrar el camino de regreso.\r\nDesgraciadamente, los
+        p\xE1jaros se hab\xEDan comido las migas que marcaban el camino. Toda la noche,
+        anduvieron por el bosque con mucho temor observando el brillo de los ojos
+        de las fieras y a cada paso se perd\xEDan m\xE1s en aquella espesura.\r\nAl
+        amanecer, casi muertos de miedo y de hambre, los ni\xF1os vieron un p\xE1jaro
+        blanco que volaba frente a ellos.  El p\xE1jaro les aleteaba en se\xF1al amistosa
+        para animarlos a seguir adelante.\r\nSiguiendo el vuelo de aquel p\xE1jaro
+        encontraron una extra\xF1a casita. \r\nEstaba construida de panes, dulces,
+        bombones y otras golosinas muy sabrosas.\r\nLos ni\xF1os, con un apetito terrible,
+        corrieron hasta la casita, para comer los riqu\xEDsimos dulces, pero una bruja
+        los detuvo. <br>La casa estaba hecha para atraer a los ni\xF1os y cuando \xE9stos
+        se encontraban en su poder, la bruja los mataba y los cocinaba para com\xE9rselos.\r\nComo
+        Hansel estaba muy delgadito, la bruja lo encerr\xF3 en una jaula y all\xED
+        lo alimentaba con ricos y sustanciosos manjares para engordarlo. Mientras
+        tanto, Gretel ten\xEDa que hacer los trabajos m\xE1s pesados y s\xF3lo ten\xEDa
+        c\xE1scaras de cangrejos para comer.\r\n\"Un d\xEDa, la bruja decidi\xF3 que
+        Hansel estaba listo y orden\xF3 a Gretel que preparara una enorme cacerola
+        de agua para cocinarlo.<br><b><size=20>\u2014Primero</size></b> \u2014dijo
+        la bruja\u2014<b><size=20>, vamos a ver el horno que yo prend\xED para hacer
+        pan. Entra t\xFA primero, Gretel, y f\xEDjate si est\xE1 bien caliente como
+        para hornear.\n</size></b>\"\r\nEn realidad la bruja pensaba cerrar la puerta
+        del horno una vez que Gretel estuviera dentro para cocinarla a ella tambi\xE9n.
+        Pero Gretel que era muy astuta hizo como que no entend\xEDa lo que la bruja
+        dec\xEDa.\r\n\u2014<b><size=21>Yo no s\xE9. \xBFC\xF3mo entro? </size></b>\u2014pregunt\xF3
+        Gretel. <br>\u2014<b><size=36>\xA1Tonta! </size></b>\u2014grit\xF3 la bruja\u2014,
+        <b><size=21>mira c\xF3mo se hace</size></b> \u2014y la bruja meti\xF3 la cabeza
+        dentro del horno. <br>R\xE1pidamente Gretel la empuj\xF3 dentro del horno
+        y cerr\xF3 la puerta.\r\nGretel puso en libertad a Hansel. Pero antes de irse...\r\nLos
+        dos ni\xF1os se llenaron los bolsillos de perlas y piedras preciosas del tesoro
+        de la bruja.\r\nLos ni\xF1os huyeron del bosque hasta llegar a orillas de
+        un inmenso lago que parec\xEDa imposible de atravesar. Afortunadamente, un
+        hermoso cisne blanco les ofreci\xF3 cruzarlos hasta el muelle.\r\nCon gran
+        alegr\xEDa, los ni\xF1os encontraron a su padre all\xED. La cruel madrastra
+        no estaba porque ella hab\xEDa muerto. El padre hab\xEDa sufrido mucho por
+        la ausencia de los ni\xF1os y los hab\xEDa buscado por todas partes.\r\nDejando
+        caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron en sus
+        brazos. Juntos olvidaron todos los malos momentos que hab\xEDan pasado. As\xED,
+        Hansel y Gretel supieron que lo m\xE1s importante en la vida es estar junto
+        a los seres queridos. Desde ese momento, vivieron felices y ricos para siempre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: correctChoice
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: questionID
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531504200712742781, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8795ff84141c649a2592376719451c, type: 3}
@@ -9835,7 +10191,7 @@ PrefabInstance:
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
@@ -9846,11 +10202,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1760704322}
+      objectReference: {fileID: 1522460335}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Show
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
@@ -9875,22 +10231,22 @@ PrefabInstance:
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1522460335}
+      objectReference: {fileID: 1670859464}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: SetActive
+      value: CallBothActions
       objectReference: {fileID: 0}
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
@@ -9900,6 +10256,11 @@ PrefabInstance:
     - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_FloatArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776306269438260146, guid: a80d2b1992b9155489528fe03f42e744,
+        type: 3}
+      propertyPath: OnArriveAny.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_FloatArgument
       value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 2776306270180104326, guid: a80d2b1992b9155489528fe03f42e744,
@@ -9960,7 +10321,7 @@ PrefabInstance:
     - target: {fileID: 5600099382115132752, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 38.46
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 5600099382115132752, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
@@ -10082,7 +10443,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Name
-      value: TextVR Question 4
+      value: TextVR Question 24
       objectReference: {fileID: 0}
     - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
@@ -10270,7 +10631,7 @@ PrefabInstance:
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 360314502}
+      objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CallDelayedAction
@@ -10341,7 +10702,7 @@ PrefabInstance:
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 360314502}
+      objectReference: {fileID: 0}
     - target: {fileID: 386775853, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: delayedAction.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CallDelayedAction
@@ -10396,14 +10757,6 @@ PrefabInstance:
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
-      value: 
-      objectReference: {fileID: 1404357935}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1897807942, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -10413,15 +10766,158 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: correctChoice
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_text
+      value: Ser ricos para siempre.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
-      propertyPath: questionID
-      value: 27
+      propertyPath: m_textInfo.wordCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_text
+      value: Encontrar un lugar tranquilo.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_text
+      value: Estar con los seres queridos.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_padding
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 1404357935}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.size
@@ -10551,160 +11047,6 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: idle
       objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: Ser ricos para siempre.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 23
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_padding
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: Encontrar un lugar tranquilo.
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 29
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_text
-      value: Estar con los seres queridos.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 29
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
       value: "Dejando caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron
@@ -10722,7 +11064,7 @@ PrefabInstance:
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 360314502}
+      objectReference: {fileID: 0}
     - target: {fileID: 8176199075842031566, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -10762,6 +11104,99 @@ PrefabInstance:
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493277917417023350, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: content
+      value: "Hansel y Gretel viv\xEDan muy cerca de un espeso bosque con su padre
+        que era un pobre le\xF1ador y su cruel madrastra. Viv\xEDan con much\xEDsima
+        escasez y ya no les alcanzaba para que los cuatro pudieran comer.\r\nUna noche,
+        creyendo que los ni\xF1os estaban dormidos, la cruel madrastra dijo al le\xF1ador:
+        No hay bastante comida para todos. Ma\xF1ana llevaremos a los ni\xF1os a la
+        parte m\xE1s espesa del bosque y los dejaremos all\xED. Ellos no podr\xE1n
+        encontrar el camino a casa y as\xED nos desprenderemos de esa carga. Al principio,
+        el padre se opuso rotundamente a la cruel idea de la malvada mujer.\r\n<size=26>\u2013\xBFC\xF3mo
+        vamos a abandonar a mis hijos a su suerte?, \xA1quiz\xE1s sean atacados por
+        los animales del bosque! -<size=18>grit\xF3 enojado.\r\n\u2013De cualquier
+        manera, as\xED moriremos todos de hambre \u2013dijo la madrastra y no descans\xF3
+        hasta convencer al d\xE9bil hombre de llevar adelante el mal\xE9volo plan
+        que se hab\xEDa trazado.\r\nSin embargo, los ni\xF1os escucharon toda la conversaci\xF3n.
+        Gretel lloraba amargamente y Hansel la consolaba: \u2013No llores, querida
+        hermanita \u2013dec\xEDa \xE9l\u2013, \xA1Yo tengo una idea para encontrar
+        el camino de regreso a casa!\r\nA la ma\xF1ana siguiente, cuando salieron
+        hacia el bosque, la madrastra les dio a cada uno de los ni\xF1os un pedazo
+        de pan. <br><b>\u2013No deben comer este pan antes del almuerzo </b>\u2013les
+        dijo\u2013. <b>Eso es todo lo que tendr\xE1n para la tarde.</b>\r\nEl dominado
+        padre y la madrastra los acompa\xF1aron a adentrarse en el bosque. Cuando
+        penetraron en la espesura, los ni\xF1os se quedaron atr\xE1s. Hansel, haciendo
+        migas de su pan, las fue dejando caer con disimulo para tener se\xF1ales que
+        les permitieran luego regresar a casa.\r\nLos padres los llevaron muy adentro
+        del bosque y la madrastra les dijo: <b>\u2014Ya se acerca la hora de irnos.
+        Qu\xE9dense aqu\xED hasta que vengamos a buscarlos.</b> <br>Hansel y Gretel
+        hicieron lo que sus padres hab\xEDan ordenado. Pero cuando se acerc\xF3 la
+        noche, trataron de encontrar el camino de regreso.\r\nDesgraciadamente, los
+        p\xE1jaros se hab\xEDan comido las migas que marcaban el camino. Toda la noche,
+        anduvieron por el bosque con mucho temor observando el brillo de los ojos
+        de las fieras y a cada paso se perd\xEDan m\xE1s en aquella espesura.\r\nAl
+        amanecer, casi muertos de miedo y de hambre, los ni\xF1os vieron un p\xE1jaro
+        blanco que volaba frente a ellos.  El p\xE1jaro les aleteaba en se\xF1al amistosa
+        para animarlos a seguir adelante.\r\nSiguiendo el vuelo de aquel p\xE1jaro
+        encontraron una extra\xF1a casita. \r\nEstaba construida de panes, dulces,
+        bombones y otras golosinas muy sabrosas.\r\nLos ni\xF1os, con un apetito terrible,
+        corrieron hasta la casita, para comer los riqu\xEDsimos dulces, pero una bruja
+        los detuvo. <br>La casa estaba hecha para atraer a los ni\xF1os y cuando \xE9stos
+        se encontraban en su poder, la bruja los mataba y los cocinaba para com\xE9rselos.\r\nComo
+        Hansel estaba muy delgadito, la bruja lo encerr\xF3 en una jaula y all\xED
+        lo alimentaba con ricos y sustanciosos manjares para engordarlo. Mientras
+        tanto, Gretel ten\xEDa que hacer los trabajos m\xE1s pesados y s\xF3lo ten\xEDa
+        c\xE1scaras de cangrejos para comer.\r\n\"Un d\xEDa, la bruja decidi\xF3 que
+        Hansel estaba listo y orden\xF3 a Gretel que preparara una enorme cacerola
+        de agua para cocinarlo.<br><b><size=20>\u2014Primero</size></b> \u2014dijo
+        la bruja\u2014<b><size=20>, vamos a ver el horno que yo prend\xED para hacer
+        pan. Entra t\xFA primero, Gretel, y f\xEDjate si est\xE1 bien caliente como
+        para hornear.\n</size></b>\"\r\nEn realidad la bruja pensaba cerrar la puerta
+        del horno una vez que Gretel estuviera dentro para cocinarla a ella tambi\xE9n.
+        Pero Gretel que era muy astuta hizo como que no entend\xEDa lo que la bruja
+        dec\xEDa.\r\n\u2014<b><size=21>Yo no s\xE9. \xBFC\xF3mo entro? </size></b>\u2014pregunt\xF3
+        Gretel. <br>\u2014<b><size=36>\xA1Tonta! </size></b>\u2014grit\xF3 la bruja\u2014,
+        <b><size=21>mira c\xF3mo se hace</size></b> \u2014y la bruja meti\xF3 la cabeza
+        dentro del horno. <br>R\xE1pidamente Gretel la empuj\xF3 dentro del horno
+        y cerr\xF3 la puerta.\r\nGretel puso en libertad a Hansel. Pero antes de irse...\r\nLos
+        dos ni\xF1os se llenaron los bolsillos de perlas y piedras preciosas del tesoro
+        de la bruja.\r\nLos ni\xF1os huyeron del bosque hasta llegar a orillas de
+        un inmenso lago que parec\xEDa imposible de atravesar. Afortunadamente, un
+        hermoso cisne blanco les ofreci\xF3 cruzarlos hasta el muelle.\r\nCon gran
+        alegr\xEDa, los ni\xF1os encontraron a su padre all\xED. La cruel madrastra
+        no estaba porque ella hab\xEDa muerto. El padre hab\xEDa sufrido mucho por
+        la ausencia de los ni\xF1os y los hab\xEDa buscado por todas partes.\r\nDejando
+        caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron en sus
+        brazos. Juntos olvidaron todos los malos momentos que hab\xEDan pasado. As\xED,
+        Hansel y Gretel supieron que lo m\xE1s importante en la vida es estar junto
+        a los seres queridos. Desde ese momento, vivieron felices y ricos para siempre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: correctChoice
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660754200817291266, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: questionID
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 298211348483546628, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5531504200712742781, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8795ff84141c649a2592376719451c, type: 3}
@@ -10988,7 +11423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a422589695343c149bd5601807024260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 12.94
+  duration: 2.94
 --- !u!65 &1522460339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11202,6 +11637,121 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1570113761}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1571978435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1571978436}
+  - component: {fileID: 1571978437}
+  m_Layer: 0
+  m_Name: _Cinematica Fin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1571978436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571978435}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 731484292}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1571978437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571978435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fade50be94da5094999a6c0db6bc6eb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doOnStart: 0
+  normalAction:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  delayedAction:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 186603874}
+        m_MethodName: JFadeOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1428999082}
+        m_MethodName: FinalTp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 180
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1886278308}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 186603874}
+        m_MethodName: JFadeIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  delay:
+  - 1.5
+  - 4
+  - 6
+  - 6
 --- !u!114 &1580632348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11332,7 +11882,7 @@ GameObject:
   - component: {fileID: 1589872478}
   - component: {fileID: 1589872479}
   m_Layer: 0
-  m_Name: _Cinematica
+  m_Name: _Cinematica 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11350,7 +11900,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 731484292}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1589872479
 MonoBehaviour:
@@ -11384,21 +11934,69 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2104583459}
-        m_MethodName: Play
-        m_Mode: 5
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1522460338}
+        m_MethodName: Rotate
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 180
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1424136839}
+        m_MethodName: MoveAgents
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Idle
+          m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 186603874}
+        m_MethodName: JFadeOut
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 180
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 186603874}
+        m_MethodName: JFadeIn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 1
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   delay:
   - 1.5
+  - 2
+  - 5
+  - 7.5
 --- !u!225 &1600608882 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 3148484979670643510, guid: 3e8795ff84141c649a2592376719451c,
@@ -11655,7 +12253,7 @@ GameObject:
   - component: {fileID: 1670859463}
   - component: {fileID: 1670859464}
   m_Layer: 0
-  m_Name: 'text 2 button '
+  m_Name: _Cinematica 2 - vuelta del ganzo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11673,7 +12271,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 731484292}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1670859464
 MonoBehaviour:
@@ -11755,8 +12353,8 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 180173223}
-        m_MethodName: Debugear
+      - m_Target: {fileID: 1571978437}
+        m_MethodName: CallBothActions
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11770,6 +12368,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   delay:
   - 0.5
+  - 5
 --- !u!1 &1677698618
 GameObject:
   m_ObjectHideFlags: 0
@@ -11834,7 +12433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 44529546, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11971,33 +12570,9 @@ PrefabInstance:
       propertyPath: normalAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: canvasGroup.Array.data[0]
-      value: 
-      objectReference: {fileID: 899549130}
-    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: startVisibility
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4081060794762982323, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1244623264}
-    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CallBothActions
-      objectReference: {fileID: 0}
-    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Hide
-      objectReference: {fileID: 0}
-    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_CullTransparentMesh
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
@@ -12006,6 +12581,26 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3243588568939689716, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
@@ -12023,32 +12618,32 @@ PrefabInstance:
     - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8918703354658435130, guid: 3e8795ff84141c649a2592376719451c,
         type: 3}
       propertyPath: m_padding
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: canvasGroup.Array.data[0]
+      value: 
+      objectReference: {fileID: 899549130}
+    - target: {fileID: 386775852, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: startVisibility
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3313063361047059708, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
+    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1244623264}
+    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CallBothActions
       objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6270226332369149922, guid: 3e8795ff84141c649a2592376719451c,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
+    - target: {fileID: 44529566, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Hide
       objectReference: {fileID: 0}
     - target: {fileID: 44529549, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_Text
@@ -12100,6 +12695,79 @@ PrefabInstance:
         type: 3}
       propertyPath: actionRedirect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2493277917417023350, guid: 3e8795ff84141c649a2592376719451c,
+        type: 3}
+      propertyPath: content
+      value: "Hansel y Gretel viv\xEDan muy cerca de un espeso bosque con su padre
+        que era un pobre le\xF1ador y su cruel madrastra. Viv\xEDan con much\xEDsima
+        escasez y ya no les alcanzaba para que los cuatro pudieran comer.\r\nUna noche,
+        creyendo que los ni\xF1os estaban dormidos, la cruel madrastra dijo al le\xF1ador:
+        No hay bastante comida para todos. Ma\xF1ana llevaremos a los ni\xF1os a la
+        parte m\xE1s espesa del bosque y los dejaremos all\xED. Ellos no podr\xE1n
+        encontrar el camino a casa y as\xED nos desprenderemos de esa carga. Al principio,
+        el padre se opuso rotundamente a la cruel idea de la malvada mujer.\r\n<size=26>\u2013\xBFC\xF3mo
+        vamos a abandonar a mis hijos a su suerte?, \xA1quiz\xE1s sean atacados por
+        los animales del bosque! -<size=18>grit\xF3 enojado.\r\n\u2013De cualquier
+        manera, as\xED moriremos todos de hambre \u2013dijo la madrastra y no descans\xF3
+        hasta convencer al d\xE9bil hombre de llevar adelante el mal\xE9volo plan
+        que se hab\xEDa trazado.\r\nSin embargo, los ni\xF1os escucharon toda la conversaci\xF3n.
+        Gretel lloraba amargamente y Hansel la consolaba: \u2013No llores, querida
+        hermanita \u2013dec\xEDa \xE9l\u2013, \xA1Yo tengo una idea para encontrar
+        el camino de regreso a casa!\r\nA la ma\xF1ana siguiente, cuando salieron
+        hacia el bosque, la madrastra les dio a cada uno de los ni\xF1os un pedazo
+        de pan. <br><b>\u2013No deben comer este pan antes del almuerzo </b>\u2013les
+        dijo\u2013. <b>Eso es todo lo que tendr\xE1n para la tarde.</b>\r\nEl dominado
+        padre y la madrastra los acompa\xF1aron a adentrarse en el bosque. Cuando
+        penetraron en la espesura, los ni\xF1os se quedaron atr\xE1s. Hansel, haciendo
+        migas de su pan, las fue dejando caer con disimulo para tener se\xF1ales que
+        les permitieran luego regresar a casa.\r\nLos padres los llevaron muy adentro
+        del bosque y la madrastra les dijo: <b>\u2014Ya se acerca la hora de irnos.
+        Qu\xE9dense aqu\xED hasta que vengamos a buscarlos.</b> <br>Hansel y Gretel
+        hicieron lo que sus padres hab\xEDan ordenado. Pero cuando se acerc\xF3 la
+        noche, trataron de encontrar el camino de regreso.\r\nDesgraciadamente, los
+        p\xE1jaros se hab\xEDan comido las migas que marcaban el camino. Toda la noche,
+        anduvieron por el bosque con mucho temor observando el brillo de los ojos
+        de las fieras y a cada paso se perd\xEDan m\xE1s en aquella espesura.\r\nAl
+        amanecer, casi muertos de miedo y de hambre, los ni\xF1os vieron un p\xE1jaro
+        blanco que volaba frente a ellos.  El p\xE1jaro les aleteaba en se\xF1al amistosa
+        para animarlos a seguir adelante.\r\nSiguiendo el vuelo de aquel p\xE1jaro
+        encontraron una extra\xF1a casita. \r\nEstaba construida de panes, dulces,
+        bombones y otras golosinas muy sabrosas.\r\nLos ni\xF1os, con un apetito terrible,
+        corrieron hasta la casita, para comer los riqu\xEDsimos dulces, pero una bruja
+        los detuvo. <br>La casa estaba hecha para atraer a los ni\xF1os y cuando \xE9stos
+        se encontraban en su poder, la bruja los mataba y los cocinaba para com\xE9rselos.\r\nComo
+        Hansel estaba muy delgadito, la bruja lo encerr\xF3 en una jaula y all\xED
+        lo alimentaba con ricos y sustanciosos manjares para engordarlo. Mientras
+        tanto, Gretel ten\xEDa que hacer los trabajos m\xE1s pesados y s\xF3lo ten\xEDa
+        c\xE1scaras de cangrejos para comer.\r\n\"Un d\xEDa, la bruja decidi\xF3 que
+        Hansel estaba listo y orden\xF3 a Gretel que preparara una enorme cacerola
+        de agua para cocinarlo.<br><b><size=20>\u2014Primero</size></b> \u2014dijo
+        la bruja\u2014<b><size=20>, vamos a ver el horno que yo prend\xED para hacer
+        pan. Entra t\xFA primero, Gretel, y f\xEDjate si est\xE1 bien caliente como
+        para hornear.\n</size></b>\"\r\nEn realidad la bruja pensaba cerrar la puerta
+        del horno una vez que Gretel estuviera dentro para cocinarla a ella tambi\xE9n.
+        Pero Gretel que era muy astuta hizo como que no entend\xEDa lo que la bruja
+        dec\xEDa.\r\n\u2014<b><size=21>Yo no s\xE9. \xBFC\xF3mo entro? </size></b>\u2014pregunt\xF3
+        Gretel. <br>\u2014<b><size=36>\xA1Tonta! </size></b>\u2014grit\xF3 la bruja\u2014,
+        <b><size=21>mira c\xF3mo se hace</size></b> \u2014y la bruja meti\xF3 la cabeza
+        dentro del horno. <br>R\xE1pidamente Gretel la empuj\xF3 dentro del horno
+        y cerr\xF3 la puerta.\r\nGretel puso en libertad a Hansel. Pero antes de irse...\r\nLos
+        dos ni\xF1os se llenaron los bolsillos de perlas y piedras preciosas del tesoro
+        de la bruja.\r\nLos ni\xF1os huyeron del bosque hasta llegar a orillas de
+        un inmenso lago que parec\xEDa imposible de atravesar. Afortunadamente, un
+        hermoso cisne blanco les ofreci\xF3 cruzarlos hasta el muelle.\r\nCon gran
+        alegr\xEDa, los ni\xF1os encontraron a su padre all\xED. La cruel madrastra
+        no estaba porque ella hab\xEDa muerto. El padre hab\xEDa sufrido mucho por
+        la ausencia de los ni\xF1os y los hab\xEDa buscado por todas partes.\r\nDejando
+        caer los tesoros a los pies de su padre, los ni\xF1os se arrojaron en sus
+        brazos. Juntos olvidaron todos los malos momentos que hab\xEDan pasado. As\xED,
+        Hansel y Gretel supieron que lo m\xE1s importante en la vida es estar junto
+        a los seres queridos. Desde ese momento, vivieron felices y ricos para siempre."
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529550, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8795ff84141c649a2592376719451c, type: 3}
@@ -13818,11 +14486,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4009313522745819221, guid: a80d2b1992b9155489528fe03f42e744,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2776306269538122505, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: m_IsActive
@@ -13861,6 +14524,11 @@ PrefabInstance:
     - target: {fileID: 2776306269935881065, guid: a80d2b1992b9155489528fe03f42e744,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009313522745819221, guid: a80d2b1992b9155489528fe03f42e744,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
