@@ -112,6 +112,7 @@ namespace J
 
             Canvas cv = block_screen_obj.AddComponent<Canvas>();
             cv.renderMode = RenderMode.WorldSpace;
+            cv.sortingOrder = 100;
             block_screen_obj.transform.JReset();
             block_screen_obj.transform.localPosition = new Vector3(0f, 0f, distanceFromCamera);
             block_screen_obj.GetComponent<RectTransform>().sizeDelta = new Vector2(2, 2);
