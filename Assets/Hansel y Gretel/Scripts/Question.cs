@@ -47,7 +47,7 @@ public class Question : MonoBehaviour {
 	}
     public void Answer(int choice)
     {
-        MyQuestionManager.RegisterAnswer(questionID, choice.ToString());    
+        MyQuestionManager.RegisterAnswer(questionID, choice-1);    
 
         if (choice == (int)correctChoice)
         {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class MyQuestionManager : MonoBehaviour
 {
     public static MyQuestionManager Instance { get; private set; }
@@ -15,14 +16,13 @@ public class MyQuestionManager : MonoBehaviour
             Destroy(this.gameObject); // Nota: Esto podria eliminar todo un objeto, con otros componentes
         DontDestroyOnLoad(gameObject);
         // End Singleton
+        Sessions = new List<string[]>();
     }
 
     public void Start()
     {
-        for (int i = 0; i < 1; i++) {
-            BeginNewSession();
-            Debug.Log("Inicie");
-        }
+      BeginNewSession();
+        
     }
 
 
@@ -30,15 +30,16 @@ public class MyQuestionManager : MonoBehaviour
     private static string[] CurrentSessionAnswers;
 
     //Todas las sesiones guardadas hasta el momento.
-    private List<string[]> Sessions;
+    private static List<string[]> Sessions;
 
     //Cuantas preguntas totales
-    public int NumQuestions;
+    private int NumQuestions = 25;
 
     public void BeginNewSession()
     {
         CurrentSessionAnswers  = new string[NumQuestions];
-        //Sessions.Add(CurrentSessionAnswers);
+        
+        Sessions.Add(CurrentSessionAnswers);
 
     }
 
@@ -48,9 +49,22 @@ public class MyQuestionManager : MonoBehaviour
         {
             CurrentSessionAnswers[Index] = Answer;
         }
-        Debug.Log("La pregunta "+ Index+ " se respondio con " + Answer);
+
+        //Debug.Log("Las respuesta de la pregunta "+ Index + " fue: " + CurrentSessionAnswers[Index]);
+        //Debug.Log("la repuesta 1 fue"+CurrentSessionAnswers[1]);
+        
     }
 
+    public static void RegisterAnswer(int Index, int Answer)
+    {
+        string[] PossibleAnswers = new string[3] { "A", "B", "C" };
+        if (Answer < PossibleAnswers.Length)
+        {
+            RegisterAnswer(Index, PossibleAnswers[Answer]);
+        }
+    }
+
+  
 }
 
 
