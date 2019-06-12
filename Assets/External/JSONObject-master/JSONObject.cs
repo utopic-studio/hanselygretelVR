@@ -445,7 +445,7 @@ public class JSONObject : IEnumerable {
 	public void Add(int val) {
 		Add(Create(val));
 	}
-	public void Add(string str) {
+	public void Add(string str, string palabras) {
 		Add(CreateStringObject(str));
 	}
 	public void Add(AddJSONContents content) {
