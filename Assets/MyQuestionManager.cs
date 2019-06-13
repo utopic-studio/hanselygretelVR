@@ -24,16 +24,17 @@ public class MyQuestionManager : MonoBehaviour
 
     public string resetingScene = "01 Bosque";
 
-    private JSONObject json;
+    private JSONObject Respuestas;
 
     public void Start()
     {
-        BeginNewSession();
+        
         if (SceneManager.GetActiveScene().name == resetingScene)
-            Debug.Log("Comenzando Escena " + resetingScene);
-        json = new JSONObject(JSONObject.Type.OBJECT);
+        BeginNewSession();
+        
     }
 
+    public static string Tiempo;
 
     //Guarda las respuestas actuales.
     public static string[] CurrentSessionAnswers;
@@ -46,6 +47,10 @@ public class MyQuestionManager : MonoBehaviour
 
     public void BeginNewSession()
     {
+        Debug.Log("Comenzando Escena " + resetingScene);
+        Respuestas = new JSONObject(JSONObject.Type.OBJECT);
+        Tiempo = System.DateTime.Now.ToString();
+        Debug.Log(System.DateTime.Now);
         CurrentSessionAnswers  = new string[NumQuestions];
         
         Sessions.Add(CurrentSessionAnswers);
@@ -79,24 +84,16 @@ public class MyQuestionManager : MonoBehaviour
         //JSONObject j2 = new JSONObject(JSONObject.Type.ARRAY);
         //Datos
         JSONObject Respuestas = new JSONObject(JSONObject.Type.OBJECT);
+        Respuestas.AddField("El tiempo es ",Tiempo);
         for (int i = 1; i < NumQuestions; i++)
         {
-            Respuestas.AddField("\n Respuesta " + i, CurrentSessionAnswers[i]);
+            Respuestas.AddField("Respuesta " + i, CurrentSessionAnswers[i]);
            
         }
-
-
-
-
-        //j2.Add(j3);
-
-        //Debug
-        //Debug.Log(j3.ToString());
-
-
+        
         //GuardaArchivo
         string path = Application.persistentDataPath + "/DatosGuardados.json";
-        File.WriteAllText(path, Respuestas.ToString());
+        File.WriteAllText(path, Respuestas.ToString(true));
 
     }
 
