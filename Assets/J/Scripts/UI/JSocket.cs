@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace J
 {
@@ -11,6 +12,10 @@ namespace J
     [RequireComponent(typeof(LineRenderer))]
     public class JSocket : MonoBehaviour
     {
+        /// <summary>
+        /// Called when the out port changes its connection
+        /// </summary>
+        public UnityEvent OnSocketConnectionChanged;
 
         public enum SocketConnectionPolicy
         {
@@ -26,7 +31,24 @@ namespace J
         private bool bUsingCursor;
 
         //"Port" that connects to a socket
-        private JSocket OutPort;
+        private JSocket _OutPort;
+        public JSocket OutPort
+        {
+            get
+            {
+                return _OutPort;
+            }
+            private set
+            {
+                bool bNotify = _OutPort != value;
+                _OutPort = value;
+
+                if(bNotify)
+                {
+                    OnSocketConnectionChanged?.Invoke();
+                }
+            }
+        }
 
         //Current socket being managed
         private static JSocket CurrentSocket;
@@ -39,6 +61,11 @@ namespace J
 
         //Connection policy
         public SocketConnectionPolicy ConnectionPolicy;
+
+        /// <summary>
+        /// Custom data that can be attached to the 
+        /// </summary>
+        public string CustomData;
 
         // Use this for initialization
         void Start()
