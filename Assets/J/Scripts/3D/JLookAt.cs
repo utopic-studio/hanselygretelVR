@@ -6,6 +6,8 @@ namespace J
     [AddComponentMenu("J/3D/JLookAt")]
     public class JLookAt : MonoBehaviour
     {
+        public GameObject[] players;    
+        
         public enum LookAtType
         {
             Constant, OneShot
@@ -21,10 +23,10 @@ namespace J
         private void Start()
         {
             startWasCalled = true;
-            if (!target)
-                target = GameObject.FindGameObjectWithTag("Player").transform;
+            
+            players = GameObject.FindGameObjectsWithTag("Player");
+            target = players[0].transform;
         }
-
 
         void Update()
         {

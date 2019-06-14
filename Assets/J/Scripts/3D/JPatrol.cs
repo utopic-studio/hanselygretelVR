@@ -3,7 +3,7 @@ using UnityEngine.AI;
 
 namespace J
 {
-	[AddComponentMenu("J/3d/JPatrol")]
+	[AddComponentMenu("J/3D/JPatrol")]
 	[RequireComponent(typeof(UnityEngine.AI.NavMeshAgent))]
 	public class JPatrol : MonoBehaviour {
 

@@ -20,6 +20,7 @@ public class MoveNavMeshAgents : MonoBehaviour
     [SerializeField] UnityEngine.Events.UnityEvent OnArriveAny;
     [SerializeField] UnityEngine.Events.UnityEvent OnArriveAll;
     [SerializeField] UnityEngine.Events.UnityEvent[] eventOnArrivePerCharacter;
+    
 
     private List<bool> boolOnArrive;
     private bool any = false;
@@ -61,6 +62,7 @@ public class MoveNavMeshAgents : MonoBehaviour
     }
     public void MoveAgents()
     {
+
         moveAgentsCalled = true;
         if (agents.Length <= destinations.Length)
         {
@@ -73,6 +75,7 @@ public class MoveNavMeshAgents : MonoBehaviour
     }
     public void MoveAgentsInstantly()
     {
+
         moveAgentsCalled = true;
         if (agents.Length <= destinations.Length)
         {
@@ -85,7 +88,6 @@ public class MoveNavMeshAgents : MonoBehaviour
                 }
             }
         }
-        
     }
     public void CallEventOnArrive(int i)
     {
