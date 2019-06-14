@@ -10,6 +10,7 @@ public class Question : MonoBehaviour {
     
     [HeaderAttribute("set Question Number to 1 or more")]
     public int questionID;
+    public string respuesta;
     [SerializeField] QChoice correctChoice;
     [SerializeField] QType type;
     [SerializeField] QDifficulty difficulty;
@@ -46,6 +47,8 @@ public class Question : MonoBehaviour {
 	}
     public void Answer(int choice)
     {
+        MyQuestionManager.RegisterAnswer(questionID, choice-1);    
+
         if (choice == (int)correctChoice)
         {
             optionImages[choice - 1].sprite = QuestionManager.Instance.correctSprites[choice - 1];
@@ -58,6 +61,9 @@ public class Question : MonoBehaviour {
         {
             item.enabled = false;
         }
+        
+        
+
     }
 
     public void InvokeAction()

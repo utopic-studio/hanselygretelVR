@@ -76,7 +76,8 @@ public class MyInfoToJson : MonoBehaviour {
 			if (q.optionTexts != null) {
 				for (int k = 0; k < q.optionTexts.Length; k++) {
 				
-					j4.Add (q.optionTexts [k]);
+                    //DESCOMENTAR DESPUES Y REVISAR EL ERROR
+					//j4.Add (q.optionTexts [k]);
 				}
 			}
 
