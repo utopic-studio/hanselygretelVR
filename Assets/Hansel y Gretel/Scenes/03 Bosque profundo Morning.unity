@@ -75439,6 +75439,7 @@ GameObject:
   - component: {fileID: 6903469773639417447}
   - component: {fileID: 6903469771295802137}
   - component: {fileID: 1718662628574180721}
+  - component: {fileID: 6798327431567026668}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -75446,6 +75447,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6798327431567026668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6798327431567026667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d1fb129c994404a8bb975afa23e2e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetingScene: 01 Bosque
 --- !u!1 &6813278018644779473
 GameObject:
   m_ObjectHideFlags: 0
@@ -75657,7 +75671,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6798327431567026667}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11c8885b5f1824d78bed25a78cb63485, type: 3}
   m_Name: 
@@ -87773,6 +87787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionID: 1
+  respuesta: 
   correctChoice: 1
   type: 0
   difficulty: 0
@@ -87838,6 +87853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionID: 1
+  respuesta: 
   correctChoice: 1
   type: 0
   difficulty: 0
@@ -87903,6 +87919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionID: 1
+  respuesta: 
   correctChoice: 1
   type: 0
   difficulty: 0
@@ -87968,6 +87985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionID: 1
+  respuesta: 
   correctChoice: 1
   type: 0
   difficulty: 0
