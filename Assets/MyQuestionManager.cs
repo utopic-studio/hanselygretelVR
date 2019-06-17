@@ -29,7 +29,7 @@ public class MyQuestionManager : MonoBehaviour
     public void Start()
     {
         
-        if (SceneManager.GetActiveScene().name == resetingScene)
+        if (SceneManager.GetActiveScene().name == resetingScene || CurrentSessionAnswers == null)
         BeginNewSession();
         
     }
