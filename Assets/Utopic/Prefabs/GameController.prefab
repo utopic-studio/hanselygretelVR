@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2015223097}
-  - component: {fileID: 2015223098}
+  - component: {fileID: 4369776478750307717}
   m_Layer: 0
   m_Name: J
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 5299839788435948249}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2015223098
+--- !u!114 &4369776478750307717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2015223096}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf436fa112e9a0544b2c3ea69d848412, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bef67bac9a750b4a8ea09e066f6d303, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5296629302831996313
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5296629302831996313}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09319d4fb93f74e69abea4f37c9bf2c4, type: 3}
   m_Name: 
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5296629302831996313}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11c8885b5f1824d78bed25a78cb63485, type: 3}
   m_Name: 
@@ -200,4 +200,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d1fb129c994404a8bb975afa23e2e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NumQuestions: 0
+  resetingScene: 01 Bosque

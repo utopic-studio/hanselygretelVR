@@ -606,7 +606,7 @@ Transform:
   - {fileID: 534051687}
   - {fileID: 1909575304}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &36577626 stripped
 Transform:
@@ -3505,7 +3505,7 @@ Transform:
   - {fileID: 818655191}
   - {fileID: 2137008354}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &220974076
 PrefabInstance:
@@ -23505,7 +23505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -57057,7 +57057,7 @@ Transform:
   - {fileID: 44529546}
   - {fileID: 584453406}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1388149779
 GameObject:
@@ -58617,24 +58617,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1769171872}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1465182100 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2015223096, guid: def576f599838064b8abbc279ee7fff0,
-    type: 3}
-  m_PrefabInstance: {fileID: 1593041030}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1465182101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465182100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bef67bac9a750b4a8ea09e066f6d303, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1466208106 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8cb71e6f7dadbe749855f83ee2748444,
@@ -59095,7 +59077,7 @@ MonoBehaviour:
   fadeoutTime: 1.5
   ignoreTimeScale: 0
   distanceFromCamera: 0.42
-  fadeInAtStart: 0
+  fadeInAtStart: 1
 --- !u!1001 &1495956800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60625,16 +60607,6 @@ PrefabInstance:
     - target: {fileID: 5299839788435948249, guid: def576f599838064b8abbc279ee7fff0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5194875373522049525, guid: def576f599838064b8abbc279ee7fff0,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5194875435005119015, guid: def576f599838064b8abbc279ee7fff0,
-        type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -64365,7 +64337,7 @@ Transform:
   - {fileID: 413983781}
   - {fileID: 1974264915}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1779820776 stripped
 Transform:
@@ -66980,111 +66952,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1123027545}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1926109227
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1926109229}
-  - component: {fileID: 1926109228}
-  m_Layer: 0
-  m_Name: on start
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1926109228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926109227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fade50be94da5094999a6c0db6bc6eb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doOnStart: 1
-  normalAction:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1490839217}
-        m_MethodName: JFadeInInstantly
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1490839217}
-        m_MethodName: JFadeOutInstantly
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  delayedAction:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1490839217}
-        m_MethodName: JFadeIn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1.5
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1490839216}
-        m_MethodName: SetTimeScale
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1.5
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
-  delay:
-  - 0.04
-  - 0.2
---- !u!4 &1926109229
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1926109227}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1926361693 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 9438951d0283b284ab8d6b3438da131a,
@@ -67854,7 +67721,7 @@ PrefabInstance:
     - target: {fileID: 1812745999396014891, guid: 00b7f3e37a0523f4682d08cd83c0965a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1812745999396014891, guid: 00b7f3e37a0523f4682d08cd83c0965a,
         type: 3}
@@ -68791,6 +68658,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8620454503361160491, guid: ace986442c3170e4b9c777d5706dfeaa,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620454503361160491, guid: ace986442c3170e4b9c777d5706dfeaa,
+        type: 3}
+      propertyPath: far clip plane
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 8645783002308860165, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68829,7 +68706,7 @@ PrefabInstance:
     - target: {fileID: 8645783002308860165, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8645783002308860165, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
@@ -68845,16 +68722,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8620454503361160491, guid: ace986442c3170e4b9c777d5706dfeaa,
-        type: 3}
-      propertyPath: near clip plane
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8620454503361160491, guid: ace986442c3170e4b9c777d5706dfeaa,
-        type: 3}
-      propertyPath: far clip plane
-      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 8559340813599409195, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
