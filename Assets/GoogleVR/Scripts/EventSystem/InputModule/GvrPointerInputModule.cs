@@ -57,6 +57,12 @@ public class GvrPointerInputModule : BaseInputModule, IGvrInputModuleController 
   [Tooltip("Manages scroll events for the input module.")]
   public GvrPointerScrollInput scrollInput = new GvrPointerScrollInput();
 
+    [Tooltip("Fill an internal timer and trigger a click event on timeout.")]
+    public bool UseGazeTimedInput = true;
+
+    [Tooltip("Time it takes for the input to trigger on a gaze based click input.")]
+    public float GazeTriggerTime = 1.0f;
+
   public GvrPointerInputModuleImpl Impl { get; private set; }
 
   public GvrEventExecutor EventExecutor { get; private set; }
@@ -214,5 +220,8 @@ public class GvrPointerInputModule : BaseInputModule, IGvrInputModuleController 
     Impl.VrModeOnly = vrModeOnly;
     Impl.ModuleController = this;
     Impl.EventExecutor = EventExecutor;
+
+    Impl.GazeTriggerTime = GazeTriggerTime;
+    Impl.UseGazeTimedInput = UseGazeTimedInput;
   }
 }
