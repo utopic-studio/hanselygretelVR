@@ -11,6 +11,9 @@ namespace J
 
     public abstract class JRenderOption : MonoBehaviour
     {
+        public delegate void OnAnswerValueChangeSignature();
+        public event OnAnswerValueChangeSignature OnAnswerValueChange;
+
         /// <summary>
         /// Option that owns the data on this render option.
         /// </summary>
@@ -47,6 +50,7 @@ namespace J
             if(OwningOption != null)
             {
                 OwningOption.AnswerData = Data;
+                OnAnswerValueChange();
             }
         }
     }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
+using UnityEngine.UI;
+using TMPro;
 
 namespace J
 {
@@ -32,13 +34,6 @@ namespace J
     [AddComponentMenu("J/Resources/Resource")]
     public class JResource : MonoBehaviour
     {
-        public UnityEvent OnShownEvent;
-        public UnityEvent OnHiddenEvent;
-
-        public bool bOpenOnStart = false;
-        private bool bShown = false;
-        private bool bDeferedOpen = false;
-
         /// <summary>
         /// Internal class that holds the logic for page on this resource
         /// </summary>
@@ -74,7 +69,7 @@ namespace J
                             this.Data = System.Text.RegularExpressions.Regex.Unescape(j.str);
                             break;
                         case "imagen":
-                            this.ImagenURL = j.str.Replace("\\", "");
+                            this.ImagenURL = j.str != null ? j.str.Replace("\\", "") : "";
                             break;
                         case "tipo":
                             this.Type = ParseType(j.str);
@@ -247,7 +242,7 @@ namespace J
                 JsonData = Data;
                 Index = InIndex;
             }
-            
+
             //Methods for getting values
             public bool GetValueAsBool(string Key)
             {
@@ -275,10 +270,41 @@ namespace J
             public int Index;
         }
 
+        public UnityEvent OnShownEvent;
+        public UnityEvent OnHiddenEvent;
+
+        private bool bShown = false;
+        private bool bDeferedOpen = false;
+
         /// <summary>
         /// Represents this resource code on the remote webservice
         /// </summary>
         public string Code;
+
+        /// <summary>
+        /// If the content of this resource should be treated as sequential, i.e. block buttons and force the player to complete each page sequentially
+        /// </summary>
+        public bool HasSequentialContent = false;
+
+        /// <summary>
+        /// If the resource starts opened.
+        /// </summary>
+        public bool bOpenOnStart = false;
+
+        /// <summary>
+        /// Exit button of the resource, used for sequential content
+        /// </summary>
+        public Button ExitButton;
+
+        /// <summary>
+        /// Next button of the resource, used for sequential content
+        /// </summary>
+        public Button NextButton;
+
+        /// <summary>
+        /// Prev button of the resource, used for sequential content
+        /// </summary>
+        public Button PrevButton;
 
         /// <summary>
         /// Prefabs to use for each Type of content option when generating a page.
@@ -322,10 +348,10 @@ namespace J
         public GameObject UI;
 
         //UI Title
-        private UnityEngine.UI.Text TitleText;
+        private TextMeshPro TitleText;
 
         //UI Detail
-        private UnityEngine.UI.Text DetailText;
+        private TextMeshPro DetailText;
 
         //UI Image Wrapper
         private GameObject ImageWrapper;
@@ -381,8 +407,9 @@ namespace J
             //DetailZoom = GetComponent<ZoomInDetail>();
 
             //UI Components, search for the text ones
-            UnityEngine.UI.Text[] TextComponents = transform.GetComponentsInChildren<UnityEngine.UI.Text>(true);
-            foreach (UnityEngine.UI.Text T in TextComponents)
+            //UnityEngine.UI.Text[] TextComponents = transform.GetComponentsInChildren<UnityEngine.UI.Text>(true);
+            TextMeshPro[] TextComponents = transform.GetComponentsInChildren<TextMeshPro>(true);
+            foreach (TextMeshPro T in TextComponents)
             {
                 if (T.gameObject.CompareTag("ResourceTitle"))
                 {
@@ -540,6 +567,9 @@ namespace J
                 OptionListWrapper.SetActive(false);
             }
 
+            //Optionally block the progress UI
+            ConditionalLockProgressUI();
+
             return true;
         }
 
@@ -572,6 +602,9 @@ namespace J
             foreach (JRenderOption Opt in options)
             {
                 ListController.Add(Opt.gameObject);
+
+                //Add a delegate for when the value changes, to make sure we're unlocking progress when needed
+                Opt.OnAnswerValueChange += ConditionalLockProgressUI;
             }
 
         }
@@ -607,6 +640,68 @@ namespace J
                             JResourceManager.Instance.RegisterAnswer(Opt.AnswerData, Code, Page.Index, Opt.Index);
                         }
                     }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Updates the accessibility of the progress UI, depending of the state of the page's content
+        /// </summary>
+        private void ConditionalLockProgressUI()
+        {
+            if(ExitButton != null && NextButton != null && PrevButton != null)
+            {
+                if (HasSequentialContent)
+                {
+                    bool bLockedPage = true;
+                    ContentPage Page = Pages[CurrentPage];
+                    if(Page != null && Page.Options != null && Page.Options.Length > 0)
+                    {
+                        foreach(ContentOption Option in Page.Options)
+                        {
+                            if(Option.AnswerData == null)
+                            {
+                                //Empty answer, we can only continue if this isn't a alternative question
+                                if(Page.Type != ContentType.Question)
+                                {
+                                    bLockedPage = true;
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                //Non empty answer is enough for a question type
+                                if (Page.Type == ContentType.Question)
+                                {
+                                    bLockedPage = false;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+
+                    //Check if the content page is locked
+                    if(bLockedPage)
+                    {
+                        ExitButton.gameObject.SetActive(false);
+                        NextButton.gameObject.SetActive(false);
+                        PrevButton.gameObject.SetActive(CurrentPage != 0);
+                    }
+                    else
+                    {
+                        //Page isn't locked, we enable everything, except the ExitButton and NextButton which are exclusive
+                        ExitButton.gameObject.SetActive(CurrentPage == Pages.Length - 1);
+                        NextButton.gameObject.SetActive(!ExitButton.gameObject.activeSelf);
+                        PrevButton.gameObject.SetActive(CurrentPage != 0);
+                    }
+                    
+                }
+                else
+                {
+                    //Enable all progress UI
+                    ExitButton.gameObject.SetActive(true);
+                    NextButton.gameObject.SetActive(CurrentPage < Pages.Length - 1);
+                    PrevButton.gameObject.SetActive(CurrentPage != 0);
                 }
             }
         }
