@@ -123,7 +123,7 @@ PlayerSettings:
   isWsaHolographicRemotingEnabled: 0
   vrSettings:
     cardboard:
-      depthFormat: 0
+      depthFormat: 2
       enableTransitionView: 0
     daydream:
       depthFormat: 0
@@ -151,7 +151,7 @@ PlayerSettings:
     Android: com.UtopicStudio.HanselYGretelVR
   buildNumber: {}
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 19
+  AndroidMinSdkVersion: 22
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -358,6 +358,7 @@ PlayerSettings:
     m_Enabled: 1
     m_Devices:
     - cardboard
+    - Oculus
   m_BuildTargetEnableVuforiaSettings: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0

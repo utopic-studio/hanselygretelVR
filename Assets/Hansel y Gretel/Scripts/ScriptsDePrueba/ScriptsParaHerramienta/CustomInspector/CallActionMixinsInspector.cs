@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+#if UNITY_EDITOR
 using UnityEditor;
 using UnityEditorInternal;
+#endif
 using System.IO;
 using System;
 
+#if UNITY_EDITOR
 [System.Serializable]
 public class AssetInfo
 {
     public string assetPath;
 }
-
 [CustomEditor(typeof(CallMixinActions))]
 public class CallActionMixinsInspector : Editor
 {
@@ -174,3 +175,12 @@ public class CallActionMixinsInspector : Editor
     }
 
 }
+
+#else
+public class CallActionMixinsInspector : MonoBehaviour
+{
+
+}
+#endif
+
+
