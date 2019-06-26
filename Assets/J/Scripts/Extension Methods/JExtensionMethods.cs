@@ -3,86 +3,137 @@
 namespace J
 {
 		
-	public static class JExtensionMethods {
+	public static class JExtensionMethods
+    {
+        
+        #region GAME_OBJECT
+
+        /// <summary>
+        /// Activa/desactiva un objeto en la jerarquia
+        /// </summary>
+        public static void JToggleActive(this GameObject go)
+        {
+            go.SetActive(!go.activeSelf);
+        }
+
+        /// <summary>
+        /// Crea un objeto. Si ya existía, no se crea y se usa ese objeto
+        /// </summary>
+        /// <param name="name">Nombre del objeto en la jerarquía</param>
+        /// <returns>Objeto creado o el que ya existía</returns>
+        public static GameObject JCreateEmptyGameObjectNoDuplicates(this GameObject go, string name)
+        {
+            GameObject newGameObject;
+            newGameObject = GameObject.Find(name);
+            if (!newGameObject)
+            {
+                newGameObject = new GameObject(name);
+            }
+            return newGameObject;
+        }
+
+        #endregion
 
 
 
-		// :: GAME OBJECT ::
-		public static void JToggleActive(this GameObject go) {
-			go.SetActive (!go.activeSelf);
-		}
+        #region TRANSFORM
 
-		public static GameObject JCreateEmptyGameObjectNoDuplicates(this GameObject go, string name) {
-			GameObject newGameObject;
-			newGameObject = GameObject.Find(name);
-			if (!newGameObject) {
-				newGameObject = new GameObject(name);
-			}
-			return newGameObject;
-		}
-
-
-
-
-		// :: TRANSFORM ::
-		public static void JReset(this Transform t) {
+        /// <summary>
+        /// Reinicia la posición, rotación y la escala
+        /// </summary>
+        public static void JReset(this Transform t) {
 			t.localPosition = Vector3.zero;
 			t.localRotation = Quaternion.identity;
 			t.localScale = Vector3.one;
 		}
+
+        /// <summary>
+        /// Asigna un valor para transform.x
+        /// </summary>
 		public static void JSetX(this Transform t, float x) {
 			t.position = new Vector3(x, t.position.y, t.position.z);
 		}
-		public static void JSetY(this Transform t, float y) {
+
+        /// <summary>
+        /// Asigna un valor para transform.y
+        /// </summary>
+        public static void JSetY(this Transform t, float y) {
 			t.position = new Vector3(t.position.x, y, t.position.z);
 		}
-		public static void JSetZ(this Transform t, float z) {
+
+        /// <summary>
+        /// Asigna un valor para transform.z
+        /// </summary>
+        public static void JSetZ(this Transform t, float z) {
 			t.position = new Vector3(t.position.x, t.position.y, z);
 		}
-		public static Transform JGetParent(this Transform t) {
+
+        /// <summary>
+        /// Obtiene el padre de este objeto - Muestra warning en consola si no tiene padre
+        /// </summary>
+        /// <returns>Padre o null</returns>
+        public static Transform JGetParent(this Transform t) {
 			if (!t.parent)
 				Debug.LogWarning(string.Format("J - No parent found for object {0}", t.gameObject.name));
 			return t.parent;
 		}
 
+        #endregion
+        
 
 
+        #region COLLIDER
 
-
-
-		// :: COLLIDER ::
-		public static void JToggleCollider(this Collider col) {
+        
+        /// <summary>
+        /// Activa/desactiva el componente Collider
+        /// </summary>
+        public static void JToggleCollider(this Collider col) {
 			col.enabled = !col.enabled;
 		}
-		public static void JToggleIsTrigger(this Collider col) {
+
+        /// <summary>
+        /// Activa/desactiva si es el Collider es trigger o no
+        /// </summary>
+        public static void JToggleIsTrigger(this Collider col) {
 			col.isTrigger = !col.isTrigger;
 		}
 
+        #endregion
+        
 
 
+        #region RENDERER
 
-
-
-
-		// :: RENDERER ::
-		public static void JToggleRenderer(this Renderer rend) {
+        /// <summary>
+        /// Activa/desactiva el componente Renderer
+        /// </summary>
+        public static void JToggleRenderer(this Renderer rend) {
 			rend.enabled = !rend.enabled;
 		}
 
+        #endregion
 
 
 
-
-
-
-
-		// :: RIGIDBODY ::
-		public static void JToggleUseGravity(this Rigidbody rb) {
+        #region RIGIDBODY
+        
+        /// <summary>
+        /// Activa/desactiva si este Rigidbody es afectado por la gravedad
+        /// </summary>
+        public static void JToggleUseGravity(this Rigidbody rb) {
 			rb.useGravity = !rb.useGravity;
 		}
-		public static void JToggleIsKinematic(this Rigidbody rb) {
+        
+        /// <summary>
+        /// Activa/desactiva si este Rigidbody es kinemático o no
+        /// </summary>
+        public static void JToggleIsKinematic(this Rigidbody rb) {
 			rb.isKinematic = !rb.isKinematic;
 		}
-	}
+
+        #endregion
+
+    }
 
 }

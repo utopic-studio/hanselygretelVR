@@ -70,8 +70,6 @@ public class GvrPointerPhysicsRaycaster : GvrBasePointerRaycaster {
     }
   }
 
-  public float raycastDistance = 80f;
-
   /// Camera used for masking layers and determining the screen position of the raycast result.
   public override Camera eventCamera {
     get {
@@ -108,26 +106,25 @@ public class GvrPointerPhysicsRaycaster : GvrBasePointerRaycaster {
     base.Awake();
     hits = new RaycastHit[maxRaycastHits];
   }
-
+    
   protected override bool PerformRaycast(GvrBasePointer.PointerRay pointerRay, float radius,
     PointerEventData eventData, List<RaycastResult> resultAppendList) {
-
+        
     if (eventCamera == null) {
-      return false;
-    }
+            return false;
 
-    int numHits;
+    }
+        int numHits;
     if (radius > 0.0f) {
-      numHits = Physics.SphereCastNonAlloc(pointerRay.ray, radius, hits, raycastDistance, finalEventMask);
+      numHits = Physics.SphereCastNonAlloc(pointerRay.ray, radius, hits, pointerRay.distance, finalEventMask);
     } else {
-      numHits = Physics.RaycastNonAlloc(pointerRay.ray, hits, raycastDistance, finalEventMask);
+      numHits = Physics.RaycastNonAlloc(pointerRay.ray, hits, pointerRay.distance, finalEventMask);
     }
 
     if (numHits == 0) {
       return false;
     }
-
-    if (numHits == MaxRaycastHits) {
+        if (numHits == MaxRaycastHits) {
       MaxRaycastHits *= 2;
       Debug.LogWarningFormat("Physics Raycast/Spherecast returned {0} hits, which is the current " +
         "maximum and means that some hits may have been lost. Setting maxRaycastHits to {1}. " +
@@ -137,34 +134,35 @@ public class GvrPointerPhysicsRaycaster : GvrBasePointerRaycaster {
 
     Array.Sort(hits, 0, numHits, hitComparer);
 
-    for (int i = 0; i < numHits; ++i) {
-      Vector3 projection = Vector3.Project(hits[i].point - pointerRay.ray.origin, pointerRay.ray.direction);
-      Vector3 hitPosition = projection + pointerRay.ray.origin;
-      float resultDistance = hits[i].distance + pointerRay.distanceFromStart;
+        for (int i = 0; i < numHits; ++i)
+        {
+            Vector3 projection = Vector3.Project(hits[i].point - pointerRay.ray.origin, pointerRay.ray.direction);
+            Vector3 hitPosition = projection + pointerRay.ray.origin;
+            float resultDistance = hits[i].distance + pointerRay.distanceFromStart;
 
-      Transform pointerTransform =
-        GvrPointerInputModule.Pointer.PointerTransform;
-      float delta = (hitPosition - pointerTransform.position).magnitude;
-      if (delta < pointerRay.distanceFromStart) {
-        continue;
-      }
+            Transform pointerTransform =
+              GvrPointerInputModule.Pointer.PointerTransform;
+            float delta = (hitPosition - pointerTransform.position).magnitude;
+            if (delta < pointerRay.distanceFromStart)
+            {
+                continue;
+            }
 
-      RaycastResult result = new RaycastResult
-      {
-        gameObject = hits[i].collider.gameObject,
-        module = this,
-        distance = resultDistance,
-        worldPosition = hitPosition,
-        worldNormal = hits[i].normal,
-        screenPosition = eventCamera.WorldToScreenPoint(hitPosition),
-        index = resultAppendList.Count,
-        sortingLayer = 0,
-        sortingOrder = 0
-      };
+            RaycastResult result = new RaycastResult
+            {
+                gameObject = hits[i].collider.gameObject,
+                module = this,
+                distance = resultDistance,
+                worldPosition = hitPosition,
+                worldNormal = hits[i].normal,
+                screenPosition = eventCamera.WorldToScreenPoint(hitPosition),
+                index = resultAppendList.Count,
+                sortingLayer = 0,
+                sortingOrder = 0
+            };
 
-      resultAppendList.Add(result);
-    }
-
+            resultAppendList.Add(result);
+        }
     return true;
   }
 
