@@ -12,13 +12,13 @@ public class JsonPrueba : MonoBehaviour
 
     void Save() {
         JSONObject jsontest = new JSONObject();
-        jsontest.Add("palabras", palabras);
+        jsontest.AddField("palabras", palabras);
 
 
         JSONArray sesiones = new JSONArray();
         sesiones.Add(sesiones);
 
-        jsontest.Add("sesiones", sesiones);
+        //jsontest.AddField("sesiones", sesiones);
         Debug.Log(jsontest.ToString());
     }
 

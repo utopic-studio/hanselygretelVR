@@ -19,7 +19,7 @@ namespace J
             rot = new Vector3(rot.x, rot.y + angle, rot.z);
             Quaternion rotation = Quaternion.Euler(rot);
 
-            J.instance.followCurve(x => transform.rotation = Quaternion.Lerp(transform.rotation, rotation, x), duration);
+            J.Instance.followCurve(x => transform.rotation = Quaternion.Lerp(transform.rotation, rotation, x), duration);
         }
     }
 
