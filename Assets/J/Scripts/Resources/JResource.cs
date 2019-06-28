@@ -350,10 +350,10 @@ namespace J
         public GameObject UI;
 
         //UI Title
-        private TextMeshPro TitleText;
+        private TextMeshProUGUI TitleText;
 
         //UI Detail
-        private TextMeshPro DetailText;
+        private TextMeshProUGUI DetailText;
 
         //UI Image Wrapper
         private GameObject ImageWrapper;
@@ -397,7 +397,8 @@ namespace J
             }
 
             //The title is common, so we should set it up here
-            TitleText.text = Title;
+            if (TitleText)
+                TitleText.text = Title;
 
             //Check if we're open, we should reset the current page
             if (bShown)
@@ -410,8 +411,8 @@ namespace J
 
             //UI Components, search for the text ones
             //UnityEngine.UI.Text[] TextComponents = transform.GetComponentsInChildren<UnityEngine.UI.Text>(true);
-            TextMeshPro[] TextComponents = transform.GetComponentsInChildren<TextMeshPro>(true);
-            foreach (TextMeshPro T in TextComponents)
+            TextMeshProUGUI[] TextComponents = transform.GetComponentsInChildren<TextMeshProUGUI>(true);
+            foreach (TextMeshProUGUI T in TextComponents)
             {
                 if (T.gameObject.CompareTag("ResourceTitle"))
                 {
@@ -537,6 +538,9 @@ namespace J
 
             //Change the content here
             ContentPage currentContent = Pages[InPage];
+            Debug.Log(string.Format("{0} - {1} - {2}",  Pages.Length, InPage, currentContent));
+            Debug.Log(currentContent.Data);
+            Debug.Log(DetailText);
             DetailText.text = currentContent.Data;
 
             //Try to setup the image if there is one
@@ -692,9 +696,11 @@ namespace J
                     //Check if the content page is locked
                     if(bLockedPage)
                     {
+                        /*
                         ExitButton.gameObject.SetActive(false);
                         NextButton.gameObject.SetActive(false);
                         PrevButton.gameObject.SetActive(CurrentPage != 0);
+                        */
                     }
                     else
                     {
