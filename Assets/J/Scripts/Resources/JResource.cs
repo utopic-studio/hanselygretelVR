@@ -276,6 +276,8 @@ namespace J
         private bool bShown = false;
         private bool bDeferedOpen = false;
 
+        public bool ConnectToServer = true;
+
         /// <summary>
         /// Represents this resource code on the remote webservice
         /// </summary>
@@ -486,6 +488,9 @@ namespace J
         {
             //Has to be first... if not, the internal IEnumerator from the yield will not run (as its deactivated)
             UI.SetActive(true);
+            UI.GetComponent<GraphicRaycaster>().enabled = true;
+            if (UI.GetComponent<JFadeUI>())
+                UI.GetComponent<JFadeUI>().Show();
 
             //Show the page if valid, if not, fallback to first page
             if (!GoToPage(ShowPage))
@@ -504,11 +509,15 @@ namespace J
         public void Hide()
         {
             //Chance to persist the answers into local repository
-            StoreOptionAnswers();
-            UI.SetActive(false);
+            if(ConnectToServer)
+                StoreOptionAnswers();
+            UI.GetComponent<GraphicRaycaster>().enabled = false;
+            if(UI.GetComponent<JFadeUI>())
+                UI.GetComponent<JFadeUI>().Hide();
             OnHiddenEvent.Invoke();
             bShown = false;
-            JResourceManager.Instance.PushAnswers();
+            if(ConnectToServer)
+                JResourceManager.Instance.PushAnswers();
         }
 
         /// <summary>
