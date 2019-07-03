@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4807255558510746407}
   - component: {fileID: 8563687805030211393}
   - component: {fileID: 8739273233960620851}
+  - component: {fileID: 8652543168605809267}
   m_Layer: 0
   m_Name: JGameController
   m_TagString: Untagged
@@ -95,7 +96,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Url: http://api.vrkids.nice.cl
-  LoginPath: /login
+  LoginPath: /login/app
   UserField: email
   TypeField: tipo
   PasswordField: password
+--- !u!114 &8652543168605809267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807255558510746406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bef67bac9a750b4a8ea09e066f6d303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
