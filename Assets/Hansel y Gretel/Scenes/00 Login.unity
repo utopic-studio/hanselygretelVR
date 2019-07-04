@@ -6289,7 +6289,7 @@ PrefabInstance:
     - target: {fileID: 185000885678985870, guid: 75839f5b9d9c628419484485082732c2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 185000885678985870, guid: 75839f5b9d9c628419484485082732c2,
         type: 3}
@@ -26452,7 +26452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &911396735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33616,7 +33616,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1031848054
 GameObject:
@@ -59067,9 +59067,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1490839214}
-  - component: {fileID: 1490839213}
-  - component: {fileID: 1490839215}
-  - component: {fileID: 1490839216}
   - component: {fileID: 1490839217}
   m_Layer: 0
   m_Name: SceneController
@@ -59078,21 +59075,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1490839213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490839212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ba6d9e3689a9944ca853788dda1528b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  texts:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &1490839214
 Transform:
   m_ObjectHideFlags: 0
@@ -59107,33 +59089,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1490839215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490839212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5315084cbd0fc3645824cb8838bfbb32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 02 Casa
-  delay: 2
---- !u!114 &1490839216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1490839212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 782d4eb79ce597f458efd3ab094300cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeScale: 1.4
 --- !u!114 &1490839217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59153,7 +59108,7 @@ MonoBehaviour:
   fadeoutTime: 1.5
   ignoreTimeScale: 0
   distanceFromCamera: 0.42
-  fadeInAtStart: 0
+  fadeInAtStart: 1
 --- !u!1001 &1495956800
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60630,41 +60585,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameController
       objectReference: {fileID: 0}
-    - target: {fileID: 7616455576622861572, guid: def576f599838064b8abbc279ee7fff0,
-        type: 3}
-      propertyPath: OnFetchComplete.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7616455576622861572, guid: def576f599838064b8abbc279ee7fff0,
-        type: 3}
-      propertyPath: OnFetchComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7616455576622861572, guid: def576f599838064b8abbc279ee7fff0,
-        type: 3}
-      propertyPath: OnFetchComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7616455576622861572, guid: def576f599838064b8abbc279ee7fff0,
-        type: 3}
-      propertyPath: OnFetchComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1633364045}
-    - target: {fileID: 7616455576622861572, guid: def576f599838064b8abbc279ee7fff0,
-        type: 3}
-      propertyPath: OnFetchComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadTheLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 7616455576622861572, guid: def576f599838064b8abbc279ee7fff0,
-        type: 3}
-      propertyPath: OnFetchComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 7616455576622861572, guid: def576f599838064b8abbc279ee7fff0,
-        type: 3}
-      propertyPath: BaseResourceCode
-      value: 5cd4a4b057028e42849d4150
-      objectReference: {fileID: 0}
     - target: {fileID: 5299839788435948249, guid: def576f599838064b8abbc279ee7fff0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -60703,7 +60623,7 @@ PrefabInstance:
     - target: {fileID: 5299839788435948249, guid: def576f599838064b8abbc279ee7fff0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5299839788435948249, guid: def576f599838064b8abbc279ee7fff0,
         type: 3}
@@ -60724,6 +60644,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616455576622861572, guid: def576f599838064b8abbc279ee7fff0,
+        type: 3}
+      propertyPath: OnFetchComplete.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616455576622861572, guid: def576f599838064b8abbc279ee7fff0,
+        type: 3}
+      propertyPath: OnFetchComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616455576622861572, guid: def576f599838064b8abbc279ee7fff0,
+        type: 3}
+      propertyPath: OnFetchComplete.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616455576622861572, guid: def576f599838064b8abbc279ee7fff0,
+        type: 3}
+      propertyPath: OnFetchComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1633364045}
+    - target: {fileID: 7616455576622861572, guid: def576f599838064b8abbc279ee7fff0,
+        type: 3}
+      propertyPath: OnFetchComplete.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadTheLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616455576622861572, guid: def576f599838064b8abbc279ee7fff0,
+        type: 3}
+      propertyPath: OnFetchComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616455576622861572, guid: def576f599838064b8abbc279ee7fff0,
+        type: 3}
+      propertyPath: BaseResourceCode
+      value: 5cd4a4b057028e42849d4150
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2015223098, guid: def576f599838064b8abbc279ee7fff0, type: 3}
@@ -61737,7 +61692,7 @@ GameObject:
   - component: {fileID: 1633364046}
   - component: {fileID: 1633364045}
   m_Layer: 0
-  m_Name: LevelChange
+  m_Name: Load Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61752,12 +61707,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1633364044}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7428dae0195334301b0b17234336d038, type: 3}
+  m_Script: {fileID: 11500000, guid: 5315084cbd0fc3645824cb8838bfbb32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Assets/Hansel y Gretel/Scenes/01 Bosque.unity
-  fadeOutMusic: 0
-  asyncLoad: 1
+  sceneName: 01 Bosque
+  delay: 0
 --- !u!4 &1633364046
 Transform:
   m_ObjectHideFlags: 0
@@ -61770,7 +61724,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1633453254
 PrefabInstance:
@@ -64512,7 +64466,7 @@ Transform:
   - {fileID: 413983781}
   - {fileID: 1974264915}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1779820776 stripped
 Transform:
@@ -67190,7 +67144,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1490839216}
+      - m_Target: {fileID: 0}
         m_MethodName: SetTimeScale
         m_Mode: 4
         m_Arguments:
@@ -67218,7 +67172,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1926361693 stripped
 Transform:
@@ -67989,7 +67943,7 @@ PrefabInstance:
     - target: {fileID: 1812745999396014891, guid: 00b7f3e37a0523f4682d08cd83c0965a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1812745999396014891, guid: 00b7f3e37a0523f4682d08cd83c0965a,
         type: 3}
@@ -70573,7 +70527,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2134221929 stripped
 Transform:
