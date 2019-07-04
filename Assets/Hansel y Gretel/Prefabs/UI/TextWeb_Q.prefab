@@ -787,11 +787,11 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 808428866237711814}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6390946222142019057}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -813,7 +813,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4089515497287645660}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -1571,7 +1571,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7763483813836087041}
-  - component: {fileID: 6938808712903334414}
   m_Layer: 0
   m_Name: History
   m_TagString: Untagged
@@ -1597,36 +1596,6 @@ Transform:
   m_Father: {fileID: 1548392980589145575}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -56.394, z: 0}
---- !u!114 &6938808712903334414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4089515497287645660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df2c162ab50b5c54d9ac5a47f9a64e1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  content: "Hansel y Gretel viv\xEDan muy cerca de un espeso bosque con su padre que
-    era un pobre le\xF1ador y su cruel madrastra. Viv\xEDan con much\xEDsima escasez
-    y ya no les alcanzaba para que los cuatro pudieran comer.\r\nUna noche, creyendo
-    que los ni\xF1os estaban dormidos, la cruel madrastra dijo al le\xF1ador: <b>-No
-    hay bastante comida para todos. Ma\xF1ana llevaremos a los ni\xF1os a la parte
-    m\xE1s espesa del bosque y los dejaremos all\xED. Ellos no podr\xE1n encontrar
-    el camino a casa y as\xED nos desprenderemos de esa carga</b>. Al principio, el
-    padre se opuso rotundamente a la cruel idea de la malvada mujer.\r\n\u2013\xBFC\xF3mo
-    vamos a abandonar a mis hijos a su suerte?, \xA1quiz\xE1s sean atacados por los
-    animales del bosque! -grit\xF3 enojado.\r\n<b>\u2013De cualquier manera, as\xED
-    moriremos todos de hambre</b> \u2013dijo la madrastra y no descans\xF3 hasta convencer
-    al d\xE9bil hombre de llevar adelante el mal\xE9volo plan que se hab\xEDa trazado.\r\nSin
-    embargo, los ni\xF1os escucharon toda la conversaci\xF3n. Gretel lloraba amargamente
-    y Hansel la consolaba:<br><b>\u2013No llores, querida hermanita \u2013dec\xEDa
-    \xE9l\u2013, \xA1Yo tengo una idea para encontrar el camino de regreso a casa!</b>"
-  text: {fileID: 0}
-  textPro: {fileID: 8184528266330539533}
-  update: 0
 --- !u!1 &4720719047415778671
 GameObject:
   m_ObjectHideFlags: 0
@@ -2789,7 +2758,7 @@ PrefabInstance:
     - target: {fileID: 8904525779425845346, guid: df6f11c524969b1478cc442b4c1cb103,
         type: 3}
       propertyPath: m_Name
-      value: TextWeb_Question Variant
+      value: TextWeb_Q
       objectReference: {fileID: 0}
     - target: {fileID: 595111030, guid: df6f11c524969b1478cc442b4c1cb103, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2839,21 +2808,6 @@ PrefabInstance:
       propertyPath: Code
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 876032427670791649, guid: df6f11c524969b1478cc442b4c1cb103,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.000030396606
-      objectReference: {fileID: 0}
-    - target: {fileID: 876032427670791649, guid: df6f11c524969b1478cc442b4c1cb103,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 677863470989406836, guid: df6f11c524969b1478cc442b4c1cb103,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4878826897369722964, guid: df6f11c524969b1478cc442b4c1cb103,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -2899,9 +2853,19 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.11
       objectReference: {fileID: 0}
-    - target: {fileID: 8660542585267919802, guid: df6f11c524969b1478cc442b4c1cb103,
+    - target: {fileID: 677863470989406836, guid: df6f11c524969b1478cc442b4c1cb103,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 876032427670791649, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000030396606
+      objectReference: {fileID: 0}
+    - target: {fileID: 876032427670791649, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5598123124807166528, guid: df6f11c524969b1478cc442b4c1cb103,
@@ -2914,9 +2878,9 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5107956280700263733, guid: df6f11c524969b1478cc442b4c1cb103,
+    - target: {fileID: 8660542585267919802, guid: df6f11c524969b1478cc442b4c1cb103,
         type: 3}
-      propertyPath: m_RaycastTarget
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3574533601843050798, guid: df6f11c524969b1478cc442b4c1cb103,
@@ -2927,6 +2891,11 @@ PrefabInstance:
     - target: {fileID: 3659241607477863293, guid: df6f11c524969b1478cc442b4c1cb103,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5107956280700263733, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
