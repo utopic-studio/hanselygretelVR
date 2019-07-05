@@ -24,7 +24,6 @@ namespace J
 
 
         protected float duration = 1f;
-        protected float timeVariable = 0f;
 		protected float curveRealDuration;
 		protected float curveStartTime;
 		protected float modifyFactor;
@@ -33,14 +32,16 @@ namespace J
 		protected float curveValue;
 		protected bool updateEnabled;
 		protected bool reverse;
-		protected CurveDelegate foo;
+		protected CurveDelegate curve_delegate;
 
 
-
+        private float t;
 
 
 		public void beginFollowCurve(CurveDelegate d , float duration, float amplitude, int repeat, CurveType type, bool reverse, MonoBehaviour callingScript) {
-			foo = d;
+
+            t = 0f;
+            curve_delegate = d;
             updateEnabled = true;
 
 			this.amplitudeFactor = amplitude;
@@ -71,42 +72,38 @@ namespace J
 		}
 
 		private void Update () {
-			if (updateEnabled) {
-				float t = timeVariable + Time.deltaTime / duration;
+			if (updateEnabled)
+            {
+                // 0 <= t <= 1
+				t = Mathf.Clamp01(t + (Time.deltaTime / duration));
 
-				
-				timeVariable = t % curveRealDuration;
+                float t_curve = t * curveRealDuration;
+
+                print("curveRealDuration="+curveRealDuration+"   t="+t);
 				if (reverse)
-					curveValue = curve.Evaluate (curveStartTime + curveRealDuration - timeVariable) * amplitudeFactor;
+					curveValue = curve.Evaluate (curveStartTime + curveRealDuration - t_curve) * amplitudeFactor;
 				else
-					curveValue = curve.Evaluate (curveStartTime + timeVariable) * amplitudeFactor;
+					curveValue = curve.Evaluate (curveStartTime + t_curve) * amplitudeFactor;
 
 
-                if (repeatCounter > 0 && t > curveRealDuration)
+                
+                curve_delegate(curveValue);
+
+
+
+                this.curveCurrentValue = curveValue;
+                this.curveCurrentTime = t_curve;
+                this.timeProgress = t * this.duration;
+
+                if (repeatCounter > 0 && t == 1f)
+                {
                     repeatCounter--;
-
-
+                }
                 if (repeatCounter == 0)
                 {
                     updateEnabled = false;
-                    if (reverse)
-                        curveValue = Mathf.Min(curveValue, 0f);
-                    else
-                        curveValue = Mathf.Max(curveValue, amplitudeFactor);
-
-                    foo(curveValue);
                 }
-                else
-                {
-                    foo(curveValue);
-
-                    this.curveCurrentValue = curveValue;
-                    this.curveCurrentTime = timeVariable;
-                    this.timeProgress = timeVariable * this.duration;
-                }
-                    
-
-			}
+            }
 		}
 
 	}

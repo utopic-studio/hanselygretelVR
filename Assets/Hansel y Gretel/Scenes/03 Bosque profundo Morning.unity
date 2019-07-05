@@ -492,7 +492,7 @@ PrefabInstance:
     - target: {fileID: 657049348312161451, guid: cad039527728ff546b2ba65d2a27efa1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000022543607
+      value: -0.000015316293
       objectReference: {fileID: 0}
     - target: {fileID: 657049348312161451, guid: cad039527728ff546b2ba65d2a27efa1,
         type: 3}
@@ -7016,7 +7016,7 @@ GameObject:
   - component: {fileID: 834027655}
   - component: {fileID: 834027654}
   m_Layer: 0
-  m_Name: SceneChanger
+  m_Name: Load Scene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7580,11 +7580,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5296629302831996313, guid: def576f599838064b8abbc279ee7fff0,
-        type: 3}
-      propertyPath: m_Name
-      value: GameController
-      objectReference: {fileID: 0}
     - target: {fileID: 5299839788435948249, guid: def576f599838064b8abbc279ee7fff0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7639,6 +7634,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5296629302831996313, guid: def576f599838064b8abbc279ee7fff0,
+        type: 3}
+      propertyPath: m_Name
+      value: GameController
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: def576f599838064b8abbc279ee7fff0, type: 3}
@@ -40610,20 +40610,6 @@ Transform:
   m_Father: {fileID: 1718662628914980960}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1718662629098008876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718662629098008878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5315084cbd0fc3645824cb8838bfbb32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: 05 exterior de la cas de la bruja
-  delay: 3
 --- !u!4 &1718662629098008877
 Transform:
   m_ObjectHideFlags: 0
@@ -40647,7 +40633,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1718662629098008877}
-  - component: {fileID: 1718662629098008876}
   - component: {fileID: 1718662629098008879}
   - component: {fileID: 1718662629098008882}
   - component: {fileID: 1718662629098008880}
@@ -40670,7 +40655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782d4eb79ce597f458efd3ab094300cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeScale: 1.5
+  timeScale: 1.61
 --- !u!114 &1718662629098008880
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,20 +11,19 @@ namespace J
         [SerializeField] Camera mainCamera;
         [SerializeField] Color opaqueColor = Color.black;
         [SerializeField] Color transparentColor = Color.clear;
-        [SerializeField] float fadeinTime = 1f;
-        [SerializeField] float fadeoutTime = 1f;
+        public float fadeinTime = 1f;
+        public float fadeoutTime = 1f;
         [SerializeField] bool ignoreTimeScale = false;
         [SerializeField] float distanceFromCamera = 0.05f;
         public bool fadeInAtStart = true;
 
-        private UnityEngine.UI.Image myImage;
+        private UnityEngine.UI.Image imgInFront;
         private string JFadeCanvasName = "JFadeCanvas";
         private string JFadeImageName = "JFadeImage";
 
         private GameObject block_screen_obj;
         private GameObject block_screen_img_obj;
-
-
+        
 
         private void OnValidate()
         {
@@ -33,7 +32,8 @@ namespace J
         }
         private void Start()
         {
-            this.CreateFadeCanvasIfNeeded(true);
+            if (!imgInFront)
+                this.CreateFadeCanvasIfNeeded(true);
         }
 
 
@@ -47,18 +47,22 @@ namespace J
         }
         public void JFadeIn()
         {
+            print("JFadeIn called");
             _Fade(fadeinTime, this.transparentColor);
         }
         public void JFadeOut()
         {
+            print("JFadeOut called");
             _Fade(fadeoutTime, this.opaqueColor);
         }
         public void JFadeInInstantly()
         {
+            print("JFadeInInstantly called");
             _Fade(0f, this.transparentColor);
         }
         public void JFadeOutInstantly()
         {
+            print("JFadeOutInstantly called");
             _Fade(0f, this.opaqueColor);
         }
 
@@ -67,13 +71,24 @@ namespace J
 
         private void _Fade(float fadeDuration, Color targetColor)
         {
-            CreateFadeCanvasIfNeeded(false);
+            if (!imgInFront)
+                CreateFadeCanvasIfNeeded(false);
+            if (!imgInFront)
+                return;
+            print("_Fade :: imgInFront exists");
 
-            Color imgColorBeforeLerp = myImage.color;
-            J2.Instance.JLerp((x) =>
-           {
-               myImage.color = Color.Lerp(imgColorBeforeLerp, targetColor, x);
-           }, fadeDuration);
+            Color imgColorBeforeLerp = imgInFront.color;
+            if (fadeDuration > 0f)
+            {
+                J2.Instance.JLerp((x) =>
+                {
+                   imgInFront.color = Color.Lerp(imgColorBeforeLerp, targetColor, x);
+                }, fadeDuration);
+            } else
+            {
+                imgInFront.color = targetColor;
+            }
+            print("camera _Fade() called");
         }
 
 
@@ -126,13 +141,14 @@ namespace J
 
             block_screen_img_obj.GetComponent<RectTransform>().sizeDelta = new Vector2(2, 2);
             
-            myImage = img_img;
-            myImage.color = opaqueColor;
+            imgInFront = img_img;
+            imgInFront.color = opaqueColor;
 
 
             // Initial camera state
             if (calledAtStart)
             {
+                print(calledAtStart);
                 if (fadeInAtStart)
                     this.JFadeIn();
                 else
