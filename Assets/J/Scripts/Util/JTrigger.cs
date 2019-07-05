@@ -4,56 +4,65 @@ namespace J
 {
 
 	[AddComponentMenu("J/Util/JTrigger")]
-	[RequireComponent(typeof(Collider))]
-	public class JTrigger : MonoBehaviour {
+    [RequireComponent(typeof(MeshFilter))]
+    [RequireComponent(typeof(Collider))]
+    public class JTrigger : MonoBehaviour {
 
+        [Tooltip("Dejar vacío para activarse con cualquier otro objeto")]
 		[SerializeField]	string tagCondition = "";
-		[SerializeField]	bool enterOnce = true;
-		[SerializeField]	bool exitOnce = true;
+		[SerializeField]	bool callEnterOnce = true;
+		[SerializeField]	bool callExitOnce = true;
 		[SerializeField]	UnityEngine.Events.UnityEvent onEnter;
 		[SerializeField]	UnityEngine.Events.UnityEvent onExit;
-		[SerializeField]	UnityEngine.Events.UnityEvent onStay;
 
 		protected Collider coll;
 		protected bool m_enterEnabled = true, m_exitEnabled = true;
 
-		void OnValidate() {
-			tagCondition = tagCondition.Trim ();
+
+        private void Start () {
+            this.Reset();
 		}
 
-		void Start () {
-			coll = GetComponent<Collider> ();
-			coll.isTrigger = true;
-		}
+        private void OnValidate()
+        {
+            tagCondition = tagCondition.Trim();
+        }
 
-		void OnTriggerEnter(Collider other) {
+        private void Reset()
+        {
+            Renderer rend = GetComponent<Renderer>();
+            Collider col = GetComponent<Collider>();
+            if (rend)
+                rend.enabled = false;
+            if (col)
+                col.isTrigger = true;
+        }
+
+
+        private void OnTriggerEnter(Collider other) {
 			if (!isTagValid (other.tag))
 				return;
 			if (m_enterEnabled) {
 				onEnter.Invoke ();
 			}
-			if (enterOnce)
+			if (callEnterOnce)
 				m_enterEnabled = false;
 		}
-		void OnTriggerExit(Collider other) {
+		private void OnTriggerExit(Collider other) {
 			if (!isTagValid (other.tag))
 				return;
 			if (m_exitEnabled) {
 				onExit.Invoke ();
 			}
-			if (exitOnce)
+			if (callExitOnce)
 				m_exitEnabled = false;
-		}
-		void OnTriggerStay(Collider other) {
-			if (!isTagValid (other.tag))
-				return;
-			onStay.Invoke ();
 		}
 		private bool isTagValid(string tag) {
 			if (tagCondition == "")
 				return true;
 			return tag == tagCondition;
 		}
+        
 	}
 
 }

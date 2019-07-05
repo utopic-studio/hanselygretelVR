@@ -97,6 +97,7 @@ public class GvrKeyboard : MonoBehaviour {
 
   public string EditorText {
     get { return instance != null ? instance.keyboardState.editorText : string.Empty; }
+    set { keyboardProvider.EditorText = value; }
   }
 
   public GvrKeyboardInputMode Mode {
@@ -130,6 +131,7 @@ public class GvrKeyboard : MonoBehaviour {
 
   void OnDestroy() {
     instance = null;
+    threadSafeCallbacks.Clear();
   }
 
   // Use this for initialization.
@@ -217,7 +219,10 @@ public class GvrKeyboard : MonoBehaviour {
     // Get user matrix.
     Quaternion fixRot = new Quaternion(transform.rotation.x * -1, transform.rotation.y * -1,
       transform.rotation.z, transform.rotation.w);
-    Matrix4x4 modelMatrix = Matrix4x4.TRS(transform.position, fixRot, Vector3.one);
+    // Need to convert from left handed to right handed for the Keyboard coordinates.
+    Vector3 fixPos = new Vector3(transform.position.x, transform.position.y,
+      transform.position.z * -1);
+    Matrix4x4 modelMatrix = Matrix4x4.TRS(fixPos, fixRot, Vector3.one);
     Matrix4x4 mat = Matrix4x4.identity;
     Vector3 position = gameObject.transform.position;
     if (position.x == 0 && position.y == 0 && position.z == 0 && !useRecommended) {
@@ -309,6 +314,7 @@ public class GvrKeyboard : MonoBehaviour {
     }
   }
 
+  [AOT.MonoPInvokeCallback(typeof(GvrKeyboardEvent))]
   private static void OnKeyboardCallback(IntPtr closure, GvrKeyboardEvent keyboardEvent) {
     lock (callbacksLock) {
       threadSafeCallbacks.Add(keyboardEvent);

@@ -59,7 +59,7 @@ namespace J
             if (instant)
                 targetX.rotation = Quaternion.RotateTowards(_initialRotation, _lookRotation, 360f);
             else
-                J.instance.followCurve(x =>
+                J.Instance.followCurve(x =>
                 {
                     targetX.rotation = Quaternion.Lerp(_initialRotation, _lookRotation, x);
                 },

@@ -60,11 +60,13 @@ namespace J
 		public void Show() {
             Invoke("CallOnFadeInStarting", 0f);
             foreach (var g in canvasGroup)
-			    J.instance.followCurve (x => g.alpha = x, duration: fadeInTime, repeat: 1, type: CurveType.Linear);
+			    //J.Instance.followCurve (x => g.alpha = x, duration: fadeInTime, repeat: 1, type: CurveType.Linear);
+                J2.Instance.JLerp(x => g.alpha = x, duration: fadeInTime, repeat: 1, type: CurveType.Linear);
         }
 		public void Hide() {
             foreach (var g in canvasGroup)
-			    J.instance.followCurve (x => g.alpha = x, duration: fadeOutTime, repeat: 1, type: CurveType.Linear, reverse: true);
+			    //J.Instance.followCurve (x => g.alpha = x, duration: fadeOutTime, repeat: 1, type: CurveType.Linear, reverse: true);
+                J2.Instance.JLerp(x => g.alpha = x, duration: fadeOutTime, repeat: 1, type: CurveType.Linear, reverse: true);
             Invoke("CallOnFadeOutEnded", fadeOutTime);
         }
 		public void ShowInstantly() {
