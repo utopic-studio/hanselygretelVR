@@ -79,7 +79,7 @@ namespace J
 
                 float t_curve = t * curveRealDuration;
 
-                print("curveRealDuration="+curveRealDuration+"   t="+t);
+                //print("curveRealDuration="+curveRealDuration+"   t="+t);
 				if (reverse)
 					curveValue = curve.Evaluate (curveStartTime + curveRealDuration - t_curve) * amplitudeFactor;
 				else

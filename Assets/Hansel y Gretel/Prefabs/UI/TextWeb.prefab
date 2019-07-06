@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7956594380381834468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9125769746715400488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c60079255a870eb4e8d0e41b90eabb34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DefaultPlaySoundVolume: 1
 --- !u!1001 &375492288920828234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62,6 +75,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 595111031, guid: df6f11c524969b1478cc442b4c1cb103, type: 3}
+      propertyPath: OnHiddenEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 595111031, guid: df6f11c524969b1478cc442b4c1cb103, type: 3}
       propertyPath: OnHiddenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
@@ -88,5 +105,68 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.0000076293945
       objectReference: {fileID: 0}
+    - target: {fileID: 677863470989406836, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 677863470989406836, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 677863470989406836, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 677863470989406836, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 7956594380381834468}
+    - target: {fileID: 677863470989406836, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 677863470989406836, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.AudioClip, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 677863470989406836, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: cdc926458fb5fe14da211bc53694e352, type: 3}
+    - target: {fileID: 5815095989742718245, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 106718263, guid: df6f11c524969b1478cc442b4c1cb103, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 106718263, guid: df6f11c524969b1478cc442b4c1cb103, type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 106718263, guid: df6f11c524969b1478cc442b4c1cb103, type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895953463216584601, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df6f11c524969b1478cc442b4c1cb103, type: 3}
+--- !u!1 &9125769746715400488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8904525779425845346, guid: df6f11c524969b1478cc442b4c1cb103,
+    type: 3}
+  m_PrefabInstance: {fileID: 375492288920828234}
+  m_PrefabAsset: {fileID: 0}

@@ -276,8 +276,6 @@ namespace J
         private bool bShown = false;
         private bool bDeferedOpen = false;
 
-        public bool ConnectToServer = true;
-
         /// <summary>
         /// Represents this resource code on the remote webservice
         /// </summary>
@@ -350,10 +348,10 @@ namespace J
         public GameObject UI;
 
         //UI Title
-        private TextMeshProUGUI TitleText;
+        private TextMeshPro TitleText;
 
         //UI Detail
-        private TextMeshProUGUI DetailText;
+        private TextMeshPro DetailText;
 
         //UI Image Wrapper
         private GameObject ImageWrapper;
@@ -397,8 +395,7 @@ namespace J
             }
 
             //The title is common, so we should set it up here
-            if (TitleText)
-                TitleText.text = Title;
+            TitleText.text = Title;
 
             //Check if we're open, we should reset the current page
             if (bShown)
@@ -411,8 +408,8 @@ namespace J
 
             //UI Components, search for the text ones
             //UnityEngine.UI.Text[] TextComponents = transform.GetComponentsInChildren<UnityEngine.UI.Text>(true);
-            TextMeshProUGUI[] TextComponents = transform.GetComponentsInChildren<TextMeshProUGUI>(true);
-            foreach (TextMeshProUGUI T in TextComponents)
+            TextMeshPro[] TextComponents = transform.GetComponentsInChildren<TextMeshPro>(true);
+            foreach (TextMeshPro T in TextComponents)
             {
                 if (T.gameObject.CompareTag("ResourceTitle"))
                 {
@@ -489,9 +486,6 @@ namespace J
         {
             //Has to be first... if not, the internal IEnumerator from the yield will not run (as its deactivated)
             UI.SetActive(true);
-            UI.GetComponent<GraphicRaycaster>().enabled = true;
-            if (UI.GetComponent<JFadeUI>())
-                UI.GetComponent<JFadeUI>().Show();
 
             //Show the page if valid, if not, fallback to first page
             if (!GoToPage(ShowPage))
@@ -510,15 +504,10 @@ namespace J
         public void Hide()
         {
             //Chance to persist the answers into local repository
-            if(ConnectToServer)
-                StoreOptionAnswers();
-            UI.GetComponent<GraphicRaycaster>().enabled = false;
-            if(UI.GetComponent<JFadeUI>())
-                UI.GetComponent<JFadeUI>().Hide();
+            StoreOptionAnswers();
+            UI.SetActive(false);
             OnHiddenEvent.Invoke();
             bShown = false;
-            if(ConnectToServer)
-                JResourceManager.Instance.PushAnswers();
         }
 
         /// <summary>
@@ -538,9 +527,6 @@ namespace J
 
             //Change the content here
             ContentPage currentContent = Pages[InPage];
-            Debug.Log(string.Format("{0} - {1} - {2}",  Pages.Length, InPage, currentContent));
-            Debug.Log(currentContent.Data);
-            Debug.Log(DetailText);
             DetailText.text = currentContent.Data;
 
             //Try to setup the image if there is one
@@ -666,9 +652,12 @@ namespace J
             {
                 if (HasSequentialContent)
                 {
-                    bool bLockedPage = true;
                     ContentPage Page = Pages[CurrentPage];
-                    if(Page != null && Page.Options != null && Page.Options.Length > 0)
+
+                    //We start with the general case and then find exceptions 
+                    //questions start locked and need only one answer to unlock, whereas other start unlocked and need only one unanswered option to be locked
+                    bool bLockedPage = Page.Type == ContentType.Question;
+                    if (Page != null && Page.Options != null && Page.Options.Length > 0)
                     {
                         foreach(ContentOption Option in Page.Options)
                         {
@@ -696,11 +685,9 @@ namespace J
                     //Check if the content page is locked
                     if(bLockedPage)
                     {
-                        /*
                         ExitButton.gameObject.SetActive(false);
                         NextButton.gameObject.SetActive(false);
                         PrevButton.gameObject.SetActive(CurrentPage != 0);
-                        */
                     }
                     else
                     {

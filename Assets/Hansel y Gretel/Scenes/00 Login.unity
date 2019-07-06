@@ -6344,35 +6344,20 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 185000885383565053, guid: 75839f5b9d9c628419484485082732c2,
+    - target: {fileID: 185000885678985871, guid: 75839f5b9d9c628419484485082732c2,
         type: 3}
-      propertyPath: m_Color.r
+      propertyPath: OnLogged.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 185000885383565053, guid: 75839f5b9d9c628419484485082732c2,
+    - target: {fileID: 185000885678985871, guid: 75839f5b9d9c628419484485082732c2,
         type: 3}
-      propertyPath: m_Color.g
+      propertyPath: OnLogged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 185000885383565053, guid: 75839f5b9d9c628419484485082732c2,
+    - target: {fileID: 185000885678985871, guid: 75839f5b9d9c628419484485082732c2,
         type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 185000886369162078, guid: 75839f5b9d9c628419484485082732c2,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 185000886369162078, guid: 75839f5b9d9c628419484485082732c2,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 185000886369162078, guid: 75839f5b9d9c628419484485082732c2,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 1
+      propertyPath: OnLogged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 185000885678985871, guid: 75839f5b9d9c628419484485082732c2,
         type: 3}
@@ -6384,10 +6369,10 @@ PrefabInstance:
       propertyPath: OnLogged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadTheLevel
       objectReference: {fileID: 0}
-    - target: {fileID: 185000886391844368, guid: 75839f5b9d9c628419484485082732c2,
+    - target: {fileID: 185000885678985871, guid: 75839f5b9d9c628419484485082732c2,
         type: 3}
-      propertyPath: m_Text
-      value: Enter text...
+      propertyPath: OnLogged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75839f5b9d9c628419484485082732c2, type: 3}
