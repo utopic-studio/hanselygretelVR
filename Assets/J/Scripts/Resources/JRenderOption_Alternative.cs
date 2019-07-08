@@ -24,11 +24,23 @@ namespace J
         {
             List<JRenderOption> RenderOptions = new List<JRenderOption>();
 
+            UnityEngine.UI.ToggleGroup TGroup = null;
             for (int i = 0; i < Options.Length; i++)
             {
                 JResource.ContentOption Opt = Options[i];
                 GameObject instantiated = GameObject.Instantiate(Blueprint);
                 JRenderOption_Alternative alternative = instantiated.GetComponent<JRenderOption_Alternative>();
+
+                //We need some way to enforce the toggles to be setup one at a time, we use a toggle group on the first element
+                if (i == 0)
+                {
+                    TGroup = instantiated.AddComponent<UnityEngine.UI.ToggleGroup>();
+                    alternative.Toggle.group = TGroup;
+                }
+                else
+                {
+                    alternative.Toggle.group = TGroup;
+                }
 
                 alternative.Assign(Opt);
                 RenderOptions.Add(alternative);
