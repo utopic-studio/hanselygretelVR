@@ -66,7 +66,7 @@ namespace J
         public override int GetHashCode()
         {
             //Can potentially collide with other hashes, but its a longshot
-            return Identifier.GetHashCode() + PageIndex + OptionIndex;
+            return Identifier.GetHashCode() + 1000 * PageIndex + OptionIndex;
         }
 
         public void AddJSONContents(JSONObject j)
