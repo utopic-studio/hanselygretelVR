@@ -796,6 +796,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1387554239}
     m_Modifications:
+    - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_Name
+      value: TextVR
+      objectReference: {fileID: 0}
+    - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 44529546, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 66.83
@@ -838,14 +846,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 44529546, guid: 3e8795ff84141c649a2592376719451c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_Name
-      value: TextVR
-      objectReference: {fileID: 0}
-    - target: {fileID: 44529535, guid: 3e8795ff84141c649a2592376719451c, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7645844725954561183, guid: 3e8795ff84141c649a2592376719451c,
@@ -7532,6 +7532,12 @@ Transform:
   m_Father: {fileID: 1779818643}
   m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &343484127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2524473287009671139, guid: f2d6fe6c96e245e4ea9df6234de8991d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2907590171949265457}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &344047093
 GameObject:
   m_ObjectHideFlags: 0
@@ -26500,6 +26506,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1877826137, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
+      propertyPath: m_Name
+      value: WebVRCameraSet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1877826137, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 65.25
@@ -26542,14 +26556,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877826137, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_Name
-      value: WebVRCameraSet
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877826137, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -64712,7 +64718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5315084cbd0fc3645824cb8838bfbb32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 02 Casa
+  sceneName: 02 Casa 1
   delay: 2
   cameraFade: 1
 --- !u!114 &1490839217
@@ -75946,6 +75952,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8641980040674156189, guid: ace986442c3170e4b9c777d5706dfeaa,
+        type: 3}
+      propertyPath: m_Name
+      value: GvrPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8641980040674156189, guid: ace986442c3170e4b9c777d5706dfeaa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620454503361160491, guid: ace986442c3170e4b9c777d5706dfeaa,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620454503361160491, guid: ace986442c3170e4b9c777d5706dfeaa,
+        type: 3}
+      propertyPath: far clip plane
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 8645783002308860165, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -76000,26 +76026,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8641980040674156189, guid: ace986442c3170e4b9c777d5706dfeaa,
-        type: 3}
-      propertyPath: m_Name
-      value: GvrPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 8641980040674156189, guid: ace986442c3170e4b9c777d5706dfeaa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8620454503361160491, guid: ace986442c3170e4b9c777d5706dfeaa,
-        type: 3}
-      propertyPath: near clip plane
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8620454503361160491, guid: ace986442c3170e4b9c777d5706dfeaa,
-        type: 3}
-      propertyPath: far clip plane
-      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 8559340813599409195, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
@@ -78723,9 +78729,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 375492289482364221, guid: cad039527728ff546b2ba65d2a27efa1,
         type: 3}
+      propertyPath: OnHiddenEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 375492289482364221, guid: cad039527728ff546b2ba65d2a27efa1,
+        type: 3}
       propertyPath: OnHiddenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1909575305}
+    - target: {fileID: 375492289482364221, guid: cad039527728ff546b2ba65d2a27efa1,
+        type: 3}
+      propertyPath: OnHiddenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 375492289482364221, guid: cad039527728ff546b2ba65d2a27efa1,
+        type: 3}
+      propertyPath: OnHiddenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 375492289482364221, guid: cad039527728ff546b2ba65d2a27efa1,
+        type: 3}
+      propertyPath: Code
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 375492289482364221, guid: cad039527728ff546b2ba65d2a27efa1,
+        type: 3}
+      propertyPath: OnHiddenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 375492289482364221, guid: cad039527728ff546b2ba65d2a27efa1,
+        type: 3}
+      propertyPath: OnHiddenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 375492289482364221, guid: cad039527728ff546b2ba65d2a27efa1,
+        type: 3}
+      propertyPath: OnHiddenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 375492289142704147, guid: cad039527728ff546b2ba65d2a27efa1,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -81428,6 +81469,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6338054596503608313, guid: f2d6fe6c96e245e4ea9df6234de8991d,
         type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338054596503608313, guid: f2d6fe6c96e245e4ea9df6234de8991d,
+        type: 3}
       propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 595111031}
@@ -81440,6 +81486,36 @@ PrefabInstance:
         type: 3}
       propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338054596503608313, guid: f2d6fe6c96e245e4ea9df6234de8991d,
+        type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338054596503608313, guid: f2d6fe6c96e245e4ea9df6234de8991d,
+        type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338054596503608313, guid: f2d6fe6c96e245e4ea9df6234de8991d,
+        type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338054596503608313, guid: f2d6fe6c96e245e4ea9df6234de8991d,
+        type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 343484127}
+    - target: {fileID: 6338054596503608313, guid: f2d6fe6c96e245e4ea9df6234de8991d,
+        type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6338054596503608313, guid: f2d6fe6c96e245e4ea9df6234de8991d,
+        type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1665837975, guid: f2d6fe6c96e245e4ea9df6234de8991d, type: 3}
       propertyPath: target
