@@ -64,6 +64,11 @@ namespace J
         /// </summary>
         public Color FeedbackTextColor = new Color(200.0f, 200.0f, 0200.0f);
 
+        /// <summary>
+        /// If the login should disable XR when starting
+        /// </summary>
+        public bool DisableXRForLogin = true;
+
         //Init
         private void Start()
         {
@@ -71,7 +76,14 @@ namespace J
             FeedbackText.enabled = false;
             LoadingImage.enabled = false;
 
-            if(UsePreviousSession && JRemoteSession.Instance.SessionData.IsValidSession())
+#if !UNITY_EDITOR
+            if(DisableXRForLogin)
+            {
+                UnityEngine.XR.XRSettings.enabled = false;
+            }
+#endif 
+
+            if (UsePreviousSession && JRemoteSession.Instance.SessionData.IsValidSession())
             {
                 OnLogged?.Invoke();
             }
@@ -99,7 +111,7 @@ namespace J
         public void PerformLogin()
         {
             //Prepare the UI
-            JRemoteSession.SessionType Type = (JRemoteSession.SessionType) TypeDropdown.value;
+            JRemoteSession.SessionType Type = (JRemoteSession.SessionType)TypeDropdown.value;
             JRemoteSession.Instance.AsyncLogin(UserField.text, PasswordField.text, Type, true, OnLoggin, OnLoginFailed);
 
             StartLoginFeedback();
@@ -107,7 +119,7 @@ namespace J
 
         private void OnLoggin()
         {
-            if(AutomaticResourceFetch && JResourceManager.Instance != null)
+            if (AutomaticResourceFetch && JResourceManager.Instance != null)
             {
                 JResourceManager.Instance.OnFetchComplete.AddListener(OnManagerFetchComplete);
                 JResourceManager.Instance.Fetch();
@@ -117,9 +129,21 @@ namespace J
             }
             else
             {
-                OnLogged?.Invoke();
+                NotifyLogged();
                 StopLoginFeedback();
             }
+        }
+
+        private void NotifyLogged()
+        {
+#if !UNITY_EDITOR
+            if(DisableXRForLogin)
+            {
+                UnityEngine.XR.XRSettings.enabled = true;
+            }
+#endif
+
+            OnLogged?.Invoke();
         }
 
         private void OnLoginFailed(int Code, string Error)
@@ -134,7 +158,7 @@ namespace J
         {
             //Remove listener, no longer needed
             JResourceManager.Instance.OnFetchComplete.RemoveListener(OnManagerFetchComplete);
-            OnLogged?.Invoke();
+            NotifyLogged();
             StopLoginFeedback();
         }
 
@@ -160,7 +184,7 @@ namespace J
         {
             //Speed per frame, defined statically
             float Speed = 250.0f;
-            while(true)
+            while (true)
             {
                 LoadingImage.rectTransform.Rotate(Vector3.back, Speed * Time.deltaTime);
                 yield return new WaitForEndOfFrame();
