@@ -231,16 +231,16 @@ namespace J
                 for (int i = 0; i < Data.list.Count; i++)
                 {
                     JSONObject j = Data.list[i];
-                    ListC.Add(new ContentOption(j, i));
+                    ListC.Add(new ContentOption(j));
                 }
 
                 return ListC.ToArray();
             }
 
-            public ContentOption(JSONObject Data, int InIndex)
+            public ContentOption(JSONObject Data)
             {
                 JsonData = Data;
-                Index = InIndex;
+                Index = (int)Data["numero_alternativa"].i;
             }
 
             //Methods for getting values
