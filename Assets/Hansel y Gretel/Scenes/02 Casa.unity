@@ -34884,7 +34884,6 @@ GameObject:
   - component: {fileID: 1190190941}
   - component: {fileID: 1190190943}
   - component: {fileID: 1190190940}
-  - component: {fileID: 1190190942}
   m_Layer: 0
   m_Name: SceneController
   m_TagString: Untagged
@@ -34921,18 +34920,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1190190942
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190190939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53a816a08ae5e8c45aa97e15c6959c58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1190190943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36484,7 +36471,7 @@ PrefabInstance:
     - target: {fileID: 8303189434202725854, guid: 34ddf1b9abd443d40953db04c1a62b92,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000032555326
+      value: 0.00004806567
       objectReference: {fileID: 0}
     - target: {fileID: 4370606151565543531, guid: 34ddf1b9abd443d40953db04c1a62b92,
         type: 3}
@@ -43500,7 +43487,7 @@ PrefabInstance:
     - target: {fileID: 657049348312161451, guid: cad039527728ff546b2ba65d2a27efa1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000014327383
+      value: 0.00002924987
       objectReference: {fileID: 0}
     - target: {fileID: 657049348312161451, guid: cad039527728ff546b2ba65d2a27efa1,
         type: 3}
@@ -47931,7 +47918,7 @@ PrefabInstance:
         type: 3}
       propertyPath: OnHiddenEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1190190942}
+      objectReference: {fileID: 0}
     - target: {fileID: 9156539414482834504, guid: 34ddf1b9abd443d40953db04c1a62b92,
         type: 3}
       propertyPath: OnHiddenEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -49648,7 +49635,7 @@ PrefabInstance:
     - target: {fileID: 657049348312161451, guid: cad039527728ff546b2ba65d2a27efa1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0000117871205
+      value: 0.000026709607
       objectReference: {fileID: 0}
     - target: {fileID: 657049348312161451, guid: cad039527728ff546b2ba65d2a27efa1,
         type: 3}
