@@ -10,9 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6902204336541789359}
   - component: {fileID: 2786560512952192561}
+  - component: {fileID: 8652543168605809267}
   - component: {fileID: 4807255558510746407}
+  - component: {fileID: 3238030018609873183}
   - component: {fileID: 8563687805030211393}
   - component: {fileID: 8739273233960620851}
+  - component: {fileID: 3157371034668436911}
   m_Layer: 0
   m_Name: JGameController
   m_TagString: Untagged
@@ -46,6 +49,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf436fa112e9a0544b2c3ea69d848412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8652543168605809267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807255558510746406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bef67bac9a750b4a8ea09e066f6d303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4807255558510746407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +73,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4e1341c2636d34b936228a4dbd0eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3238030018609873183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807255558510746406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782d4eb79ce597f458efd3ab094300cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeScale: 1.6
 --- !u!114 &8563687805030211393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +123,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Url: http://api.vrkids.nice.cl
-  LoginPath: /login
+  LoginPath: /login/app
   UserField: email
   TypeField: tipo
   PasswordField: password
+--- !u!114 &3157371034668436911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807255558510746406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a279975cb5841644695dd703be394094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnLogged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8563687805030211393}
+        m_MethodName: Fetch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  user: alummno1@gmail.com
+  pswd: alumno1
+  userType: 0
+  onStart: 1
+  UsePreviousSession: 1

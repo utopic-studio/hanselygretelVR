@@ -508,7 +508,6 @@ namespace J
             UI.SetActive(false);
             OnHiddenEvent.Invoke();
             bShown = false;
-            JResourceManager.Instance.PushAnswers();
         }
 
         /// <summary>
@@ -653,9 +652,12 @@ namespace J
             {
                 if (HasSequentialContent)
                 {
-                    bool bLockedPage = true;
                     ContentPage Page = Pages[CurrentPage];
-                    if(Page != null && Page.Options != null && Page.Options.Length > 0)
+
+                    //We start with the general case and then find exceptions 
+                    //questions start locked and need only one answer to unlock, whereas other start unlocked and need only one unanswered option to be locked
+                    bool bLockedPage = Page.Type == ContentType.Question;
+                    if (Page != null && Page.Options != null && Page.Options.Length > 0)
                     {
                         foreach(ContentOption Option in Page.Options)
                         {

@@ -95,6 +95,8 @@ MonoBehaviour:
   scrollInput:
     inertia: 1
     decelerationRate: 0.05
+  UseGazeTimedInput: 1
+  GazeTriggerTime: 1
 --- !u!1 &8641299812783459883
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +328,6 @@ GameObject:
   - component: {fileID: 8639448916511234511}
   - component: {fileID: 8537910499938432615}
   - component: {fileID: 8537864214100305759}
-  - component: {fileID: 8538167432625509861}
   m_Layer: 0
   m_Name: GvrControllerPointer
   m_TagString: Untagged
@@ -362,12 +363,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311793381eb9d45149dc1a422000a9fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laserVisual: {fileID: 8535158308210059083}
-  controllerVisual: {fileID: 8535032280282220791}
   armModel: {fileID: 8537864214100305759}
-  isLaserVisualEnabled: 1
-  isControllerVisualEnabled: 1
-  isVisibleWhenDisconnected: 0
+  isDeactivatedWhenDisconnected: 1
+  controllerHand: 2
 --- !u!114 &8537864214100305759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,29 +378,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dda4bb2d5509e44e978d2bf56e25d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addedElbowHeight: 0
-  addedElbowDepth: 0
-  pointerTiltAngle: 15
-  fadeDistanceFromFace: 0.32
+  elbowRestPosition: {x: 0.195, y: -0.5, z: 0.005}
+  wristRestPosition: {x: 0, y: 0, z: 0.25}
+  controllerRestPosition: {x: 0, y: 0, z: 0.05}
+  armExtensionOffset: {x: -0.13, y: 0.14, z: 0.08}
+  elbowBendRatio: 0.6
+  fadeControllerOffset: 0
+  fadeDistanceFromHeadForward: 0.25
+  fadeDistanceFromHeadSide: 0.15
   tooltipMinDistanceFromFace: 0.45
   tooltipMaxAngleFromCamera: 80
-  followGaze: 1
-  useAccelerometer: 0
-  isLockedToHead: 0
---- !u!114 &8538167432625509861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8641555881847752679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b185dc34a16a7487e99971711f86abc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pose: 0
-  armModel: {fileID: 0}
+  isLockedToNeck: 0
 --- !u!1 &8641840184582790695
 GameObject:
   m_ObjectHideFlags: 0
@@ -690,7 +676,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8428158438135146411}
-  - component: {fileID: 8538782616965266141}
   - component: {fileID: 8535118441643364847}
   - component: {fileID: 8430707830601592841}
   m_Layer: 5
@@ -719,19 +704,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.4, y: 1.4}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8538782616965266141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8641861267231091531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 644076fb2b4854a72b6de9578e358b8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &8535118441643364847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,7 +919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739800cd36aba44e9b04ce977e5784bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawDebugRays: 0
   ignoreReversedGraphics: 1
   blockingObjects: 0
   blockingMask:
@@ -1040,7 +1011,6 @@ GameObject:
   - component: {fileID: 8639127328824874395}
   - component: {fileID: 8538238931903645111}
   - component: {fileID: 8535158308210059083}
-  - component: {fileID: 8538168632571745105}
   - component: {fileID: 8521157894035316503}
   - component: {fileID: 8623735560387439979}
   m_Layer: 2
@@ -1079,8 +1049,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raycastMode: 0
   overridePointerCamera: {fileID: 0}
+  drawDebugRays: 0
   maxPointerDistance: 20
   defaultReticleDistance: 20
+  overrideCameraRayIntersectionDistance: 0
 --- !u!114 &8535158308210059083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,33 +1065,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ee199cdc1304b2090f019e4f488674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reticle: {fileID: 0}
+  controller: {fileID: 8639059320476640263}
   laserColor: {r: 1, g: 1, b: 1, a: 0.25}
   laserColorEnd: {r: 1, g: 1, b: 1, a: 0}
   maxLaserDistance: 0.75
-  allowRotation: 1
-  reticle: {fileID: 8639579308655461319}
-  doesReticleFaceCamera:
-    alongXAxis: 1
-    alongYAxis: 1
-    alongZAxis: 1
-  controller: {fileID: 8639059320476640263}
   lerpSpeed: 20
   lerpThreshold: 1.5
-  reticleSortingOrder: 0
---- !u!114 &8538168632571745105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8641980813789331421}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b185dc34a16a7487e99971711f86abc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pose: 1
-  armModel: {fileID: 0}
+  shrinkLaser: 1
+  shrunkScale: 0.2
+  beginShrinkAngleDegrees: 0
+  endShrinkAngleDegrees: 2
 --- !u!120 &8521157894035316503
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1512,7 +1468,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa952cbcc0eb13d4ca558b6da550ff55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximumAlpha: 1
   attachmentPrefabs:
   - {fileID: 1000011375678268, guid: 6e5b693d0947f4a8b85a00d3965ba64c, type: 3}
   touchPadColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
@@ -1527,6 +1482,7 @@ MonoBehaviour:
     homeButton: 0
     touching: 0
     touchPos: {x: 0.5, y: 0.5}
+  maximumAlpha: 1
 --- !u!1 &8642237916906577219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,12 +1615,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5dd43baba2d4dc1bab789615567e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawDebugRays: 1
   raycasterEventMask:
     serializedVersion: 2
     m_Bits: 4294967291
   maxRaycastHits: 64
-  raycastDistance: 60
 --- !u!1 &8642255674098021101
 GameObject:
   m_ObjectHideFlags: 0
@@ -1711,6 +1665,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raycastMode: 0
   overridePointerCamera: {fileID: 0}
+  drawDebugRays: 0
+  maxReticleDistance: 75
   reticleSegments: 32
   reticleGrowthSpeed: 1.8
   reticleSortingOrder: 32767
