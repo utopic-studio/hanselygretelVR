@@ -57,28 +57,35 @@ namespace J
         public UnityEngine.UI.Toggle Toggle;
         public UnityEngine.UI.Text Label;
         public UnityEngine.UI.Text IndexLabel;
+        
 
         private void Awake()
         {
             //Need to have bindings onto the Toggle
             Toggle.onValueChanged.AddListener(OnToggleValueChange);
         }
+        
 
         private void OnToggleValueChange(bool Active)
         {
             AnswerValueChange(Active.ToString());
+
+            // @gabo - Desactiva la imagen de una alternativa porque es tapada por el obj "Checkbox"
+            Transform childButton =  transform.Find("Background");
+            childButton.GetComponent<UnityEngine.UI.Image>().enabled = !childButton.GetComponent<UnityEngine.UI.Image>().enabled;
         }
 
         protected override void OnOwningOptionChanged(JResource.ContentOption Option)
         {
             //We should be assigned to a toggle, so we can search it and init the values
             Label.text = Option.GetValueAsString("texto");
-            int asciiValue = (int)'A' + Option.Index;
+            int offset = -2;
+            int asciiValue = (int)'A' + Option.Index + offset;
             IndexLabel.text = ((char)asciiValue).ToString();
 
             //Check for answer
             bool bIsOn;
-            bool bParseSuccess = bool.TryParse(Option.AnswerData,out bIsOn);
+            bool bParseSuccess = bool.TryParse(Option.AnswerData, out bIsOn);
             Toggle.isOn = bParseSuccess ? bIsOn : false;
         }
 

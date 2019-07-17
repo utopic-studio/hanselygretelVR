@@ -31,7 +31,7 @@ public class AlternativeButtonEvent : MonoBehaviour
         t = t.parent;
 
         // Hide TextWeb UI
-        Invoke("hideUI", delay);
+        //Invoke("hideUI", delay);
         
     }
     private void hideUI()
