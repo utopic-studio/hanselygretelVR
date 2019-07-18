@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using TMPro;
 
 namespace J
 {
@@ -10,7 +11,8 @@ namespace J
 
         [Tooltip("If empty it uses this object's CanvasGroup")]
         [SerializeField]    CanvasGroup[] canvasGroup;
-		[SerializeField]	UIAlphaStartMode startVisibility = UIAlphaStartMode.visible;
+        [SerializeField]    TextMeshPro[] tmpro;
+        [SerializeField]	UIAlphaStartMode startVisibility = UIAlphaStartMode.visible;
 		[SerializeField]	float fadeInTime = 1f;
 		[SerializeField]	float fadeOutTime = 1f;
         [SerializeField] UnityEngine.Events.UnityEvent[] OnFadeInStarting;
@@ -58,24 +60,33 @@ namespace J
 
 
 		public void Show() {
+            print("JFadeUI.Show()");
             Invoke("CallOnFadeInStarting", 0f);
             foreach (var g in canvasGroup)
 			    //J.Instance.followCurve (x => g.alpha = x, duration: fadeInTime, repeat: 1, type: CurveType.Linear);
+                J2.Instance.JLerp(x => g.alpha = x, duration: fadeInTime, repeat: 1, type: CurveType.Linear);
+            foreach (var g in tmpro)
                 J2.Instance.JLerp(x => g.alpha = x, duration: fadeInTime, repeat: 1, type: CurveType.Linear);
         }
 		public void Hide() {
             foreach (var g in canvasGroup)
 			    //J.Instance.followCurve (x => g.alpha = x, duration: fadeOutTime, repeat: 1, type: CurveType.Linear, reverse: true);
                 J2.Instance.JLerp(x => g.alpha = x, duration: fadeOutTime, repeat: 1, type: CurveType.Linear, reverse: true);
+            foreach (var g in tmpro)
+                J2.Instance.JLerp(x => g.alpha = x, duration: fadeOutTime, repeat: 1, type: CurveType.Linear, reverse: true);
             Invoke("CallOnFadeOutEnded", fadeOutTime);
         }
 		public void ShowInstantly() {
             foreach (var g in canvasGroup)
                 g.alpha = 1f;
+            foreach (var g in tmpro)
+                g.alpha = 1f;
             Invoke("CallOnFadeInStarting", 0f);
         }
 		public void HideInstantly() {
             foreach (var g in canvasGroup)
+                g.alpha = 0f;
+            foreach (var g in tmpro)
                 g.alpha = 0f;
             Invoke("CallOnFadeOutEnded", 0f);
         }

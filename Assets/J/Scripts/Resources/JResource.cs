@@ -307,6 +307,16 @@ namespace J
         public Button PrevButton;
 
         /// <summary>
+        /// Log button of the resource, used for showing a canvas with the whole tale or story
+        /// </summary>
+        public Button LogButton;
+        
+        /// <summary>
+        /// Log button of the resource, used for hiding a canvas with the whole tale or story
+        /// </summary>
+        public Button LogButtonBig;
+
+        /// <summary>
         /// Prefabs to use for each Type of content option when generating a page.
         /// </summary>
         public TypeGameObjectValuePair[] BlueprintPrefabs;
@@ -484,14 +494,21 @@ namespace J
         /// </summary>
         public void Show(int ShowPage = 0)
         {
-            //Has to be first... if not, the internal IEnumerator from the yield will not run (as its deactivated)
+            //Has to be active first... if not, the internal IEnumerator from the yield will not run (as its deactivated)
             UI.SetActive(true);
+            UI.gameObject.SetActive(true);
 
             //Show the page if valid, if not, fallback to first page
             if (!GoToPage(ShowPage))
             {
                 GoToPage(0);
             }
+                
+            //use JFade
+            JFadeUI jFadeComponent = UI.GetComponent<JFadeUI>();
+            print(jFadeComponent);
+            if (jFadeComponent)
+                jFadeComponent.Show();
 
             //Invoke the event
             OnShownEvent.Invoke();
@@ -505,9 +522,15 @@ namespace J
         {
             //Chance to persist the answers into local repository
             StoreOptionAnswers();
-            UI.SetActive(false);
+            //UI.SetActive(false);
             OnHiddenEvent.Invoke();
             bShown = false;
+
+
+            //use JFade
+            JFadeUI jFadeComponent = UI.GetComponent<JFadeUI>();
+            if (jFadeComponent)
+                jFadeComponent.Hide();
         }
 
         /// <summary>
@@ -696,7 +719,12 @@ namespace J
                         NextButton.gameObject.SetActive(!ExitButton.gameObject.activeSelf);
                         PrevButton.gameObject.SetActive(CurrentPage != 0);
                     }
-                    
+
+                    // Show or Hide Log button (book img button in corner that opens History of previous texts)
+                    LogButton.gameObject.SetActive(Page.Type == ContentType.Question);
+                    //LogButtonBig.gameObject.SetActive(Page.Type == ContentType.Question);
+
+
                 }
                 else
                 {
