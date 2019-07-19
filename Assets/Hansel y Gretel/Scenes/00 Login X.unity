@@ -13376,6 +13376,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3157371034668436911, guid: 6f5e989fc5fa33243bf127ad1e8d7a10,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157371034668436911, guid: 6f5e989fc5fa33243bf127ad1e8d7a10,
+        type: 3}
+      propertyPath: user
+      value: alumno3@madreading.com
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157371034668436911, guid: 6f5e989fc5fa33243bf127ad1e8d7a10,
+        type: 3}
+      propertyPath: onStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3157371034668436911, guid: 6f5e989fc5fa33243bf127ad1e8d7a10,
+        type: 3}
+      propertyPath: pswd
+      value: alumno3
+      objectReference: {fileID: 0}
     - target: {fileID: 8563687805030211393, guid: 6f5e989fc5fa33243bf127ad1e8d7a10,
         type: 3}
       propertyPath: OnFetchComplete.m_PersistentCalls.m_Calls.Array.size
@@ -13405,26 +13425,6 @@ PrefabInstance:
         type: 3}
       propertyPath: OnFetchComplete.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3157371034668436911, guid: 6f5e989fc5fa33243bf127ad1e8d7a10,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3157371034668436911, guid: 6f5e989fc5fa33243bf127ad1e8d7a10,
-        type: 3}
-      propertyPath: user
-      value: alumno3@madreading.com
-      objectReference: {fileID: 0}
-    - target: {fileID: 3157371034668436911, guid: 6f5e989fc5fa33243bf127ad1e8d7a10,
-        type: 3}
-      propertyPath: onStart
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3157371034668436911, guid: 6f5e989fc5fa33243bf127ad1e8d7a10,
-        type: 3}
-      propertyPath: pswd
-      value: alumno3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f5e989fc5fa33243bf127ad1e8d7a10, type: 3}
@@ -59349,7 +59349,7 @@ GameObject:
   - component: {fileID: 1490839214}
   - component: {fileID: 1490839213}
   m_Layer: 0
-  m_Name: SceneController
+  m_Name: Load Scene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59367,7 +59367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5315084cbd0fc3645824cb8838bfbb32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 01 Bosque
+  sceneName: 01 Bosque X
   delay: 0.2
   cameraFade: 1
 --- !u!4 &1490839214
