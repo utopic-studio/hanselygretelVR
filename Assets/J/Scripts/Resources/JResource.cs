@@ -494,9 +494,14 @@ namespace J
         /// </summary>
         public void Show(int ShowPage = 0)
         {
-            //Has to be active first... if not, the internal IEnumerator from the yield will not run (as its deactivated)
-            UI.SetActive(true);
-            UI.gameObject.SetActive(true);
+            
+            // use JFade
+            JFadeUI jFadeComponent = UI.GetComponent<JFadeUI>();
+            print(jFadeComponent);
+            if (jFadeComponent)
+                jFadeComponent.Show();
+                
+
 
             //Show the page if valid, if not, fallback to first page
             if (!GoToPage(ShowPage))
@@ -504,11 +509,7 @@ namespace J
                 GoToPage(0);
             }
                 
-            //use JFade
-            JFadeUI jFadeComponent = UI.GetComponent<JFadeUI>();
-            print(jFadeComponent);
-            if (jFadeComponent)
-                jFadeComponent.Show();
+            
 
             //Invoke the event
             OnShownEvent.Invoke();

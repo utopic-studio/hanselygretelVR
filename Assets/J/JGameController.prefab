@@ -12,12 +12,13 @@ GameObject:
   - component: {fileID: 2786560512952192561}
   - component: {fileID: 8652543168605809267}
   - component: {fileID: 4807255558510746407}
+  - component: {fileID: 7100365535803754474}
   - component: {fileID: 8563687805030211393}
   - component: {fileID: 8739273233960620851}
   - component: {fileID: 3157371034668436911}
   m_Layer: 0
   m_Name: JGameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,6 +73,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4e1341c2636d34b936228a4dbd0eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7100365535803754474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4807255558510746406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3562ed0d9356c0a419f962dfbb172d42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tapTime: 1.5
+  tapOnce: 0
+  activateObjectWhenTappingOnce: {fileID: 0}
+  worksInEditor: 0
 --- !u!114 &8563687805030211393
 MonoBehaviour:
   m_ObjectHideFlags: 0

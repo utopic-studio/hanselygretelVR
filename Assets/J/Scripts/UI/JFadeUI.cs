@@ -26,7 +26,7 @@ namespace J
             if (_startHasHappened && startVisibility != _mode)
             {
                 _mode = startVisibility;
-                UpdateVisibilityState();
+                //UpdateVisibilityState();
             }
         }
 
@@ -34,7 +34,7 @@ namespace J
             _startHasHappened = true;
             _mode = startVisibility;
 
-            UpdateVisibilityState();
+            //UpdateVisibilityState();
 		}
         private void UpdateVisibilityState()
         {
@@ -60,6 +60,8 @@ namespace J
 
 
 		public void Show() {
+            gameObject.SetActive(true);
+
             print("JFadeUI.Show()");
             Invoke("CallOnFadeInStarting", 0f);
             foreach (var g in canvasGroup)
@@ -67,8 +69,11 @@ namespace J
                 J2.Instance.JLerp(x => g.alpha = x, duration: fadeInTime, repeat: 1, type: CurveType.Linear);
             foreach (var g in tmpro)
                 J2.Instance.JLerp(x => g.alpha = x, duration: fadeInTime, repeat: 1, type: CurveType.Linear);
+                
         }
-		public void Hide() {
+		public void Hide()
+        {
+            print("JFadeUI.Hide()");
             foreach (var g in canvasGroup)
 			    //J.Instance.followCurve (x => g.alpha = x, duration: fadeOutTime, repeat: 1, type: CurveType.Linear, reverse: true);
                 J2.Instance.JLerp(x => g.alpha = x, duration: fadeOutTime, repeat: 1, type: CurveType.Linear, reverse: true);
@@ -76,14 +81,18 @@ namespace J
                 J2.Instance.JLerp(x => g.alpha = x, duration: fadeOutTime, repeat: 1, type: CurveType.Linear, reverse: true);
             Invoke("CallOnFadeOutEnded", fadeOutTime);
         }
-		public void ShowInstantly() {
+		public void ShowInstantly()
+        {
+            print("JFadeUI.ShowInstantly()");
             foreach (var g in canvasGroup)
                 g.alpha = 1f;
             foreach (var g in tmpro)
                 g.alpha = 1f;
             Invoke("CallOnFadeInStarting", 0f);
         }
-		public void HideInstantly() {
+		public void HideInstantly()
+        {
+            print("JFadeUI.HideInstantly()");
             foreach (var g in canvasGroup)
                 g.alpha = 0f;
             foreach (var g in tmpro)

@@ -2106,6 +2106,11 @@ PrefabInstance:
       propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6338054596503608313, guid: f2d6fe6c96e245e4ea9df6234de8991d,
+        type: 3}
+      propertyPath: onEnter.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1665837975, guid: f2d6fe6c96e245e4ea9df6234de8991d, type: 3}
       propertyPath: target
       value: 
@@ -35679,6 +35684,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8640996321183732187, guid: ace986442c3170e4b9c777d5706dfeaa,
+        type: 3}
+      propertyPath: m_Speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8645783002308860165, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35748,11 +35758,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2.0038593
-      objectReference: {fileID: 0}
-    - target: {fileID: 8640996321183732187, guid: ace986442c3170e4b9c777d5706dfeaa,
-        type: 3}
-      propertyPath: m_Speed
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ace986442c3170e4b9c777d5706dfeaa, type: 3}
@@ -58953,11 +58958,6 @@ PrefabInstance:
       propertyPath: Code
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1749047484580809865, guid: 16efd0165e38ca245be92bb9eefe65be,
-        type: 3}
-      propertyPath: m_Alpha
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1749047484580809866, guid: 16efd0165e38ca245be92bb9eefe65be,
         type: 3}
       propertyPath: tmpro.Array.size
@@ -58968,6 +58968,11 @@ PrefabInstance:
       propertyPath: tmpro.Array.data[0]
       value: 
       objectReference: {fileID: 1819873785}
+    - target: {fileID: 1749047484580809865, guid: 16efd0165e38ca245be92bb9eefe65be,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16efd0165e38ca245be92bb9eefe65be, type: 3}
 --- !u!114 &6973476166618949851
