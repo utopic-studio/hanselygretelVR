@@ -950,6 +950,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raycastMode: 0
   overridePointerCamera: {fileID: 0}
+  drawDebugRays: 0
+  maxReticleDistance: 100
   reticleSegments: 32
   reticleGrowthSpeed: 1.8
   reticleSortingOrder: 32767
@@ -1204,12 +1206,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb5dd43baba2d4dc1bab789615567e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawDebugRays: 0
   raycasterEventMask:
     serializedVersion: 2
     m_Bits: 4294967295
   maxRaycastHits: 64
-  raycastDistance: 80
 --- !u!1 &976441598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1456,6 +1456,8 @@ MonoBehaviour:
   scrollInput:
     inertia: 1
     decelerationRate: 0.05
+  UseGazeTimedInput: 1
+  GazeTriggerTime: 1
 --- !u!1 &1371756632
 GameObject:
   m_ObjectHideFlags: 0
