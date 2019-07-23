@@ -605,7 +605,7 @@ Transform:
   - {fileID: 377245442}
   - {fileID: 1909575304}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &36577626 stripped
 Transform:
@@ -23492,67 +23492,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 625717ecfa58c8b4081658b700c604c9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cb71e6f7dadbe749855f83ee2748444, type: 3}
---- !u!1001 &773815367
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1877826137, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_Name
-      value: WebVRCameraSet
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877826137, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 65.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -183.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.24943739
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.96839094
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1877826142, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 06db7c36e8bda0e498efffc2a4b90c1b, type: 3}
 --- !u!4 &774294840 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: cddb6be36bf60ea4786a073996248084,
@@ -57021,7 +56960,7 @@ Transform:
   m_Children:
   - {fileID: 658019507}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1388149779
 GameObject:
@@ -60638,7 +60577,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 02 Casa
   delay: 1.5
-  cameraFade: 0
 --- !u!4 &1594627252
 Transform:
   m_ObjectHideFlags: 0
@@ -64234,7 +64172,7 @@ Transform:
   - {fileID: 1974264915}
   - {fileID: 1957371084}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1779820776 stripped
 Transform:
@@ -68655,6 +68593,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8620454503361160491, guid: ace986442c3170e4b9c777d5706dfeaa,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620454503361160491, guid: ace986442c3170e4b9c777d5706dfeaa,
+        type: 3}
+      propertyPath: far clip plane
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 8645783002308860165, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68693,7 +68641,7 @@ PrefabInstance:
     - target: {fileID: 8645783002308860165, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8645783002308860165, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
@@ -68709,16 +68657,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8620454503361160491, guid: ace986442c3170e4b9c777d5706dfeaa,
-        type: 3}
-      propertyPath: near clip plane
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8620454503361160491, guid: ace986442c3170e4b9c777d5706dfeaa,
-        type: 3}
-      propertyPath: far clip plane
-      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 8559340813599409195, guid: ace986442c3170e4b9c777d5706dfeaa,
         type: 3}
