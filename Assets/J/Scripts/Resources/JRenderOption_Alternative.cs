@@ -79,8 +79,7 @@ namespace J
         {
             //We should be assigned to a toggle, so we can search it and init the values
             Label.text = Option.GetValueAsString("texto");
-            int offset = -2;
-            int asciiValue = (int)'A' + Option.Index + offset;
+            int asciiValue = (int)'A' + Option.Index;
             IndexLabel.text = ((char)asciiValue).ToString();
 
             //Check for answer

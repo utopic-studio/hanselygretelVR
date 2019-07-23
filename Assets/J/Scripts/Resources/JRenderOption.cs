@@ -50,7 +50,11 @@ namespace J
             if(OwningOption != null)
             {
                 OwningOption.AnswerData = Data;
-                OnAnswerValueChange();
+
+                if(OnAnswerValueChange != null)
+                {
+                    OnAnswerValueChange();
+                }
             }
         }
     }
