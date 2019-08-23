@@ -111,7 +111,7 @@ namespace J
         public void PerformLogin()
         {
             //Prepare the UI
-            JRemoteSession.SessionType Type = (JRemoteSession.SessionType)TypeDropdown.value;
+            JRemoteSession.SessionType Type = (JRemoteSession.SessionType) TypeDropdown.value;
             JRemoteSession.Instance.AsyncLogin(UserField.text, PasswordField.text, Type, true, OnLoggin, OnLoginFailed);
 
             StartLoginFeedback();
@@ -119,7 +119,7 @@ namespace J
 
         private void OnLoggin()
         {
-            if (AutomaticResourceFetch && JResourceManager.Instance != null)
+            if(AutomaticResourceFetch && JResourceManager.Instance != null)
             {
                 JResourceManager.Instance.OnFetchComplete.AddListener(OnManagerFetchComplete);
                 JResourceManager.Instance.Fetch();
@@ -184,7 +184,7 @@ namespace J
         {
             //Speed per frame, defined statically
             float Speed = 250.0f;
-            while (true)
+            while(true)
             {
                 LoadingImage.rectTransform.Rotate(Vector3.back, Speed * Time.deltaTime);
                 yield return new WaitForEndOfFrame();

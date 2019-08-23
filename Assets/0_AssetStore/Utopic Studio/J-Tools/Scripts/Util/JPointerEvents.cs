@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 namespace J
 {
     [AddComponentMenu("J/Util/JPointerEvents")]
-    public class JPointerEvents : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    public class JPointerEvents : JBase, IPointerEnterHandler, IPointerExitHandler
     {
         private bool bPointerInside = false;
         public UnityEvent OnPointerStay;

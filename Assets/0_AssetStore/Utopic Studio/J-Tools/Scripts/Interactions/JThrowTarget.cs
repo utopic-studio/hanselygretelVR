@@ -45,16 +45,38 @@ public class JThrowTarget : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        JThrowable _throwable = other.GetComponent<JThrowable>();
-
-        if (_throwable)
+        if(enabled)
         {
-            _success = true;
-            _renderer.material.color = SuccessColor;
+            JThrowable _throwable = other.GetComponent<JThrowable>();
 
-            if(OnThrowableReachedTarget != null)
+            if (_throwable)
             {
-                OnThrowableReachedTarget.Invoke(_throwable);
+                _success = true;
+                _renderer.material.color = SuccessColor;
+
+                if (OnThrowableReachedTarget != null)
+                {
+                    OnThrowableReachedTarget.Invoke(_throwable);
+                }
+            }
+        }
+    }
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        if(enabled)
+        {
+            JThrowable _throwable = other.gameObject.GetComponent<JThrowable>();
+
+            if (_throwable)
+            {
+                _success = true;
+                _renderer.material.color = SuccessColor;
+
+                if (OnThrowableReachedTarget != null)
+                {
+                    OnThrowableReachedTarget.Invoke(_throwable);
+                }
             }
         }
     }

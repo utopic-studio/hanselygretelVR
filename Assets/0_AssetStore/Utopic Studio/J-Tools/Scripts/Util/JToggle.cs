@@ -4,7 +4,8 @@ namespace J
 {
 
 	[AddComponentMenu("J/Util/JToggle")]
-	public class JToggle : MonoBehaviour {
+	public class JToggle : JBase
+    {
 
 		public void JToggleGameObject() {
 			this.gameObject.SetActive( !this.gameObject.activeSelf );

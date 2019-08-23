@@ -7,7 +7,6 @@ using J.External;
 namespace J
 {
 
-
 	public class CurveGenerator : MonoBehaviour
 	{
 	    public AnimationCurve curve;    // for preview
@@ -97,9 +96,9 @@ namespace J
 
 
 
-			if (!AssetDatabase.IsValidFolder ("Assets/J/Editor"))
-				AssetDatabase.CreateFolder ("Assets/J", "Editor");
-			AssetDatabase.CreateAsset(library, "Assets/J/Editor/Curves.curves");
+			if (!AssetDatabase.IsValidFolder ("Assets/Editor"))
+				AssetDatabase.CreateFolder ("Assets", "Editor");
+			AssetDatabase.CreateAsset(library, "Assets/Editor/Curves.curves");
 	        AssetDatabase.SaveAssets();
 	        AssetDatabase.Refresh();
 	    }

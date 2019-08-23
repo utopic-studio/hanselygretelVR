@@ -1534,7 +1534,7 @@ GameObject:
   - component: {fileID: 185000885678985868}
   - component: {fileID: 185000885678985875}
   - component: {fileID: 185000885678985871}
-  - component: {fileID: 3403117325494372534}
+  - component: {fileID: 7272870448696813409}
   m_Layer: 5
   m_Name: JLogin
   m_TagString: Untagged
@@ -1642,7 +1642,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnLogged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: ChangeScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   UserField: {fileID: 185000884865391619}
@@ -1655,7 +1666,7 @@ MonoBehaviour:
   AutomaticResourceFetch: 1
   FeedbackTextErrorColor: {r: 159, g: 0, b: 0, a: 1}
   FeedbackTextColor: {r: 200, g: 200, b: 200, a: 1}
---- !u!114 &3403117325494372534
+--- !u!114 &7272870448696813409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2032,11 +2043,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3403117325494372534}
+      - m_Target: {fileID: 7272870448696813409}
         m_MethodName: PlaySound
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: cdc926458fb5fe14da211bc53694e352,
+          m_ObjectArgument: {fileID: 8300000, guid: 1092bf4d7d12aa441ad10818fcbab240,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
@@ -2269,7 +2280,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: c7382af43f231844b812a9a03742b671, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cd8d8a77479b3fc469c6894675357dbb, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

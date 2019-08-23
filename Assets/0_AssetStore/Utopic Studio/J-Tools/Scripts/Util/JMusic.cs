@@ -5,7 +5,7 @@ namespace J
 {
 
     [AddComponentMenu("J/Util/JMusic")]
-    public class JMusic : MonoBehaviour
+    public class JMusic : JBase
     {
         
         [SerializeField] AudioClip[] audioTracks;

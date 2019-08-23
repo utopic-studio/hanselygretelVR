@@ -2,90 +2,95 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Controls a scroll rect and makes it work like a scrollable list.
-/// </summary>
-[AddComponentMenu("J/UI/JListViewController")]
-public class JListViewController : MonoBehaviour
+namespace J
 {
 
-    private List<GameObject> ListItems = new List<GameObject>();
-    public RectTransform Content;
-    public UnityEngine.UI.ScrollRect ScrollRect;
-    public float ScrollVelocity = 1.0f;
 
-    public UnityEngine.UI.Button DownButton;
-    public UnityEngine.UI.Button UpButton;
-
-    private bool bNeedsScroll = false;
-    private RectTransform ScrollRectTransform;
-
-    private void Awake()
+    /// <summary>
+    /// Controls a scroll rect and makes it work like a scrollable list.
+    /// </summary>
+    [AddComponentMenu("J/UI/JListViewController")]
+    public class JListViewController : JBase
     {
-        ScrollRectTransform = ScrollRect.GetComponent<RectTransform>();
-    }
 
-    public void Clear()
-    {
-        foreach (GameObject go in ListItems)
+        private List<GameObject> ListItems = new List<GameObject>();
+        public RectTransform Content;
+        public UnityEngine.UI.ScrollRect ScrollRect;
+        public float ScrollVelocity = 1.0f;
+
+        public UnityEngine.UI.Button DownButton;
+        public UnityEngine.UI.Button UpButton;
+
+        private bool bNeedsScroll = false;
+        private RectTransform ScrollRectTransform;
+
+        private void Awake()
         {
-            Destroy(go);
+            ScrollRectTransform = ScrollRect.GetComponent<RectTransform>();
         }
 
-        ListItems.Clear();
-    }
-
-    private void Update()
-    {
-        RecalculateRequirements();
-
-        if (bNeedsScroll)
+        public void Clear()
         {
-            UpButton.gameObject.SetActive(ScrollRect.verticalNormalizedPosition < 1.0f);
-            DownButton.gameObject.SetActive(ScrollRect.verticalNormalizedPosition > 0.0f);
+            foreach (GameObject go in ListItems)
+            {
+                Destroy(go);
+            }
+
+            ListItems.Clear();
         }
-        else
+
+        private void Update()
         {
-            UpButton.gameObject.SetActive(false);
-            DownButton.gameObject.SetActive(false);
+            RecalculateRequirements();
+
+            if (bNeedsScroll)
+            {
+                UpButton.gameObject.SetActive(ScrollRect.verticalNormalizedPosition < 1.0f);
+                DownButton.gameObject.SetActive(ScrollRect.verticalNormalizedPosition > 0.0f);
+            }
+            else
+            {
+                UpButton.gameObject.SetActive(false);
+                DownButton.gameObject.SetActive(false);
+            }
         }
-    }
 
-    public void Add(GameObject li)
-    {
-        ListItems.Add(li);
-        li.transform.parent = Content.transform;
+        public void Add(GameObject li)
+        {
+            ListItems.Add(li);
+            li.transform.parent = Content.transform;
 
-        li.transform.localPosition = Vector3.zero;
-        li.transform.localScale = Vector3.one;
-        li.transform.localRotation = Quaternion.Euler(Vector3.zero);
+            li.transform.localPosition = Vector3.zero;
+            li.transform.localScale = Vector3.one;
+            li.transform.localRotation = Quaternion.Euler(Vector3.zero);
 
-        RecalculateRequirements();
-    }
+            RecalculateRequirements();
+        }
 
-    public void ScrollUp()
-    {
-        ScrollRect.verticalNormalizedPosition += GetScrollDelta();
+        public void ScrollUp()
+        {
+            ScrollRect.verticalNormalizedPosition += GetScrollDelta();
 
-        if (ScrollRect.verticalNormalizedPosition >= 1.0f)
-            ScrollRect.verticalNormalizedPosition = 1.0f;
-    }
+            if (ScrollRect.verticalNormalizedPosition >= 1.0f)
+                ScrollRect.verticalNormalizedPosition = 1.0f;
+        }
 
-    public void ScrollDown()
-    {
-        ScrollRect.verticalNormalizedPosition -= GetScrollDelta();
+        public void ScrollDown()
+        {
+            ScrollRect.verticalNormalizedPosition -= GetScrollDelta();
 
-        if (ScrollRect.verticalNormalizedPosition <= 0)
-            ScrollRect.verticalNormalizedPosition = 0.0f;
-    }
+            if (ScrollRect.verticalNormalizedPosition <= 0)
+                ScrollRect.verticalNormalizedPosition = 0.0f;
+        }
 
-    private float GetScrollDelta()
-    {
-        return ScrollVelocity * Time.deltaTime * Mathf.Abs(ScrollRectTransform.sizeDelta.y / Content.sizeDelta.y);
-    }
+        private float GetScrollDelta()
+        {
+            return ScrollVelocity * Time.deltaTime * Mathf.Abs(ScrollRectTransform.sizeDelta.y / Content.sizeDelta.y);
+        }
 
-    private void RecalculateRequirements()
-    {
-        bNeedsScroll = Content.rect.height > ScrollRectTransform.rect.height;
+        private void RecalculateRequirements()
+        {
+            bNeedsScroll = Content.rect.height > ScrollRectTransform.rect.height;
+        }
     }
 }

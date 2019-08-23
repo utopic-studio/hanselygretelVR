@@ -159,7 +159,7 @@ public class JThrowable : MonoBehaviour
         float DegAngle = Vector3.SignedAngle(CameraHorizontal, CameraForward, -Camera.main.transform.right);
         float RadAngle = Mathf.Deg2Rad * DegAngle;
 
-        Debug.Log(DegAngle);
+        //Debug.Log(DegAngle);
 
         float Velocity = Impulse / _rb.mass;
         Vector3 OffsetFromCamera = transform.position - Camera.main.transform.position;

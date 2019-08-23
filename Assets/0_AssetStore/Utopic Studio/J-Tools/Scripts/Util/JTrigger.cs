@@ -6,7 +6,8 @@ namespace J
 	[AddComponentMenu("J/Util/JTrigger")]
     [RequireComponent(typeof(MeshFilter))]
     [RequireComponent(typeof(Collider))]
-    public class JTrigger : MonoBehaviour {
+    public class JTrigger : JBase
+    {
 
         [Tooltip("Dejar vacío para activarse con cualquier otro objeto")]
 		[SerializeField]	string tagCondition = "";

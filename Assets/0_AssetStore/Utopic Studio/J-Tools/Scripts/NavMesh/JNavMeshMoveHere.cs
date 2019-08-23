@@ -2,25 +2,27 @@
 
 namespace J
 {
-
-    [AddComponentMenu("J/NavMesh/JNavMeshMoveHere")]
-    public class JNavMeshMoveHere : MonoBehaviour
+    public class JNavMeshMoveHere : JBase
     {
-        [Tooltip("Si se deja vacío, se usa el tag Player que deberia tener un componente NavMeshAgent")]
-        [SerializeField]    UnityEngine.AI.NavMeshAgent agent;
-        [Tooltip("Si se deja vacío, se camina hacia este objeto")]
-        [SerializeField]    Transform destination;
+
+        public string tagFind = "Player";
+        public UnityEngine.AI.NavMeshAgent agent;
+        [Tooltip("If set to None, nav mesh agents walks to this object")]
+        public Transform destination;
 
 
-        public void MoveNavMeshAgent()
+        public void JMoveAgent()
         {
-            if (!agent)
-                agent = GameObject.FindGameObjectWithTag("Player").GetComponent<UnityEngine.AI.NavMeshAgent>();
+            if (!agent && tag.Trim().Length > 0)
+                agent = GameObject.FindGameObjectWithTag(tagFind).GetComponent<UnityEngine.AI.NavMeshAgent>();
 
             if (destination)
                 agent.destination = destination.position;
             else
                 agent.destination = transform.position;
         }
+
     }
 }
+
+

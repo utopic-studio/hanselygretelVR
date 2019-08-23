@@ -4,7 +4,8 @@ namespace J
 {
 
 	[AddComponentMenu("J/3D/JScaleOscilate")]
-	public class JScaleOscilate : MonoBehaviour {
+	public class JScaleOscilate : JBase
+    {
         
 		[SerializeField]	AnimationCurve curve;
         [SerializeField]    Vector3 scaleVector = Vector3.one;

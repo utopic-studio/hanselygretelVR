@@ -2,23 +2,30 @@
 
 namespace J
 {
-	/*
-	 * 		call public method 'begin()' to follow a curve. An GameObject should be created in proyect for each curve.
-	 */
-	[AddComponentMenu("J/Util/JFollowCurve")]
-	public class JFollowCurve : MonoBehaviour {
+
+    /// <summary>
+    /// Usar J.Lerp para hacer Lerp fuera de la función Update()
+    /// 
+    /// Esta clase es de uso interno para realizar Lerp y debería ser
+    /// llamada a travéz de J.Lerp
+    /// </summary>
+    public class JFollowCurve : JBase
+    {
 
 		public delegate void CurveDelegate(float x);
 
 		[SerializeField]	AnimationCurve curve;
 		[SerializeField]	float amplitudeFactor = 1f;
-		[Range(0.01f, 60f)]
-		[SerializeField]	float durationFactor = 1f;
-		[Tooltip("If equal to 0, it repeats forever")]
-		[SerializeField]	int repeat = 0;
+		[SerializeField]	int repeatCounter;
+        [SerializeField]    float timeProgress;
+        [SerializeField]    float curveCurrentTime;
+        [SerializeField]    float curveCurrentValue;
+        [SerializeField]    string createdBy;
 
-		protected float timeVariable = 0f;
-		protected float curveDuration;
+
+        protected float duration = 1f;
+        protected float timeVariable = 0f;
+		protected float curveRealDuration;
 		protected float curveStartTime;
 		protected float modifyFactor;
 
@@ -32,22 +39,26 @@ namespace J
 
 
 
-		public void begin(CurveDelegate d , float duration = 1, float amplitude = 1, int repeat = 0, CurveType type = CurveType.Linear, bool reverse = false) {
+		public void beginFollowCurve(CurveDelegate d , float duration, float amplitude, int repeat, CurveType type, bool reverse, MonoBehaviour callingScript) {
 			foo = d;
-			updateEnabled = true;
+            updateEnabled = true;
 
-			if (duration != 1)
-				this.durationFactor = duration;
-			if (amplitude != 1)
-				this.amplitudeFactor = amplitude;
-			if (repeat != 0)
-				this.repeat = repeat;
+			this.amplitudeFactor = amplitude;
+            if (callingScript)
+                this.createdBy = callingScript.name + " (Component " + callingScript.GetType().Name + ")";
+			
+			this.repeatCounter = repeat;
 
 			this.curve = CurveGenerator.GenerateCurve (type);
-			curveDuration = curve.keys [curve.length - 1].time - curve.keys [0].time;
+            
+			curveRealDuration = curve.keys [curve.length - 1].time - curve.keys [0].time;
 			curveStartTime = curve.keys [0].time;
 
 			this.reverse = reverse;
+
+            this.duration = duration;
+
+            
 		}
 
 
@@ -55,32 +66,46 @@ namespace J
 
 
 
-		void Start () {
+		private void Start () {
 			curve = CurveGenerator.GenerateCurve (CurveType.Linear);
 		}
 
-		void Update () {
+		private void Update () {
 			if (updateEnabled) {
-				float t = timeVariable + Time.deltaTime / durationFactor;
+				float t = timeVariable + Time.deltaTime / duration;
 
-				if (repeat > 0 && t > curveDuration) {
-					repeat--;
-					if (repeat == 0) {
-						updateEnabled = false;
-						if (reverse)
-							curveValue = Mathf.Min (curveValue, 0f);
-						else
-							curveValue = Mathf.Max (curveValue, amplitudeFactor);
-					}
-				}
-				if (updateEnabled) {
-					timeVariable = t % curveDuration;
-					if (reverse)
-						curveValue = curve.Evaluate (curveStartTime + curveDuration - timeVariable) * amplitudeFactor;
-					else
-						curveValue = curve.Evaluate (curveStartTime + timeVariable) * amplitudeFactor;
-				}
-				foo (curveValue);
+				
+				timeVariable = t % curveRealDuration;
+				if (reverse)
+					curveValue = curve.Evaluate (curveStartTime + curveRealDuration - timeVariable) * amplitudeFactor;
+				else
+					curveValue = curve.Evaluate (curveStartTime + timeVariable) * amplitudeFactor;
+
+
+                if (repeatCounter > 0 && t > curveRealDuration)
+                    repeatCounter--;
+
+
+                if (repeatCounter == 0)
+                {
+                    updateEnabled = false;
+                    if (reverse)
+                        curveValue = Mathf.Min(curveValue, 0f);
+                    else
+                        curveValue = Mathf.Max(curveValue, amplitudeFactor);
+
+                    foo(curveValue);
+                }
+                else
+                {
+                    foo(curveValue);
+
+                    this.curveCurrentValue = curveValue;
+                    this.curveCurrentTime = timeVariable;
+                    this.timeProgress = timeVariable * this.duration;
+                }
+                    
+
 			}
 		}
 

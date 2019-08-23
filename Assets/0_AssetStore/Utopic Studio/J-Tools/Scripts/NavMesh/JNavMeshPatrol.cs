@@ -3,7 +3,7 @@
 namespace J
 {
 	[AddComponentMenu("J/NavMesh/JNavMeshPatrol")]
-	public class JNavMeshPatrol : MonoBehaviour {
+	public class JNavMeshPatrol : JBase {
 
         [Tooltip("Dejar vacío para usar este objeto")]
         [SerializeField]    UnityEngine.AI.NavMeshAgent target;

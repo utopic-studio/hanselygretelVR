@@ -903,7 +903,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749047484580809868}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
@@ -919,33 +919,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d516092826317904fa94f70d5ea79bd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasGroup:
-  - {fileID: 1749047484580809865}
-  - {fileID: 6485917890134097334}
-  tmpro:
-  - {fileID: 5926623346908920314}
-  startVisibility: 1
+  target: []
+  state: 1
   fadeInTime: 1
   fadeOutTime: 1
-  OnFadeInStarting:
-  - m_PersistentCalls:
+  disableWhenHidden: 1
+  DoAfterFadeIn:
+    m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  OnFadeOutEnded:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1749047484580809868}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  DoAfterFadeOut:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1749047484900229059
@@ -1060,7 +1046,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 51a95050efd37d24e93fbc92210ce661, type: 2}
   m_sharedMaterial: {fileID: 21086208919386474, guid: 51a95050efd37d24e93fbc92210ce661,
@@ -1071,7 +1059,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1089,7 +1077,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1130,13 +1118,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 5926623346908920314}
-    characterCount: 0
+    characterCount: 1
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 1
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
@@ -1673,7 +1661,7 @@ GameObject:
   - component: {fileID: 3452587419448821210}
   - component: {fileID: 3098823235496729870}
   - component: {fileID: 1430118359207917867}
-  - component: {fileID: 2342984809390952699}
+  - component: {fileID: 7076730419106842091}
   m_Layer: 5
   m_Name: ScrollUpButton
   m_TagString: Untagged
@@ -1780,7 +1768,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &2342984809390952699
+--- !u!114 &7076730419106842091
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1789,13 +1777,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3017013954635380666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65ca4df5547b8514ba30113e8bb85df4, type: 3}
+  m_Script: {fileID: 11500000, guid: 195f7f0a9839fb04a9217a4855fb7b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OnPointerStay:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5271298184014373334}
+      - m_Target: {fileID: 4022554368483528183}
         m_MethodName: ScrollUp
         m_Mode: 1
         m_Arguments:
@@ -1820,7 +1808,7 @@ GameObject:
   - component: {fileID: 8074418456960785038}
   - component: {fileID: 6874564280742935980}
   - component: {fileID: 4804628921463171312}
-  - component: {fileID: 4151611265726884220}
+  - component: {fileID: 5962042016425936309}
   m_Layer: 5
   m_Name: ScrollDownButton
   m_TagString: Untagged
@@ -1927,7 +1915,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &4151611265726884220
+--- !u!114 &5962042016425936309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1936,13 +1924,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3066355073764388329}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65ca4df5547b8514ba30113e8bb85df4, type: 3}
+  m_Script: {fileID: 11500000, guid: 195f7f0a9839fb04a9217a4855fb7b90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   OnPointerStay:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5271298184014373334}
+      - m_Target: {fileID: 4022554368483528183}
         m_MethodName: ScrollDown
         m_Mode: 1
         m_Arguments:
@@ -2144,7 +2132,7 @@ GameObject:
   - component: {fileID: 2565032487976085545}
   - component: {fileID: 6820356694625751969}
   - component: {fileID: 6658221672891136669}
-  - component: {fileID: 5271298184014373334}
+  - component: {fileID: 4022554368483528183}
   m_Layer: 5
   m_Name: OptionListView
   m_TagString: Untagged
@@ -2256,7 +2244,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &5271298184014373334
+--- !u!114 &4022554368483528183
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2265,7 +2253,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3694159810979803337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68c2bc0a0c2149c43a60a950f39c66b0, type: 3}
+  m_Script: {fileID: 11500000, guid: d6ac1f1e8c1ee1a408bbdfe43569a192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Content: {fileID: 1471999445069933429}
@@ -3596,8 +3584,6 @@ MonoBehaviour:
   ExitButton: {fileID: 1237817374325095648}
   NextButton: {fileID: 8575237567189199266}
   PrevButton: {fileID: 545374114909315409}
-  LogButton: {fileID: 7975838299389022527}
-  LogButtonBig: {fileID: 2952257781537182425}
   BlueprintPrefabs:
   - Key: 1
     Value: {fileID: 1839021762165054, guid: 01390cb84b5a1904eb4eba48fcf624bf, type: 3}

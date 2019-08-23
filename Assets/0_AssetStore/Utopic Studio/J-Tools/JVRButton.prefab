@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1861436324908316641}
   - component: {fileID: 1203239822167946814}
   - component: {fileID: 5102132421674617151}
-  - component: {fileID: 8900716054849410746}
   m_Layer: 0
   m_Name: JVRButton
   m_TagString: Untagged
@@ -93,27 +92,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1861436324908316641}
   waitTime: 1.5
-  clickSound: {fileID: 8300000, guid: abb489553bda9f348a55c7f3f1c81bb2, type: 3}
+  clickSound: {fileID: 8300000, guid: 1092bf4d7d12aa441ad10818fcbab240, type: 3}
   vol: 0.7
-  UseInternalWaitTime: 0
---- !u!114 &8900716054849410746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3748714562204785818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e135e1c2119d7b64baba1ff18f494f41, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  point: {fileID: 0}
-  lookAtPlayer: 1
-  allowVerticalRotation: 1
-  lookWithBackSide: 0
-  speed: 20
 --- !u!1 &8368082744687366623
 GameObject:
   m_ObjectHideFlags: 0

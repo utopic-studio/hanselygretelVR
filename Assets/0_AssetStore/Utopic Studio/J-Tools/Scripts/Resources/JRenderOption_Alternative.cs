@@ -32,7 +32,7 @@ namespace J
                 JRenderOption_Alternative alternative = instantiated.GetComponent<JRenderOption_Alternative>();
 
                 //We need some way to enforce the toggles to be setup one at a time, we use a toggle group on the first element
-                if (i == 0)
+                if(i == 0)
                 {
                     TGroup = instantiated.AddComponent<UnityEngine.UI.ToggleGroup>();
                     alternative.Toggle.group = TGroup;
@@ -57,22 +57,16 @@ namespace J
         public UnityEngine.UI.Toggle Toggle;
         public UnityEngine.UI.Text Label;
         public UnityEngine.UI.Text IndexLabel;
-        
 
         private void Awake()
         {
             //Need to have bindings onto the Toggle
             Toggle.onValueChanged.AddListener(OnToggleValueChange);
         }
-        
 
         private void OnToggleValueChange(bool Active)
         {
             AnswerValueChange(Active.ToString());
-
-            // @gabo - Desactiva la imagen de una alternativa porque es tapada por el obj "Checkbox"
-            Transform childButton =  transform.Find("Background");
-            childButton.GetComponent<UnityEngine.UI.Image>().enabled = !childButton.GetComponent<UnityEngine.UI.Image>().enabled;
         }
 
         protected override void OnOwningOptionChanged(JResource.ContentOption Option)
@@ -84,7 +78,7 @@ namespace J
 
             //Check for answer
             bool bIsOn;
-            bool bParseSuccess = bool.TryParse(Option.AnswerData, out bIsOn);
+            bool bParseSuccess = bool.TryParse(Option.AnswerData,out bIsOn);
             Toggle.isOn = bParseSuccess ? bIsOn : false;
         }
 

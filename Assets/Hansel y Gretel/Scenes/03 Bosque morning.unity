@@ -7189,7 +7189,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: 04 Bosque fogata
   delay: 0.2
-  cameraFade: 1
 --- !u!4 &834027655
 Transform:
   m_ObjectHideFlags: 0
@@ -25427,7 +25426,7 @@ Transform:
   - {fileID: 338353478}
   - {fileID: 1208591329}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1363622700
 PrefabInstance:
@@ -28437,7 +28436,7 @@ PrefabInstance:
     - target: {fileID: 6902204336541789359, guid: 6f5e989fc5fa33243bf127ad1e8d7a10,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6902204336541789359, guid: 6f5e989fc5fa33243bf127ad1e8d7a10,
         type: 3}
@@ -29828,7 +29827,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1896907541
 MonoBehaviour:
@@ -36243,7 +36242,7 @@ Transform:
   - {fileID: 6946853434623954490}
   - {fileID: 1718662629775030565}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2086894324
 GameObject:
@@ -38200,7 +38199,7 @@ Transform:
   - {fileID: 46053146}
   - {fileID: 742663667}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1718662628681096503
 GameObject:
@@ -38914,57 +38913,6 @@ Transform:
   m_Father: {fileID: 1718662628914980960}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1718662629098008877
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718662629098008878}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 133.32103, y: 2.907643, z: 71.34276}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1718662629098008878
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1718662629098008877}
-  - component: {fileID: 1718662629098008880}
-  m_Layer: 0
-  m_Name: _cameraFade
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1718662629098008880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718662629098008878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7886f1ff2e8f7545889bd3ca735a1b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
-  opaqueColor: {r: 0, g: 0, b: 0, a: 1}
-  transparentColor: {r: 0, g: 0, b: 0, a: 0}
-  fadeinTime: 2
-  fadeoutTime: 1.5
-  ignoreTimeScale: 0
-  distanceFromCamera: 0.05
-  fadeInAtStart: 1
 --- !u!1 &1718662629102244142
 GameObject:
   m_ObjectHideFlags: 0
@@ -38995,7 +38943,7 @@ Transform:
   - {fileID: 1718662629630913937}
   - {fileID: 1718662629522805374}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1718662629114199864
 Transform:
@@ -39188,7 +39136,7 @@ Transform:
   - {fileID: 1718662629114199864}
   - {fileID: 1718662628725034495}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 246.45, z: 0}
 --- !u!1 &1718662629205878661
 GameObject:
@@ -39867,7 +39815,7 @@ Transform:
   - {fileID: 3557422977085244043}
   - {fileID: 356159928}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1718662629462863521
 MonoBehaviour:
@@ -40097,8 +40045,8 @@ MonoBehaviour:
   normalAction:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1718662629098008880}
-        m_MethodName: JFadeOut
+      - m_Target: {fileID: 6933170136546647557}
+        m_MethodName: FadeOut
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -41353,25 +41301,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c2d69c7ea45ee4a9a9a5bb0b3a2448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1718662629909534132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6933170136546647556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c26a1dc0e28b0744f821a073b62c1000, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  players: []
-  mode: 1
-  target: {fileID: 6927124858436934044}
-  x: 0
-  y: 1
-  z: 0
-  navMeshAgent: {fileID: 0}
 --- !u!1 &1718662629922777082
 GameObject:
   m_ObjectHideFlags: 0
@@ -51376,7 +51305,7 @@ Transform:
   - {fileID: 6934849739760607168}
   - {fileID: 7146097674352839094}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 246.45, z: 0}
 --- !u!4 &6927438530119453978
 Transform:
@@ -51806,7 +51735,7 @@ GameObject:
   - component: {fileID: 6927124858436934044}
   - component: {fileID: 6931909339998228801}
   - component: {fileID: 6931909339998228802}
-  - component: {fileID: 1718662629909534132}
+  - component: {fileID: 6933170136546647557}
   m_Layer: 0
   m_Name: GvrPlayer
   m_TagString: Player
@@ -51814,6 +51743,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6933170136546647557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6933170136546647556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39026b6cf8d6ab1479e743a584a768bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  opaqueColor: {r: 0, g: 0, b: 0, a: 1}
+  transparentColor: {r: 0, g: 0, b: 0, a: 0}
+  fadeinTime: 1.5
+  fadeoutTime: 1.5
+  ignoreTimeScale: 0
+  distanceFromCamera: 0.5
+  orderInLayer: 100
+  fadeInAtStart: 1
 --- !u!1 &6933251037968018786
 GameObject:
   m_ObjectHideFlags: 0

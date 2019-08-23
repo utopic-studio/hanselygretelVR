@@ -4,7 +4,8 @@ namespace J
 {
 
 	[AddComponentMenu("J/3D/JMoveToPoint")]
-	public class JMoveToPoint : MonoBehaviour {
+	public class JMoveToPoint : JBase
+    {
 
     [Tooltip("Dejar vacío para mover este objeto")]
         [SerializeField]    Transform target;

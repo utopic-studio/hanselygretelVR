@@ -3,9 +3,8 @@ using System.Collections;
 
 namespace J
 {
-
     [AddComponentMenu("J/Util/JAction")]
-    public class JAction : MonoBehaviour
+    public class JAction : JBase
     {
 
         [System.Serializable]
@@ -19,12 +18,14 @@ namespace J
         [SerializeField]    bool callOnStart = false;
         [SerializeField]    UnityEngine.Events.UnityEvent action;
         [SerializeField]    JActionStruct[] delayedActions;
-
+        //public JGlobalVariables global_vars;
         
         private void Start()
         {
             if (callOnStart)
+            {
                 CallActions();
+            }
         }
 
         private void Reset()
@@ -48,6 +49,9 @@ namespace J
             yield return new WaitForSeconds(delay);
             a.Invoke();
         }
+
+
+        
     }
 
 }

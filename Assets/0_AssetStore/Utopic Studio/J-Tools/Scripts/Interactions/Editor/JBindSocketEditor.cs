@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using J;
 
 [CustomEditor(typeof(JBindSocket)), CanEditMultipleObjects]
 public class JBindSocketEditor : Editor

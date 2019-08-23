@@ -4,7 +4,7 @@ namespace J
 {
 
     [AddComponentMenu("J/3D/JShake")]
-    public class JShake : MonoBehaviour
+    public class JShake : JBase
     {
 
         [SerializeField]    Transform target;

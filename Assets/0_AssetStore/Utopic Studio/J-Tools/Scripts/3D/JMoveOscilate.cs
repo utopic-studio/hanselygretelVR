@@ -4,7 +4,8 @@ namespace J
 {
 		
 	[AddComponentMenu("J/3D/JMoveOscilate")]
-	public class JMoveOscilate : MonoBehaviour {
+	public class JMoveOscilate : JBase
+    {
 
 		enum ModificationType
 		{

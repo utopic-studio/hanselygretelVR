@@ -36,7 +36,7 @@ namespace J
     }
 
     [AddComponentMenu("J/3D/JWaypointPath")]
-    public class JWaypointPath : MonoBehaviour
+    public class JWaypointPath : JBase
     {
         /// <summary>
         /// Called when an agent reaches a point on the nav movement list

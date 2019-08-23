@@ -3,7 +3,8 @@
 namespace J
 {
 	[AddComponentMenu("J/Util/JQuitGame")]
-	public class JQuitGame : MonoBehaviour {
+	public class JQuitGame : JBase
+    {
 
 		[SerializeField]	bool worksInEditor = false;
 

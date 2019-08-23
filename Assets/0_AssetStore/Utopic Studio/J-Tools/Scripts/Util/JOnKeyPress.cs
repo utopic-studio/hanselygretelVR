@@ -4,9 +4,10 @@ namespace J
 {
 
 	[AddComponentMenu("J/Util/JOnKeyPress")]
-	public class JOnKeyPress : MonoBehaviour {
-		
-		[SerializeField]	string inputName;
+	public class JOnKeyPress : JBase
+    {
+
+        [SerializeField] string inputName = "Submit";
 
 		[TooltipAttribute("Maximum seconds between the two taps")]
 		[SerializeField]	float pressCooldown = 0.2f;
@@ -14,15 +15,16 @@ namespace J
 		[Range(1, 50)]
 		[SerializeField]	int pressCount = 1;
 		[SerializeField]	CooldownType cooldownType;
-		[SerializeField]	UnityEngine.Events.UnityEvent onInput;
+        [SerializeField] UnityEngine.Events.UnityEvent onInput;
 
-
-		private bool isDoingCooldown = false;
+        private bool isDoingCooldown = false;
 		private float pressCooldownPrivate;
 		private int pressCountPrivate;
 		private float deltaTimeUsed;
 
-		void Start () {
+
+
+        void Start () {
 			Init ();
 		}
 

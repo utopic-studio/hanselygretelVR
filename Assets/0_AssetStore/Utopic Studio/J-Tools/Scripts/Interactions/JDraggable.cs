@@ -68,7 +68,14 @@ public class JDraggable : MonoBehaviour
     /// <summary>
     /// Stored variable for the rigidbody that needs to be recovered after ending the drag operation.
     /// </summary>
-    private bool _rbUsesGravity;
+    public bool _rbUsesGravity;
+
+    /// <summary>
+    /// If true, when dragging the object will maintain its relative rotation towards the camera, if not it will maintain its world rotation
+    /// </summary>
+    public bool MaintainCameraRotation = true;
+
+    public ParticleSystem particles;
 
     private void Awake()
     {
@@ -98,9 +105,13 @@ public class JDraggable : MonoBehaviour
 
             //We must apply a lerp
             Vector3 TargetPosition = Vector3.Lerp(transform.position, AnchorPoint, LerpFactor);
-            Quaternion TargetRotation = Quaternion.Lerp(transform.rotation, ObjectQuat, LerpFactor);
             transform.position = TargetPosition;
-            transform.rotation = ObjectQuat;
+
+            if(MaintainCameraRotation)
+            {
+                Quaternion TargetRotation = Quaternion.Lerp(transform.rotation, ObjectQuat, LerpFactor);
+                transform.rotation = ObjectQuat;
+            }
 
             if (OnDragged != null)
             {
@@ -115,8 +126,14 @@ public class JDraggable : MonoBehaviour
     /// </summary>
     public void BeginDragOperation()
     {
+
+       
         if (IsDraggable && CurrentDragOperation == null)
         {
+            if (!particles.isPlaying)
+            {
+                particles.Play();
+            }
             CurrentDragOperation = this;
             OriginalTransform = new JTrans(gameObject.transform);
             CameraRelativeQuat = Quaternion.Inverse(Camera.main.transform.rotation) * gameObject.transform.rotation;
@@ -163,6 +180,8 @@ public class JDraggable : MonoBehaviour
     /// </summary>
     public void CommitDragOperation()
     {
+        
+
         if (CurrentDragOperation == this)
         {
             CurrentDragOperation = null;

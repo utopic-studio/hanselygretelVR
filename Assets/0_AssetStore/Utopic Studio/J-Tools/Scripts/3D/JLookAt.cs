@@ -4,58 +4,43 @@ namespace J
 {
 
     [AddComponentMenu("J/3D/JLookAt")]
-    public class JLookAt : MonoBehaviour
+    public class JLookAt : JBase
     {
-        public GameObject[] players;    
         
-        public enum LookAtType
-        {
-            Constant, OneShot
-        }
 
-        [SerializeField] LookAtType mode;
-        [SerializeField] Transform target;
-        [SerializeField] bool x, y=true, z;
-        [SerializeField] UnityEngine.AI.NavMeshAgent navMeshAgent;
+        [Tooltip("Dejar vacío para que este objeto sea el que mire a otro")]
+        public Transform target;
+        [Tooltip("Mirar a este objeto")]
+        public Transform point;
+        [Tooltip("Mirar al tag Player (Sólo si variable point está vacía)")]
+        public bool lookAtPlayer = true;
+        public bool allowVerticalRotation = true;
+        public bool lookWithBackSide = false;
+        [RangeAttribute(1f, 50f)]
+        public float speed = 20f;
 
-        private bool startWasCalled = false;
+        Vector3 dir;
+
 
         private void Start()
         {
-            startWasCalled = true;
-            
-            players = GameObject.FindGameObjectsWithTag("Player");
-            target = players[0].transform;
+            if (!target)
+                target = transform;
+            if (lookAtPlayer && !point)
+                point = (GameObject.FindGameObjectWithTag("Player") as GameObject).transform;
+
         }
 
-        void Update()
+        private void Update()
         {
-            if (mode == LookAtType.Constant)
-            {
-                Quaternion rotation = CalculateRotation(target);
-                if (!x)
-                    rotation.x = 0f;
-                if (!y)
-                    rotation.y = 0f;
-                if (!z)
-                    rotation.z = 0f;
-                //transform.LookAt(target);
-                transform.rotation = rotation;
-            }
-        }
-        private Quaternion CalculateRotation(Transform target)
-        {
-            return Quaternion.Euler(Quaternion.LookRotation(target.position - transform.position).eulerAngles);
-        }
-        public void LookAt(Transform target)
-        {
-            if (target == null)
-                target = this.target;
-            //if (navMeshAgent)
-            //    navMeshAgent.enabled = false; 
-            transform.rotation = CalculateRotation(target);
-            //if (navMeshAgent)
-            //    navMeshAgent.enabled = true;
+            dir = point.position - target.position;
+            if (lookWithBackSide)
+                dir = -dir;
+            if (!allowVerticalRotation)
+                dir.y = 0f;
+            Quaternion rotation = Quaternion.LookRotation(dir);
+            target.rotation = Quaternion.Slerp(target.rotation, rotation,
+                Time.deltaTime * speed);
         }
     }
 

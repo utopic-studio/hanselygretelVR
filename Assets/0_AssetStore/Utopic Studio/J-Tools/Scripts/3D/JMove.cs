@@ -2,59 +2,47 @@
 
 namespace J
 {
-		
+
 	[AddComponentMenu("J/3D/JMove")]
-	public class JMove : MonoBehaviour {
+	public class JMove : JBase
+    {
+
 
 		enum ModificationType
 		{
 			Local, Global
 		}
 
-		[SerializeField]	AnimationCurve curve;
-		[SerializeField]	ModificationType type;
-		[SerializeField]	Vector3 direction = Vector3.forward;
-		[SerializeField]	float moveFactor = 1f;
-		[Range(0.01f, 60f)]
-		[SerializeField]	float durationFactor = 1f;
+    [Tooltip("Dejar vacío para mover este objeto")]
+        [SerializeField] Transform target;
+        [SerializeField]	ModificationType type;
+        [SerializeField]	Vector3 direction = Vector3.forward;
+		[SerializeField]	float speed = 1f;
+		[SerializeField]	float acceleration = 0f;
 
-		protected float timeVariable = 0f;
-		protected Vector3 initialPosition;
-		protected float curveDuration;
-		protected float curveStartTime;
-		protected float modifyFactor;
-        public bool loop;
+		protected float moveFactorPrivate;
+		protected float accelerationPrivate;
 
-		void Start () {
-			UpdateCurveInfo ();
+        private void Start()
+        {
+            if (!target)
+                target = transform;
+        }
 
-			initialPosition = transform.position;
-		}
-		void OnValidate () {
-			UpdateCurveInfo ();
-		}
-
-		void Update () {
-
-			timeVariable = (timeVariable + Time.deltaTime / durationFactor) % curveDuration;
-			modifyFactor = curve.Evaluate (curveStartTime + timeVariable) * moveFactor;
-
-
+        private void Update ()
+        {
+			accelerationPrivate = acceleration * Time.deltaTime;
+			speed += accelerationPrivate;
+			moveFactorPrivate = speed * Time.deltaTime;
 			switch (type) {
 			case ModificationType.Local:
-				transform.position = initialPosition + transform.TransformVector (Vector3.Normalize (direction)) * modifyFactor;
+				transform.position += transform.TransformVector (Vector3.Normalize (direction)) * moveFactorPrivate;
 				break;
 			case ModificationType.Global:
-				transform.position = initialPosition + Vector3.Normalize(direction) * modifyFactor;
+				transform.position += Vector3.Normalize(direction) * moveFactorPrivate;
 				break;
 			}
 		}
-
-		protected void UpdateCurveInfo() {
-			curveDuration = curve.keys [curve.length - 1].time - curve.keys [0].time;
-			curveStartTime = curve.keys [0].time;
-		}
 	}
-
 
 }
