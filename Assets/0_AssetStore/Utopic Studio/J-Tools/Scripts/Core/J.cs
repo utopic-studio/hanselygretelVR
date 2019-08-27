@@ -96,7 +96,7 @@ namespace J
         }
 
         //@DEPRECATED - Maintained for older scripts
-        public void followCurve(JFollowCurve.CurveDelegate d, float duration = 1, float amplitude = 1, int repeat = 0, CurveType type = CurveType.Linear, bool reverse = false)
+        public void followCurve(JFollowCurve.CurveDelegate d, float duration = 1, float amplitude = 1, int repeat = 1, CurveType type = CurveType.Linear, bool reverse = false)
         {
             Lerp(d, duration, amplitude, repeat, type, reverse);
         }

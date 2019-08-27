@@ -42,6 +42,14 @@ namespace J
             _LookAt(t.position, true, objToRotate);
         }
 
+        public void Rotate(float angle)
+        {
+            Vector3 rot = transform.rotation.eulerAngles;
+            rot = new Vector3(rot.x, rot.y + angle, rot.z);
+            Quaternion rotation = Quaternion.Euler(rot);
+            J.Instance.followCurve(x => transform.rotation = Quaternion.Lerp(transform.rotation, rotation, x), duration);
+        }
+
         private void _LookAt(Vector3 point, bool instant, Transform targetX = null)
         {
             
