@@ -530,7 +530,7 @@ namespace J
             DetailText.text = currentContent.Data;
 
             //Try to setup the image if there is one
-            if (currentContent.ImagenURL.Length > 0)
+            if (!string.IsNullOrEmpty(currentContent.ImagenURL))
             {
                 //First we should enable the image wrapper
                 ImageWrapper.SetActive(true);
