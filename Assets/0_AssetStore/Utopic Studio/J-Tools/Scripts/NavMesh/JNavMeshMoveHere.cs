@@ -13,7 +13,7 @@ namespace J
 
         public void JMoveAgent()
         {
-            if (!agent && tag.Trim().Length > 0)
+            if (!agent && tagFind.Trim().Length > 0)
                 agent = GameObject.FindGameObjectWithTag(tagFind).GetComponent<UnityEngine.AI.NavMeshAgent>();
 
             if (destination)

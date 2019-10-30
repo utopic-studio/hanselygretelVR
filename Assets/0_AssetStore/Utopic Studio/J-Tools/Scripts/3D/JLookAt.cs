@@ -52,7 +52,7 @@ namespace J
             }
 
             //Avoid rotation when not needed
-            if (dir.sqrMagnitude > 0.0f)
+            if (dir.sqrMagnitude > Vector3.kEpsilon)
             {
                 //Obtain the desired rotation and lerp to it
                 Quaternion rotation = Quaternion.LookRotation(dir);

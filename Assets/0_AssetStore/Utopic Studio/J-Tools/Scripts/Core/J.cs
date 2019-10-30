@@ -1,15 +1,36 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace J
 {
+
+    /// <summary>
+    /// Mode this application is currently running.
+    /// </summary>
+    public enum ApplicationMode
+    {
+        Normal,
+        Preview
+    }
+
     /// <summary>
     /// Main manager for JTools
     /// </summary>
     [AddComponentMenu("J/J")]
     public class J : JBase
     {
-        //this class is a singleton)
+        //Called when the application boots on preview mode
+        public UnityEvent OnPreviewMode;
+
+        //this class is a singleton
         public static J Instance { get; private set; }
+
+        //Current mode
+        private ApplicationMode _AppMode = ApplicationMode.Normal;
+        public ApplicationMode AppMode
+        {
+            get { return _AppMode; }
+        }
 
         /// <summary>
         /// GameObject that represents the player (checked via TAG)
@@ -27,12 +48,75 @@ namespace J
             {
                 Instance = this;
                 UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnLevelLoaded;
+
+#if UNITY_WEBGL
+                InitWebArguments();
+#endif
             }
             else if (Instance != this)
             {
-                Destroy(this.gameObject); // Nota: Esto podria eliminar todo un objeto, con otros componentes
+                Destroy(this.gameObject);
             }
         }
+
+        private void Start()
+        {
+            //Trigger a call for the preview mode
+            if(_AppMode == ApplicationMode.Preview)
+            {
+                OnPreviewMode?.Invoke();
+            }
+        }
+
+#if UNITY_WEBGL
+        void InitWebArguments()
+        {
+            //Obtain the sections that conform this url (separated by the GET char)
+            string[] UrlSections = Application.absoluteURL.Split('?');
+            Debug.Log("Obtained application url:" + Application.absoluteURL);
+            if (UrlSections.Length > 1)
+            {
+                //Arguments are on the second section of this URL
+                string[] Arguments = UrlSections[1].Split('&');
+                foreach (string Arg in Arguments)
+                {
+                    //We need a final pass on the arguments, 
+                    string[] KeyValue = Arg.Split('=');
+                    ParseWebArgument(KeyValue[0], KeyValue[1]);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Processes each significant value of the web session arguments.
+        /// </summary>
+        /// <param name="Key">Name of the associated argument</param>
+        /// <param name="Value">Value of the argument, which needs to be parsed down to the required type</param>
+        void ParseWebArgument(string Key, string Value)
+        {
+            if (Key.ToLower() == "mode")
+            {
+                if (Key.ToLower() == "mode")
+                {
+                    switch (Value.ToLower())
+                    {
+                        case "normal":
+                            _AppMode = ApplicationMode.Normal;
+                            break;
+                        case "preview":
+                            _AppMode = ApplicationMode.Preview;
+                            break;
+                        default:
+                            _AppMode = ApplicationMode.Normal;
+                            break;
+                    }
+
+                    Debug.Log("Entered application mode: " + _AppMode);
+                }
+            }
+
+        }
+#endif
 
         // Runs each time a scene is loaded, even when script is using DontDestroyOnLoad().
         // Finds a GameObject tagged with 'Player'. Needs to find exactly one.

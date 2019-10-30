@@ -133,12 +133,12 @@ public class JRenderOption_Pairs : JRenderOption {
         {
             case PortLocation.Left:
                 Label = LabelLeft;
-                data = Opcion.GetValueAsString("data");
+                data = Opcion.GetValueAsString("texto");
                 LeftSocket.CustomData = Opcion.Index.ToString();
                 break;
             case PortLocation.Right:
                 Label = LabelRight;
-                data = Opcion.GetValueAsString("data_secundaria");
+                data = Opcion.GetValueAsString("texto_secundario");
                 RightSocket.CustomData = Opcion.Index.ToString();
                 break;
         }
@@ -176,8 +176,10 @@ public class JRenderOption_Pairs : JRenderOption {
 
     private IEnumerator LoadImage(string ImageUrl, PortLocation Location)
     {
-        Debug.Log("Starting Load Image from url: " + ImageUrl + " on port location: " + Location);
-        using (UnityWebRequest www = UnityWebRequestTexture.GetTexture(ImageUrl))
+        string BaseURL = JResourceManager.Instance.ImageRepositoryURL;
+        string URL = BaseURL + "/" + ImageUrl;
+        Debug.Log("Starting Load Image from url: " + URL + " on port location: " + Location);
+        using (UnityWebRequest www = UnityWebRequestTexture.GetTexture(URL))
         {
             yield return www.SendWebRequest();
 

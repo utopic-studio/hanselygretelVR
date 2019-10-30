@@ -7,15 +7,6 @@ using UnityEngine.Networking;
 namespace J
 {
     /// <summary>
-    /// Mode that this Application is running
-    /// </summary>
-    public enum ApplicationMode
-    {
-        Normal,
-        Preview
-    };
-
-    /// <summary>
     /// Holds data for answers already setup on the resource
     /// </summary>
     public struct ResourceAnswer
@@ -105,8 +96,8 @@ namespace J
         /* Server URL */
         public string FetchURL = "http://localhost:8000/";
 
-        /* The current application mode */
-        public ApplicationMode AppMode { get; private set; }
+        /* Image URL */
+        public string ImageRepositoryURL = "http://localhost:8000/";
 
         /* Resource code to search when in preview mode */
         public string PreviewResourceCode { get; private set; }
@@ -139,14 +130,15 @@ namespace J
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
 
-                //This will initialize important values, like the application mode, etc
-                InitWebArguments();
-
                 //Will need to manage level loading for resources
                 UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnLevelLoaded;
 
                 //By default, we use the base resource code
                 SelectedResource = new ResourceMetaData(BaseResourceCode, "Base Resource");
+
+#if UNITY_WEBGL
+                InitWebArguments();
+#endif
             }
             else if (Instance != this)
             {
@@ -156,11 +148,9 @@ namespace J
 
         }
 
+#if UNITY_WEBGL
         void InitWebArguments()
         {
-            //We initialize the value first, we could be on a build that doesn't support web argument passing, in this case we fallback to normal mode
-            AppMode = ApplicationMode.Normal;
-
             //Obtain the sections that conform this url (separated by the GET char)
             string[] UrlSections = Application.absoluteURL.Split('?');
             Debug.Log("Obtained application url:" + Application.absoluteURL);
@@ -178,34 +168,26 @@ namespace J
         }
 
         /// <summary>
-        /// Manually selects each significant value and stores it on this object.
+        /// Processes each significant value of the web session arguments.
         /// </summary>
         /// <param name="Key">Name of the associated argument</param>
         /// <param name="Value">Value of the argument, which needs to be parsed down to the required type</param>
         void ParseWebArgument(string Key, string Value)
         {
-            if (Key.ToLower() == "mode")
+            Debug.Log("parsing Key: " + Key + " - Value: " + Value);
+            if (Key.ToLower() == "resource")
             {
-                switch (Value.ToLower())
-                {
-                    case "normal":
-                        AppMode = ApplicationMode.Normal;
-                        break;
-                    case "preview":
-                        AppMode = ApplicationMode.Preview;
-                        break;
-                    default:
-                        AppMode = ApplicationMode.Normal;
-                        break;
-                }
-
-                Debug.Log("Entered application mode: " + AppMode);
+                //User token, should be stored on the session
+                SelectedResource = new ResourceMetaData(Value, "ParsedResource");
             }
-            else if (Key.ToLower() == "code")
+            else if (Key.ToLower() == "preview")
             {
+                //User token, should be stored on the session
                 PreviewResourceCode = Value;
             }
+
         }
+#endif
 
         /// <summary>
         /// Obtains the resource codes currently available on the scene
@@ -242,7 +224,7 @@ namespace J
             LoadResources();
 
             //Optionally force opening of preview resource
-            if (JResourceManager.Instance.AppMode == ApplicationMode.Preview)
+            if (J.Instance.AppMode == ApplicationMode.Preview)
             {
                 string ResourceCode = JResourceManager.Instance.PreviewResourceCode;
                 JResource[] resources = GameObject.FindObjectsOfType<JResource>();
@@ -252,6 +234,7 @@ namespace J
                     if (r.Code == ResourceCode)
                     {
                         r.Show();
+                        r.AlignTransform(J.Instance.PlayerGameObject.transform);
                         break;
                     }
                 }
@@ -276,7 +259,12 @@ namespace J
             StartCoroutine(DoFetch());
         }
 
-        IEnumerator DoFetch()
+        public void FetchSilent()
+        {
+            StartCoroutine(DoFetch(true));
+        }
+
+        IEnumerator DoFetch(bool bSilent = false)
         {
             Debug.Log("Fetching resource data...");
 
@@ -294,7 +282,11 @@ namespace J
                     Debug.Log("Fetch succesful: " + www.downloadHandler.text);
                     ParseResource(www.downloadHandler.text);
                     LoadResources();
-                    OnFetchComplete?.Invoke();
+
+                    if(!bSilent)
+                    {
+                        OnFetchComplete?.Invoke();
+                    }
                 }
             }
         }
@@ -324,7 +316,11 @@ namespace J
         /// </summary>
         public void PushAnswers()
         {
-            StartCoroutine(DoPushAnswers());
+            //Avoid pushing answers on preview mode
+            if(J.Instance.AppMode != ApplicationMode.Preview)
+            {
+                StartCoroutine(DoPushAnswers());
+            }
         }
 
         IEnumerator DoPushAnswers()
