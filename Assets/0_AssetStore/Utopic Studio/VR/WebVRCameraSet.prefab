@@ -954,7 +954,7 @@ MonoBehaviour:
   raycastMode: 0
   overridePointerCamera: {fileID: 0}
   drawDebugRays: 0
-  maxReticleDistance: 60
+  maxReticleDistance: 100
   reticleSegments: 32
   reticleGrowthSpeed: 1.8
   reticleSortingOrder: 32767
@@ -1642,7 +1642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1752449763}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.917, z: 0}
+  m_LocalPosition: {x: 0, y: 1.382, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 948501784}
@@ -1731,7 +1731,7 @@ Transform:
   m_GameObject: {fileID: 1877826137}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 68.33, y: 2.108, z: -188.206}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1974505913}
   - {fileID: 127338359}
@@ -1762,7 +1762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleVRKeyName: v
   dontDestroyOnLoad: 0
-  DefaultHeight: 1.2
+  DefaultHeight: 0
   TrackingSpace: 1
   vrState: 1
 --- !u!136 &1877826138
@@ -1776,9 +1776,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2.748232
+  m_Height: 3.19
   m_Direction: 1
-  m_Center: {x: 0, y: 1.3051907, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &1877826139
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1798,7 +1798,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!1 &1920636381

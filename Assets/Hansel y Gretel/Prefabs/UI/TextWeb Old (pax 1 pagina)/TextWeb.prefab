@@ -82,11 +82,6 @@ PrefabInstance:
       propertyPath: OnHiddenEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 7691468532085301881, guid: df6f11c524969b1478cc442b4c1cb103,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 677863470989406836, guid: df6f11c524969b1478cc442b4c1cb103,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -122,6 +117,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 8300000, guid: cdc926458fb5fe14da211bc53694e352, type: 3}
+    - target: {fileID: 7691468532085301881, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451492505090918517, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 746793da782d74d44b826d092a1bfe3f,
+        type: 3}
     - target: {fileID: 876032427670791649, guid: df6f11c524969b1478cc442b4c1cb103,
         type: 3}
       propertyPath: m_SizeDelta.y
@@ -169,6 +175,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438876325035141096, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: OnPointerStay.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438876325035141096, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: OnPointerStay.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ScrollDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438876325035141096, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: OnPointerStay.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091002591240986223, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: OnPointerStay.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091002591240986223, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: OnPointerStay.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ScrollUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091002591240986223, guid: df6f11c524969b1478cc442b4c1cb103,
+        type: 3}
+      propertyPath: OnPointerStay.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 255455577, guid: df6f11c524969b1478cc442b4c1cb103, type: 3}
       propertyPath: m_havePropertiesChanged
