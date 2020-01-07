@@ -83,8 +83,9 @@ namespace J
             }
 #endif 
 
-            if (UsePreviousSession && JRemoteSession.Instance.SessionData.IsValidSession())
+            if (UsePreviousSession && JRemoteSession.Instance.SessionData.IsValidSession() && J.Instance.AppMode == ApplicationMode.Normal)
             {
+                Debug.Log("Previous session found, continuing");
                 OnLogged?.Invoke();
             }
         }

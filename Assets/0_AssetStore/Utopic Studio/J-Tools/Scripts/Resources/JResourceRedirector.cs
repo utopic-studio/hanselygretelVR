@@ -13,28 +13,20 @@ namespace J
     public class JResourceRedirector : MonoBehaviour
     {
         /// <summary>
-        /// Name of the main scene to fall back when normal mode is enabled instead of preview mode.
+        /// Loader for the scene
         /// </summary>
-        public string MainScenePath;
+        public JSceneLoad SceneLoad;
 
         /// <summary>
         /// Holds an indexed array for the Resource codes and its scenes.
         /// </summary>
         public JResourceIndex Index;
 
-        // Start is called before the first frame update
-        void Start()
+        private void Awake()
         {
-            //Redirection depends of the current application mode
-            ApplicationMode Mode = JResourceManager.Instance.AppMode;
-            switch (Mode)
+            if(!SceneLoad)
             {
-                case ApplicationMode.Normal:
-                    UnityEngine.SceneManagement.SceneManager.LoadScene(MainScenePath);
-                    break;
-                case ApplicationMode.Preview:
-                    PerformPreviewRedirection();
-                    break;
+                Debug.LogWarning("No Scene load found, cannot perform preview redirections!"); 
             }
         }
 
@@ -42,18 +34,21 @@ namespace J
         /// Redirects to the chosen scene for the preview mode.
         /// Selection of the resource to focus is done on that level.
         /// </summary>
-        void PerformPreviewRedirection()
+        public void PerformPreviewRedirection()
         {
-            string RedirectPath;
-            string ResourceCode = JResourceManager.Instance.PreviewResourceCode;
-            if (Index.FindResourceScene(JResourceManager.Instance.PreviewResourceCode, out RedirectPath))
+            if(SceneLoad)
             {
-                Debug.Log("Redirecting to preview mode scene");
-                UnityEngine.SceneManagement.SceneManager.LoadScene(RedirectPath);
-            }
-            else
-            {
-                Debug.LogWarning("Trying to redirect to scene holding resource with code: '" + ResourceCode + "' failed, resource path not found on ResourceIndex");
+                string RedirectPath;
+                string ResourceCode = JResourceManager.Instance.PreviewResourceCode;
+                if (Index.FindResourceScene(JResourceManager.Instance.PreviewResourceCode, out RedirectPath))
+                {
+                    Debug.Log("Redirecting to preview mode scene");
+                    SceneLoad.LoadScene(RedirectPath, 0.0f);
+                }
+                else
+                {
+                    Debug.LogWarning("Trying to redirect to scene holding resource with code: '" + ResourceCode + "' failed, resource path not found on ResourceIndex");
+                }
             }
         }
     }

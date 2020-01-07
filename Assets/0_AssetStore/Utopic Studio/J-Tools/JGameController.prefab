@@ -46,6 +46,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf436fa112e9a0544b2c3ea69d848412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnPreviewMode:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &4807255558510746407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,4 +103,5 @@ MonoBehaviour:
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   FetchURL: http://api.vrkids.nice.cl
-  BaseResourceCode: 5d30a8b657028e7d3875a2b5
+  ImageRepositoryURL: http://api.vrkids.nice.cl/preguntas
+  BaseResourceCode: 5d0d335357028e7b3779ad7d

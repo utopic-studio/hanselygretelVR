@@ -40,7 +40,7 @@ namespace J
             // Check for validity of this struct
             public bool IsValidSession()
             {
-                return !string.IsNullOrEmpty(Id) && !string.IsNullOrEmpty(Token);
+                return /*!string.IsNullOrEmpty(Id) && */ !string.IsNullOrEmpty(Token); //@NOTE: sessions are only valid when the tokens are valid
             }
 
             public override string ToString()
@@ -49,12 +49,15 @@ namespace J
             }
         }
 
+        /// <summary>
+        /// Type of user session, affects login type
+        /// </summary>
         public enum SessionType
         {
             Alumno,
             Profesor
         }
-        
+
         //Delegate calls for async login
         private OnRemoteSessionLoginSuccess OnLogin;
         private OnRemoteSessionLoginFailedSignature OnLoginFailed;
@@ -93,7 +96,7 @@ namespace J
         /// </summary>
         [SerializeField]
         private string PasswordField = "password";
-
+        
         /// <summary>
         /// Holds the data for the session
         /// </summary>
@@ -118,12 +121,58 @@ namespace J
             if (Instance == null)
             {
                 Instance = this;
+
+#if UNITY_WEBGL
+                InitWebArguments();
+#endif
             }
             else if (Instance != this)
             {
                 Destroy(this.gameObject);
             }
         }
+
+#if UNITY_WEBGL
+        void InitWebArguments()
+        {
+            //Obtain the sections that conform this url (separated by the GET char)
+            string[] UrlSections = Application.absoluteURL.Split('?');
+            Debug.Log("Obtained application url:" + Application.absoluteURL);
+            if (UrlSections.Length > 1)
+            {
+                //Arguments are on the second section of this URL
+                string[] Arguments = UrlSections[1].Split('&');
+                foreach (string Arg in Arguments)
+                {
+                    //We need a final pass on the arguments, 
+                    string[] KeyValue = Arg.Split('=');
+                    ParseWebArgument(KeyValue[0], KeyValue[1]);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Processes each significant value of the web session arguments.
+        /// </summary>
+        /// <param name="Key">Name of the associated argument</param>
+        /// <param name="Value">Value of the argument, which needs to be parsed down to the required type</param>
+        void ParseWebArgument(string Key, string Value)
+        {
+            Value = UnityWebRequest.UnEscapeURL(Value);
+            Debug.Log("parsing Key: " + Key + " - Value: " + Value);
+            if (Key.ToLower() == "token")
+            {
+                //User token, should be stored on the session
+                _SessionData.Token = Value;
+            }
+            else if (Key.ToLower() == "user")
+            {
+                //User id is not necessary, but could be inside
+                _SessionData.Id = Value;
+            }
+
+        }
+#endif
 
         /// <summary>
         /// Configures a UnityWebRequest with the session data
@@ -235,6 +284,5 @@ namespace J
 
             Debug.Log("Parsed Login response: " + _SessionData.ToString());
         }
-        
     }
 }

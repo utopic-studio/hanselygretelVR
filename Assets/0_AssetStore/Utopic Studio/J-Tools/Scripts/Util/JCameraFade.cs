@@ -25,6 +25,20 @@ namespace J
         private GameObject block_screen_obj;
         private GameObject block_screen_img_obj;
 
+        #region Property Get/Set
+        public float FadeInTime
+        {
+            get { return fadeinTime; }
+            set { fadeinTime = value; }
+        }
+
+        public float FadeOutTime
+        {
+            get { return fadeoutTime; }
+            set { fadeoutTime = value; }
+        }
+        #endregion
+
         private void OnValidate()
         {
             if (block_screen_img_obj)
@@ -41,10 +55,10 @@ namespace J
                 FadeOutInstantly();
                 FadeIn();
             }
-            else
+            /*else
             {
                 FadeInInstantly();
-            }
+            }*/
         }
 
 
@@ -65,6 +79,8 @@ namespace J
         {
             _Fade(0f, this.opaqueColor);
         }
+
+        #region deprecated
         public void SetFadeInTime(float t)
         {
             this.fadeinTime = t;
@@ -73,6 +89,7 @@ namespace J
         {
             this.fadeoutTime = t;
         }
+        #endregion
 
 
 
@@ -108,16 +125,25 @@ namespace J
                 if (cam)
                 {
                     mainCamera = cam;
-                    if (!mainCamera.transform.Find(JFadeCanvasName))
+                    Transform JFadeCanvasTransform = mainCamera.transform.Find(JFadeCanvasName);
+                    if (!JFadeCanvasTransform)
                     {
-                        this.CreateImageInFrontOfCamera(mainCamera, JFadeCanvasName, JFadeImageName);
+                        CreateImageInFrontOfCamera(mainCamera, JFadeCanvasName, JFadeImageName);
+                    }
+                    else
+                    {
+                        FindImageInCanvas(JFadeCanvasTransform, JFadeImageName);
                     }
                 }
                 else
+                {
                     Debug.LogWarning("JWarning - JCameraFade: El primero objeto con tag MainCamera encontrado no tiene el componente Camera");
+                }
             }
             else
+            {
                 Debug.LogWarning("JWarning - JCameraFade: No se encuentra el tag MainCamera en la escena");
+            }
         }
 
         private void CreateImageInFrontOfCamera(Camera cam, string canvasName, string imageName)
@@ -143,11 +169,18 @@ namespace J
             block_screen_img_obj.GetComponent<RectTransform>().sizeDelta = new Vector2(2, 2);
             
             myImage = img_img;
-            myImage.color = opaqueColor;
+            myImage.color = transparentColor;
 
         }
 
-
+        private void FindImageInCanvas(Transform JFadeCanvasTransform, string ImageName)
+        {
+            Transform imageTransform = JFadeCanvasTransform.Find(ImageName);
+            if(imageTransform)
+            {
+                myImage = imageTransform.gameObject.GetComponent<UnityEngine.UI.Image>();
+            }
+        }
 
     }
 

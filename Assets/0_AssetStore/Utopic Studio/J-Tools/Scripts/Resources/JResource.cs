@@ -347,6 +347,9 @@ namespace J
         //The UI to show
         public GameObject UI;
 
+        //Ref position to use when aligning transforms
+        public Transform RefPosition;
+
         //UI Title
         private TextMeshPro TitleText;
 
@@ -467,7 +470,7 @@ namespace J
         private void Start()
         {
             //Check for auto open config, only when on normal application mode
-            bDeferedOpen = bOpenOnStart && JResourceManager.Instance.AppMode == ApplicationMode.Normal;
+            bDeferedOpen = bOpenOnStart && J.Instance.AppMode == ApplicationMode.Normal;
         }
 
         private void Update()
@@ -508,6 +511,19 @@ namespace J
             UI.SetActive(false);
             OnHiddenEvent.Invoke();
             bShown = false;
+        }
+
+        /// <summary>
+        /// Given a gameobject transform, it moves said transform to the RefPosition
+        /// </summary>
+        /// <param name="T"></param>
+        public void AlignTransform(Transform T)
+        {
+            if(RefPosition)
+            {
+                T.position = RefPosition.position;
+                T.rotation = transform.rotation;
+            }
         }
 
         /// <summary>
